@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to this page if needed */
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .cs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        main {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!-- Nav Logo -->
+            <a href="../index.html" class="cs-logo" aria-label="back to home">
+                <img src="../logo/logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!-- Navigation List -->
+            <nav class="cs-nav" role="navigation">
+                <!-- Mobile Nav Toggle -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- Navigation Links -->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="../index.html" class="cs-li-link">Home</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../about/about.html" class="cs-li-link">About</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../services/services.html" class="cs-li-link">Services</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../works/portfolio.html" class="cs-li-link">Works</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../novel/novel.html" class="cs-li-link">Novel</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content of the webpage -->
+    <main>
+        <div class="cs-container">
+            <h1>Welcome to Asher Blumenthal Photography</h1>
+            <div style="border: 1px solid #ccc; border-radius: 5px; padding: 20px;">
+                <p style="margin-bottom: 15px;">I am a passionate portrait photographer based in New York, with a willingness to travel to capture beautiful moments. With nearly 5 years of experience, I specialize in creating unforgettable memories through my lens, focusing on delivering exceptional, heartfelt images.</p>
+                <p style="margin-bottom: 15px;">Specializing in 35mm photography, I bring an authentic and timeless aesthetic to your events. Whether capturing candid moments or crafting beautiful portraits, my goal is to add a unique charm to every photograph.</p>
+                <p style="margin-bottom: 15px;">Contact me via email at <a href="asherblumenthal@icloud.com">asherblumenthal@icloud.com</a> or by phone at <a href="tel:+718-407-9483">718-407-9473</a> to discuss your photography needs. I look forward to connecting with you!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section if needed -->
+    <footer>
+        <p>&copy; 2024 Asher Blumenthal Photography. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="../script.js"></script>
+    <script>
+        // Ensure JavaScript runs after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables
+            var CSbody = document.querySelector('body');
+            const CSnavbarMenu = document.querySelector('#cs-navigation');
+            const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+
+            // Event listener for mobile menu toggle
+            CShamburgerMenu.addEventListener('click', function () {
+                CShamburgerMenu.classList.toggle('cs-active');
+                CSnavbarMenu.classList.toggle('cs-active');
+                CSbody.classList.toggle('cs-open');
+                // Run the function to toggle aria-expanded attribute
+                ariaExpanded();
+            });
+
+            // Function to toggle aria-expanded attribute
+            function ariaExpanded() {
+                const csUL = document.querySelector('#cs-expanded');
+                const csExpanded = csUL.getAttribute('aria-expanded');
+
+                if (csExpanded === 'false' || !csExpanded) {
+                    csUL.setAttribute('aria-expanded', 'true');
+                } else {
+                    csUL.setAttribute('aria-expanded', 'false');
+                }
+            }
+            // Mobile nav dropdown code
+            const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+            for (const item of dropDowns) {
+                item.addEventListener('click', function() {
+                    item.classList.toggle('cs-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to this page if needed */
+        body {
+            /* Example of additional style */
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!-- Nav Logo -->
+            <a href="../index.html" class="cs-logo" aria-label="back to home">
+                <img src="../logo/logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!-- Navigation List -->
+            <nav class="cs-nav" role="navigation">
+                <!-- Mobile Nav Toggle -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- Navigation Links -->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="../index.html" class="cs-li-link">Home</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../about/about.html" class="cs-li-link">About</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../services/services.html" class="cs-li-link">Services</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../works/portfolio.html" class="cs-li-link">Works</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../novel/novel.html" class="cs-li-link">Novel</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content of the webpage -->
+    <main>
+        <h1>Welcome to Your Page</h1>
+        <p>This is the main content of your page!</p>
+        <!-- Add your content here -->
+    </main>
+
+    <!-- Footer section if needed -->
+    <footer>
+        <p>Footer content here.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="../script.js"></script>
+    <script>
+        // Ensure JavaScript runs after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables
+            var CSbody = document.querySelector('body');
+            const CSnavbarMenu = document.querySelector('#cs-navigation');
+            const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+
+            // Event listener for mobile menu toggle
+            CShamburgerMenu.addEventListener('click', function () {
+                CShamburgerMenu.classList.toggle('cs-active');
+                CSnavbarMenu.classList.toggle('cs-active');
+                CSbody.classList.toggle('cs-open');
+                // Run the function to toggle aria-expanded attribute
+                ariaExpanded();
+            });
+
+            // Function to toggle aria-expanded attribute
+            function ariaExpanded() {
+                const csUL = document.querySelector('#cs-expanded');
+                const csExpanded = csUL.getAttribute('aria-expanded');
+
+                if (csExpanded === 'false' || !csExpanded) {
+                    csUL.setAttribute('aria-expanded', 'true');
+                } else {
+                    csUL.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            // Mobile nav dropdown code
+            const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+            for (const item of dropDowns) {
+                item.addEventListener('click', function() {
+                    item.classList.toggle('cs-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

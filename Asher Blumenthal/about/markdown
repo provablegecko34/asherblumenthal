@@ -1,0 +1,13 @@
+- index.html
+- about/
+  - about.html
+- services/
+  - services.html
+- works/
+  - portfolio.html
+- novel/
+  - novel.html
+- logo/
+  - logo.png
+- styles.css
+- script.js

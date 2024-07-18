@@ -1,0 +1,13 @@
+<!-- Footer div -->
+<div id="footer" style="width: 639px;">
+    <p class="footerCopy" localizable="true">© Your document copyright here</p>
+    <!-- Download All button -->
+    <a href="downloads/zip_folder.zip" download="zip_folder.zip">
+        <button type="button">Download All</button>
+    </a>
+</div>
+<!-- end footer div -->
+
+
+
+<!-- apply to the footer section -->

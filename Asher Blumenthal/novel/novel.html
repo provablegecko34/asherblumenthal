@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel</title>
+    <link rel="stylesheet" href="../navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to this page if needed */
+        body {
+            /* Example of additional style */
+            background-color: #f0f0f0;
+            font-size: 1.1em; /* Increase the base font size */
+            margin: 0; /* Remove default margins */
+            padding: 0; /* Remove default padding */
+            position: relative; /* Ensure relative positioning for footer placement */
+            min-height: 100vh; /* Ensure footer is at bottom even with little content */
+        }
+        .novel-title {
+            font-size: 3.5em; /* Adjust the size as needed */
+            font-weight: 100; /* Thin font weight */
+            letter-spacing: -0.05em; /* Adjust letter spacing */
+            margin-top: 20px; /* Adjust top margin */
+            text-align: center; /* Center align text */
+        }
+        main {
+            margin: 20px auto; /* Center main content with top margin */
+            max-width: 800px; /* Example of setting a max-width */
+            padding: 20px; /* Example padding */
+        }
+        p {
+            font-size: 1.1em; /* Make paragraph text one size larger than default */
+            line-height: 1.6; /* Example line height for better readability */
+        }
+        footer {
+            text-align: left; /* Align footer content to the left */
+            position: absolute; /* Position footer absolutely */
+            bottom: 10px; /* Adjust bottom distance */
+            left: 10px; /* Adjust left distance */
+            font-size: 0.9em; /* Adjust footer font size */
+        }
+        footer p {
+            margin: 5px 0; /* Adjust margin for footer paragraphs */
+        }
+    </style>
+</head>
+<body>
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!-- Nav Logo -->
+            <a href="../index.html" class="cs-logo" aria-label="back to home">
+                <img src="../logo/logo.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!-- Navigation List -->
+            <nav class="cs-nav" role="navigation">
+                <!-- Mobile Nav Toggle -->
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <!-- Navigation Links -->
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li">
+                            <a href="../index.html" class="cs-li-link">Home</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../about/about.html" class="cs-li-link">About</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../services/services.html" class="cs-li-link">Services</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../works/portfolio.html" class="cs-li-link">Works</a>
+                        </li>
+                        <li class="cs-li">
+                            <a href="../novel/novel.html" class="cs-li-link">Novel</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content of the webpage -->
+    <main>
+        <br>
+        <h1 class="novel-title"> Novel</h1>
+        <!--put above in the left corner of page-->
+        <p>""A satire on satire," "A Paradoxical Escape" ventures into uncharted literary territory
+             with boldness. It deftly merges traditional storytelling with a keen self-awareness 
+             that critiques its own conventions while ensuring reader delight. 
+             critics have described this as "the equivalent of Vonnegut making fun of himself", 
+             guaranteeing satisfaction and leaving you "grinning from ear to ear". Through its 
+             innovative approach, "A Paradoxical Escape" invites readers to participate in a
+              dialogue about the nature of fiction and the role of the reader. 
+              It cleverly subverts familiar tropes while embracing them, creating a narrative dance 
+              that is as intellectually stimulating as it is entertaining.</p>
+        <!-- Add your content here -->
+    </main>
+
+    <!-- Footer section --!>
+    <footer>
+<footer>
+    <div style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
+        <p>&copy; 2024 Asher Blumenthal Photography. All rights reserved.</p>
+    </div>
+</footer>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="../script.js"></script>
+    <script>
+        // Ensure JavaScript runs after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables
+            var CSbody = document.querySelector('body');
+            const CSnavbarMenu = document.querySelector('#cs-navigation');
+            const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+
+            // Event listener for mobile menu toggle
+            CShamburgerMenu.addEventListener('click', function () {
+                CShamburgerMenu.classList.toggle('cs-active');
+                CSnavbarMenu.classList.toggle('cs-active');
+                CSbody.classList.toggle('cs-open');
+                // Run the function to toggle aria-expanded attribute
+                ariaExpanded();
+            });
+
+            // Function to toggle aria-expanded attribute
+            function ariaExpanded() {
+                const csUL = document.querySelector('#cs-expanded');
+                const csExpanded = csUL.getAttribute('aria-expanded');
+
+                if (csExpanded === 'false' || !csExpanded) {
+                    csUL.setAttribute('aria-expanded', 'true');
+                } else {
+                    csUL.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            // Mobile nav dropdown code
+            const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+            for (const item of dropDowns) {
+                item.addEventListener('click', function() {
+                    item.classList.toggle('cs-active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
