@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Structures</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        .container {
+            padding: 20px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto; /* Allow container to scroll if necessary */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+            border: 1px solid #ddd; /* Optional: border for better visibility */
+        }
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .structure {
+            white-space: pre;
+            margin-bottom: 20px;
+            text-align: left; /* Align text to the left */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chemical Structures</h1>
+
+        <div class="structure">
+            1. Starting Structure:<br><br>
+              C6H5<br>
+               |<br>
+              C=O<br>
+               |<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           OH   CH3<br>
+             \\ /<br>
+              C<br>
+               |<br>
+              CH3
+        </div>
+
+        <div class="structure">
+            2. Remove the Ketone Group:<br><br>
+              C6H5<br>
+               |<br>
+              CH2<br>
+               |<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           OH   CH3<br>
+             \\ /<br>
+              C<br>
+               |<br>
+              CH3
+        </div>
+
+        <div class="structure">
+            3. Add Hydroxyl Groups and Methoxy Group:<br><br>
+              C6H5<br>
+               |<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           OH   CH3<br>
+             \\ /<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           OH  OCH3<br>
+        </div>
+
+        <div class="structure">
+            4. Convert to Ester and Add Phenyl Ring:<br><br>
+              C6H5<br>
+               |<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           OH   CH3<br>
+             \\ /<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           O   C=O<br>
+        </div>
+
+        <div class="structure">
+            5. Final Structure:<br><br>
+              C6H5<br>
+               |<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           OH   CH3<br>
+             \\ /<br>
+              C<br>
+             / \\<br>
+            |   |<br>
+           O   CH2<br>
+              /<br>
+             C
+        </div>
+    </div>
+</body>
+</html>
