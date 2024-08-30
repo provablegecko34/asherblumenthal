@@ -1,0 +1,30 @@
+Asher Blumenthal/
+├── bin/
+    ├──myBinary
+├──cpp/main.cpp
+
+├──public/
+   ├──about.html
+   ├──blog.html
+   ├──contact.html
+   ├──drugs.html
+   ├──index.html
+   ├──novel.html
+   ├──sliedeshow1.html
+   ├──works.html
+   ├──assets/
+      ├──Images/
+        ├──logo.png
+   ├──css/
+         blog.css
+         navbar.css
+         slideshow1.css
+         styles.css
+    ├──js/
+        script.js
+        slideshow1.js
+├──server/
+    ├──package.json
+    ├──server.js
+├──src/
+   markdown.rmd
