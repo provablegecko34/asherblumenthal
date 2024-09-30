@@ -80,14 +80,30 @@
             linkElement.href = imageUrls[currentIndex];
         }
 
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % imageUrls.length;
+            updateSlideshow();
+        }
+
         document.getElementById('prev-button').addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
             updateSlideshow();
         });
 
         document.getElementById('next-button').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % imageUrls.length;
-            updateSlideshow();
+            nextSlide();
+        });
+
+        // Autoplay functionality
+        let autoplayInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+        // Pause autoplay on hover
+        const slideshowContainer = document.querySelector('.slideshow-container');
+        slideshowContainer.addEventListener('mouseover', () => {
+            clearInterval(autoplayInterval);
+        });
+        slideshowContainer.addEventListener('mouseout', () => {
+            autoplayInterval = setInterval(nextSlide, 3000);
         });
 
         updateSlideshow();
