@@ -67,56 +67,56 @@
     <script src="/js/slideshow1.js"></script>
     <script>
         const imageUrls = [
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEIgqjZIaf7DwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGXOx_3WMcOEAmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHRy1-e4Fg_WwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEWLR4GmOaJuwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHZ4Wf6xV0HSwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVWi9wKwYVGgmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEIgqjZIaf7DwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHhDdkhTX2--wmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFeaeqDbpcm9gmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEVapUYlhQ2kgmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGaKQPdk0F1dQmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGIsirBByCdLwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGXOx_3WMcOEAmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEqedSkowVt4AmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGq_bHDS4FYuQmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGCn8GCSNDRJAmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YE9pRlhRNnRNAmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFCUp6WaVHYeAmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGiIzxPr20Q8AmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEHGwmhtKdFbwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF2grDK4X11nwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHq8pXKRMgYbAmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFOVY8Mv4_7i0wmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHcH-37vPQbwwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF5wIjPZ4Y_g6wmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YElCdDpxxB31AmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEX1v5AlrZnItwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHj0JS6cnmnHwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHd_TBz_KbwwmtoKug6n4_ivYORwFHej4/item.JPG',
-            'https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGHL7Wb7H9Gz2wmtoKug6n4_ivYORwFHej4/item.JPG'
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGejjz7JuUjagmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGE-Xni4k_rLjgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVWi9wKwYVGu97ksGSfQw8DLd8-YhK0A5i_pWM54Un4Q/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGxYQeX5eZ4AwmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVF7x02yOY-U-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGthNJ6WfklyQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHWhkb7pZ29swmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHEfkIQ1qracQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFzTHNDgNPzrQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHN-59xcsA11gmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFqEeZYtYSNmQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFeaeqDbpcm9gmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGF7e6AaXNdFZgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH8DZCmh2IcPQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF343kPPFpwgAmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGOzkMBkNzrrwmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YG8QDzY1zGwEwmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEWLR4GmOaJu0-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHk1umB79rBegmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVWi9wKwYVGk-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHVSh1bx7VkHgQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGF7e6AaXNdFZgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFeaeqDbpcm9gmtoKug6n4_ivYORwFHej4/item.JPG"
         ];
 
         let currentIndex = 0;
 
         function showImage(index) {
-            const imgElement = document.getElementById('slideshow-image');
-            imgElement.src = imageUrls[index];
+            const imageElement = document.getElementById('slideshow-image');
+            imageElement.src = imageUrls[index];
+            const slideshowLink = document.getElementById('slideshow-link');
+            slideshowLink.href = imageUrls[index]; // Update the link for the current image
         }
 
-        document.getElementById('next-button').addEventListener('click', () => {
+        function nextImage() {
             currentIndex = (currentIndex + 1) % imageUrls.length;
             showImage(currentIndex);
-        });
+        }
 
-        document.getElementById('prev-button').addEventListener('click', () => {
+        function prevImage() {
             currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
             showImage(currentIndex);
-        });
+        }
 
-        // Show the first image
+        document.getElementById('next-button').addEventListener('click', nextImage);
+        document.getElementById('prev-button').addEventListener('click', prevImage);
+
+        // Show the first image initially
         showImage(currentIndex);
     </script>
 </body>
