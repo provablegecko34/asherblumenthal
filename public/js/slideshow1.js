@@ -31,6 +31,7 @@ const imageUrls = [
 ];
 
 let currentIndex = 0;
+let slideshowInterval;
 
 // Shuffle function
 function shuffleArray(array) {
@@ -43,18 +44,25 @@ function shuffleArray(array) {
 // Shuffle the images
 shuffleArray(imageUrls);
 
+// Show image function
 function showImage(index) {
     const imgElement = document.getElementById('slideshow-image');
     if (imgElement) {
+        imgElement.classList.remove('fade'); // Remove fade class
         imgElement.src = imageUrls[index];
+        // Trigger reflow to restart the animation
+        void imgElement.offsetWidth;
+        imgElement.classList.add('fade'); // Add fade class
     }
 }
 
+// Change to next image
 function nextImage() {
     currentIndex = (currentIndex + 1) % imageUrls.length;
     showImage(currentIndex);
 }
 
+// Change to previous image
 function prevImage() {
     currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
     showImage(currentIndex);
@@ -62,10 +70,27 @@ function prevImage() {
 
 // Initialize slideshow
 showImage(currentIndex);
+slideshowInterval = setInterval(nextImage, 5000);
 
-// Optional: Automatic slide change every 5 seconds
-setInterval(nextImage, 5000);
-
-// Attach event listeners for next/prev buttons if they exist
+// Event listeners for buttons
 document.getElementById('next-btn')?.addEventListener('click', nextImage);
 document.getElementById('prev-btn')?.addEventListener('click', prevImage);
+
+// Pause slideshow on hover
+const imgElement = document.getElementById('slideshow-image');
+imgElement?.addEventListener('mouseenter', () => clearInterval(slideshowInterval));
+imgElement?.addEventListener('mouseleave', () => {
+    slideshowInterval = setInterval(nextImage, 5000);
+});
+
+// CSS for fade effect
+const style = document.createElement('style');
+style.innerHTML = `
+    #slideshow-image {
+        transition: opacity 1s ease;
+    }
+    #slideshow-image.fade {
+        opacity: 0;
+    }
+`;
+document.head.appendChild(style);
