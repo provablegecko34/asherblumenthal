@@ -18,9 +18,9 @@
             max-width: 10000px; /* Increased width for a more horizontal layout */
             margin: 0 auto;
             background-color: #fff;
-            border: 1px solid #ccc; /* Retained border for the main container */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: none; /* Removed border for the main container */
+            border-radius: 0; /* Removed border radius */
+            box-shadow: none; /* Removed shadow for the main container */
         }
         footer {
             background-color: #333;
@@ -39,6 +39,7 @@
             border: none;       /* Removes border around the iframe */
             margin-top: 20px;   /* Adds spacing above the iframe */
             box-shadow: none;    /* Removes any shadow around the iframe */
+            display: block;      /* Ensures the iframe is treated as a block element */
         }
     </style>
 </head>
