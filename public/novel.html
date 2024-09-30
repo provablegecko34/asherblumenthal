@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novel</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/border.css"> <!-- Link to the new border.css -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -33,6 +34,13 @@
             width: 100%;
             box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
         }
+        iframe {
+            width: 100%; /* Make iframe responsive */
+            height: 500px; /* Fixed height */
+            border: none; /* No border */
+            margin-top: 20px;
+            display: block; /* Block display for better layout */
+        }
     </style>
 </head>
 <body>
@@ -60,9 +68,7 @@
         <br> 
         <!-- Embed Google Document here -->
         <iframe src="https://docs.google.com/document/d/e/2PACX-1vRJkE3c_vUXCJNpNsz5p_xmDsS1yd6Z9BwFSzxKA-6rgiJnsp2KwhDwTHlbEHIsIxWR93QkXTOfmLqi/pub?embedded=true"
-            width="1500"  <!-- Set width here -->
-            height="500"  <!-- Set height here -->
-            style="border: none; margin-top: 20px; display: block;">
+            aria-label="Embedded Google Document">
         </iframe>
     </main>
     
