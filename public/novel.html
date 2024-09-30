@@ -1,80 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novel</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Raleway', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px; /* Set a reasonable max width */
-            margin: 0 auto; /* Center the container */
-            background-color: #fff;
-            border: none; /* Removed border for the main container */
-            border-radius: 0; /* Removed border radius */
-            box-shadow: none; /* Removed shadow for the main container */
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            font-size: 0.9em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
-        }
-        iframe {
-            width: 100%;         /* Full width of the main container */
-            height: 600px;      /* Height for better visibility */
-            border: none;       /* Removes border around the iframe */
-            margin-top: 20px;   /* Adds spacing above the iframe */
-            box-shadow: none;    /* Removes any shadow around the iframe */
-            display: block;      /* Ensures the iframe is treated as a block element */
-        }
-    </style>
-</head>
-<body>
-    <header id="cs-navigation">
-        <div class="cs-container">
-            <a href="index.html" class="cs-logo" aria-label="Back to home">
-                <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
-            </a>
-            <!-- Navigation Links -->
-            <div class="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                    <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
-                    <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
-                    <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
-                    <li class="cs-li"><a href="/works.html" class="cs-li-link">Works</a></li>
-                    <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
-                    <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+main {
+    padding: 20px;
+    max-width: 90%; /* Use a percentage to allow more flexibility */
+    margin: 0 auto; /* Center the container */
+    background-color: #fff;
+    border: none; /* Removed border for the main container */
+    border-radius: 0; /* Removed border radius */
+    box-shadow: none; /* Removed shadow for the main container */
+}
 
-    <main>
-        <br>
-        <hr>
-        <br> 
-        <!-- Embed Google Document here -->
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vRJkE3c_vUXCJNpNsz5p_xmDsS1yd6Z9BwFSzxKA-6rgiJnsp2KwhDwTHlbEHIsIxWR93QkXTOfmLqi/pub?embedded=true"></iframe>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+iframe {
+    width: 100%;         /* Full width of the main container */
+    height: 600px;      /* Height for better visibility */
+    border: none;       /* Removes border around the iframe */
+    margin-top: 20px;   /* Adds spacing above the iframe */
+    box-shadow: none;    /* Removes any shadow around the iframe */
+    display: block;      /* Ensures the iframe is treated as a block element */
+    max-width: 100%;    /* Ensures iframe doesn't exceed its container */
+}
