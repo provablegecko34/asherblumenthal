@@ -1,38 +1,112 @@
-<style>
-    body {
-        font-family: 'Raleway', sans-serif;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 10; /* Ensures the header stays on top */
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    main {
-        padding: 20px;
-        padding-top: 120px; /* Adjust this value according to your navbar's height */
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 0.9em;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Correct CSS paths -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <a href="/index.html" class="cs-logo" aria-label="Back to home">
+                <!-- Corrected logo image link -->
+                <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!-- Navigation Links -->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li"><a href="/index.html" class="cs-li-link">Home</a></li>
+                    <li class="cs-li"><a href="/about.html" class="cs-li-link cs-active">About</a></li>
+                    <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
+                    <li class="cs-li"><a href="/works.html" class="cs-li-link">Works</a></li>
+                    <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
+                    <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <br>
+        <br>
+        <br>
+        <h2>About Me</h2>
+
+Hi, I’m Asher Blumenthal, a mitzvah photographer specializing in both 35mm film and digital photography. My passion is capturing life’s most meaningful moments with a timeless, classic style that brings out the beauty in every celebration. Whatever the occasion, I’m dedicated to delivering stunning, personalized photos that reflect the unique spirit of your event.
+
+
+        <br>
+        <br>
+        I take pride in providing complete client satisfaction in all aspects of my work. In fact, I personally hand-coded the website you’re reading right now, ensuring that every detail—from the photos to the site design—receives the same level of care and attention.
+
+Plus, with every purchase, I include a complimentary event slideshow hosted here on my website, making it easy to share your special day with family and friends.
+
+
+        <br>
+        <br>
+        Let’s create something unforgettable together!
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Asher Blumenthal Photography. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.querySelector('body');
+            const navbarMenu = document.querySelector('#cs-navigation');
+            const hamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+
+            if (hamburgerMenu) {
+                hamburgerMenu.addEventListener('click', function() {
+                    hamburgerMenu.classList.toggle('cs-active');
+                    navbarMenu.classList.toggle('cs-active');
+                    body.classList.toggle('cs-open');
+                    toggleAriaExpanded();
+                });
+            }
+
+            function toggleAriaExpanded() {
+                const csUL = document.querySelector('#cs-expanded');
+                const isExpanded = csUL.getAttribute('aria-expanded') === 'true';
+                csUL.setAttribute('aria-expanded', !isExpanded);
+            }
+        });
+    </script>
+</body>
+</html> 
