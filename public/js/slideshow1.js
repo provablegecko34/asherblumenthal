@@ -49,3 +49,45 @@ function showImage(index) {
     const imgElement = document.getElementById('slideshow-image');
     if (imgElement) {
         imgElement.src = imageUrls[index]; // Update the source directly
+// Continue the showImage function
+    }
+}
+
+// Start the slideshow
+function startSlideshow() {
+    slideshowInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % imageUrls.length; // Cycle through the images
+        showImage(currentIndex);
+    }, 3000); // Change image every 3 seconds
+}
+
+// Stop the slideshow
+function stopSlideshow() {
+    clearInterval(slideshowInterval);
+}
+
+// Next button click handler
+function nextImage() {
+    stopSlideshow();
+    currentIndex = (currentIndex + 1) % imageUrls.length;
+    showImage(currentIndex);
+    startSlideshow();
+}
+
+// Previous button click handler
+function previousImage() {
+    stopSlideshow();
+    currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length; // Cycle back
+    showImage(currentIndex);
+    startSlideshow();
+}
+
+// Event listeners for buttons
+document.getElementById('next-button').addEventListener('click', nextImage);
+document.getElementById('prev-button').addEventListener('click', previousImage);
+
+// Initialize slideshow on page load
+window.onload = () => {
+    showImage(currentIndex); // Show the first image
+    startSlideshow(); // Start the slideshow
+};
