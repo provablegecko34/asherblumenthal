@@ -47,39 +47,37 @@ shuffleArray(imageUrls);
 // Show image function
 function showImage(index) {
     const imgElement = document.getElementById('slideshow-image');
-    if (imgElement) {
-        imgElement.classList.remove('fade'); // Remove fade class
-        imgElement.src = imageUrls[index];
-        // Trigger reflow to restart the animation
-        void imgElement.offsetWidth;
-        imgElement.classList.add('fade'); // Add fade class
-    }
+    imgElement.src = imageUrls[index];
 }
 
-// Change to next image
+// Next image function
 function nextImage() {
     currentIndex = (currentIndex + 1) % imageUrls.length;
     showImage(currentIndex);
 }
 
-// Change to previous image
+// Previous image function
 function prevImage() {
     currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
     showImage(currentIndex);
 }
 
-// Initialize slideshow
-showImage(currentIndex);
-slideshowInterval = setInterval(nextImage, 5000);
+// Start the slideshow
+function startSlideshow() {
+    showImage(currentIndex);
+    slideshowInterval = setInterval(nextImage, 3000); // Change image every 3 seconds
+}
+
+// Stop the slideshow
+function stopSlideshow() {
+    clearInterval(slideshowInterval);
+}
 
 // Event listeners for buttons
-document.getElementById('next-btn')?.addEventListener('click', nextImage);
-document.getElementById('prev-btn')?.addEventListener('click', prevImage);
+document.getElementById('next-button').addEventListener('click', nextImage);
+document.getElementById('prev-button').addEventListener('click', prevImage);
+document.getElementById('slideshow-image').addEventListener('mouseenter', stopSlideshow);
+document.getElementById('slideshow-image').addEventListener('mouseleave', startSlideshow);
 
-// Pause slideshow on hover
-const imgElement = document.getElementById('slideshow-image');
-imgElement?.addEventListener('mouseenter', () => clearInterval(slideshowInterval));
-imgElement?.addEventListener('mouseleave', () => {
-    slideshowInterval = setInterval(nextImage, 5000);
-});
-
+// Start the slideshow
+startSlideshow();
