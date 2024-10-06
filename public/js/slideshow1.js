@@ -49,7 +49,6 @@ function showImage(index) {
     const imgElement = document.getElementById('slideshow-image');
     if (imgElement) {
         imgElement.src = imageUrls[index]; // Update the source directly
-// Continue the showImage function
     }
 }
 
