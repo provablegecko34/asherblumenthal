@@ -51,12 +51,10 @@
 </head>
 <body>
     <div class="slideshow-container">
-        <!-- Slide image -->
         <a href="#" id="slideshow-link">
             <img id="slideshow-image" src="" alt="Slideshow Image">
         </a>
 
-        <!-- Navigation buttons -->
         <button id="prev-button" class="nav-button prev"><i class="fas fa-chevron-left"></i></button>
         <button id="next-button" class="nav-button next"><i class="fas fa-chevron-right"></i></button>
     </div>
@@ -72,7 +70,6 @@
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGthNJ6WfklyQmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHWhkb7pZ29swmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHEfkIQ1qracQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
@@ -107,6 +104,9 @@
 
         // Show the first image initially
         showImage(currentIndex);
+
+        // Auto-rotate images every 5 seconds
+        setInterval(nextImage, 5000);
     </script>
 </body>
 </html>
