@@ -47,37 +47,5 @@ shuffleArray(imageUrls);
 // Show image function
 function showImage(index) {
     const imgElement = document.getElementById('slideshow-image');
-    imgElement.src = imageUrls[index];
-}
-
-// Next image function
-function nextImage() {
-    currentIndex = (currentIndex + 1) % imageUrls.length;
-    showImage(currentIndex);
-}
-
-// Previous image function
-function prevImage() {
-    currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
-    showImage(currentIndex);
-}
-
-// Start the slideshow
-function startSlideshow() {
-    showImage(currentIndex);
-    slideshowInterval = setInterval(nextImage, 3000); // Change image every 3 seconds
-}
-
-// Stop the slideshow
-function stopSlideshow() {
-    clearInterval(slideshowInterval);
-}
-
-// Event listeners for buttons
-document.getElementById('next-button').addEventListener('click', nextImage);
-document.getElementById('prev-button').addEventListener('click', prevImage);
-document.getElementById('slideshow-image').addEventListener('mouseenter', stopSlideshow);
-document.getElementById('slideshow-image').addEventListener('mouseleave', startSlideshow);
-
-// Start the slideshow
-startSlideshow();
+    if (imgElement) {
+        imgElement.src = imageUrls[index]; // Update the source directly
