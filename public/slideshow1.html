@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baruch Yehuda's Mitzva</title>
+    <title>Baruch Yehuda's Mitzvah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
@@ -23,9 +24,7 @@
         #slideshow-image {
             max-width: 100%;
             max-height: 100%;
-            width: auto; /* Added to maintain aspect ratio */
-            height: auto; /* Added to maintain aspect ratio */
-            object-fit: contain; /* Keeps the entire image visible */
+            object-fit: contain;
         }
         .nav-button {
             position: absolute;
@@ -54,7 +53,7 @@
     <div class="slideshow-container">
         <!-- Slide image -->
         <a href="#" id="slideshow-link">
-            <img id="slideshow-image" src="https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEIgqjZIaf7DwmtoKug6n4_ivYORwFHej4/item.JPG" alt="Slideshow Image">
+            <img id="slideshow-image" src="" alt="Slideshow Image">
         </a>
 
         <!-- Navigation buttons -->
@@ -62,34 +61,26 @@
         <button id="next-button" class="nav-button next"><i class="fas fa-chevron-right"></i></button>
     </div>
 
-    <script src="/js/slideshow1.js"></script>
     <script>
         const imageUrls = [
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGejjz7JuUjagmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGE-Xni4k_rLjgmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVWi9wKwYVGu97ksGSfQw8DLd8-YhK0A5i_pWM54Un4Q/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGxYQeX5eZ4AwmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVF7x02yOY-U-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YG0OnuYzgy3lgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGF7x02yOY-U-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGthNJ6WfklyQmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHWhkb7pZ29swmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHEfkIQ1qracQmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFzTHNDgNPzrQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHN-59xcsA11gmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFqEeZYtYSNmQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFeaeqDbpcm9gmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGF7e6AaXNdFZgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH8DZCmh2IcPQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF343kPPFpwgAmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGOzkMBkNzrrwmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YG8QDzY1zGwEwmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEWLR4GmOaJu0-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHk1umB79rBegmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVWi9wKwYVGk-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFzTHNDgNPzrQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHN-59xcsA11gmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFqEeZYtYSNmQmtoKug6n4_ivYORwFHej4/item.JPG"
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG"
         ];
 
         let currentIndex = 0;
