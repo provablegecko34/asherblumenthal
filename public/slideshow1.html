@@ -61,52 +61,56 @@
 
     <script>
         const imageUrls = [
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGejjz7JuUjagmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGE-Xni4k_rLjgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGVWi9wKwYVGu97ksGSfQw8DLd8-YhK0A5i_pWM54Un4Q/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGxYQeX5eZ4AwmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YG0OnuYzgy3lgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGF7x02yOY-U-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGthNJ6WfklyQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHWhkb7pZ29swmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHEfkIQ1qracQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH0oWUaHojADgmtoKug6n4_ivYORwFHej4/item.JPG"
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEoeoH2V20B3QmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEPP730CKG3yK68KbvZiioPivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEqQ4zN7b2dkU-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEvLdTzQMnl0wmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF8MqLAHQKxNQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEFD5K8XY_rNzAmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFlTv61z5_5ZgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YG2W8FmL7HvZ0-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGd3y0ZoCCWSQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGmg2cp8GfcBU-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGxt6bsREQVmO97ksGSfQw8DLd8-YhK0A5i_pWM54Un4Q/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YH2g9vD_JXO5K68KbvZiioPivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHFbJ5EJVHuSgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHhgxaPK5dybQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHU82j-cjfOrwmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHYllattxQPZgmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHuqD0oT91EtAmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHRtdVugCLDNQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHRhSCPqLUTOQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHotL-4cvG5QQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHOGsTG9nH4Na68KbvZiioPivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGtIMsfiH6CdAmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGsfK5Kj2O9O668KbvZiioPivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGq_tJXZALdbAmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGp_dtwF5i3wg-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGpOuf1EOXAlO97ksGSfQw8DLd8-YhK0A5i_pWM54Un4Q/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGmwBPCooXZs68KbvZiioPivYORwFHej4/item.JPG"
         ];
 
         let currentIndex = 0;
 
-        function showImage(index) {
-            const imageElement = document.getElementById('slideshow-image');
-            imageElement.src = imageUrls[index];
-            const slideshowLink = document.getElementById('slideshow-link');
-            slideshowLink.href = imageUrls[index]; // Update the link for the current image
+        const imgElement = document.getElementById('slideshow-image');
+        const linkElement = document.getElementById('slideshow-link');
+
+        function updateSlideshow() {
+            imgElement.src = imageUrls[currentIndex];
+            linkElement.href = imageUrls[currentIndex];
         }
 
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % imageUrls.length;
-            showImage(currentIndex);
-        }
+        document.getElementById('prev-button').addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? imageUrls.length - 1 : currentIndex - 1;
+            updateSlideshow();
+        });
 
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + imageUrls.length) % imageUrls.length;
-            showImage(currentIndex);
-        }
+        document.getElementById('next-button').addEventListener('click', () => {
+            currentIndex = (currentIndex === imageUrls.length - 1) ? 0 : currentIndex + 1;
+            updateSlideshow();
+        });
 
-        document.getElementById('next-button').addEventListener('click', nextImage);
-        document.getElementById('prev-button').addEventListener('click', prevImage);
-
-        // Show the first image initially
-        showImage(currentIndex);
-
-        // Auto-rotate images every 5 seconds
-        setInterval(nextImage, 5000);
+        updateSlideshow(); // Initialize the first image
     </script>
 </body>
 </html>
