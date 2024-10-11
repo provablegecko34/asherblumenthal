@@ -3,64 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baruch Yehuda's Mitzvah</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/slideshow.css">
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: white;
-            text-align: center;
-        }
-        .slideshow-container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: white;
-        }
-        #slideshow-image {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.5);
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 2rem;
-            color: black;
-            transition: background-color 0.3s ease;
-        }
-        .nav-button:hover {
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-        .prev {
-            left: 10px;
-        }
-        .next {
-            right: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/slideshow1.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <title>Image Slideshow</title>
 </head>
 <body>
     <div class="slideshow-container">
-        <a href="#" id="slideshow-link">
-            <img id="slideshow-image" src="" alt="Slideshow Image">
-        </a>
-        <button id="prev-button" class="nav-button prev"><i class="fas fa-chevron-left"></i></button>
-        <button id="next-button" class="nav-button next"><i class="fas fa-chevron-right"></i></button>
+        <div class="slideshow-image">
+            <img id="slide" src="https://img.gg/jYTVNp4" alt="Slideshow Image" style="width: 100%; height: auto;">
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
 
+    <script src="js/slideshow1.js"></script>
     <script>
-        const imageUrls = [
+        const images = [
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEPP730CKG3yAmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEqQ4zN7b2dkU-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEvLdTzQMnl0wmtoKug6n4_ivYORwFHej4/item.JPG",
@@ -82,38 +40,31 @@
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHotL-4cvG5QQmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YHOGsTG9nH4Na68KbvZiioPivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGtIMsfiH6CdAmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGsfK5Kj2O9O668KbvZiioPivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGq_tJXZALdbAmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGA3Gz8_SQ9PQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGFbNSkY8EqfQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGGF1OrNEI4h8nQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGE_zTIV_aENwmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGEH96g3v5b0FU-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGEIyV-QC9E2dwMtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGEGxqzgLl30T0mtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGE5ZyZ9FZ2sECgZ6HG3kOQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGD6FX1D_yl2wQmtoKug6n4_ivYORwFHej4/item.JPG"
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEDy8-fVyK83AmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEQhB6J3q7PIQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEUv2pF0gSjtwmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEvLdTzQMnl0wmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEXe3xrWMr6SwmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF0FmqBmVx3TQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF8MQ68hRmFuM0mtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFe54nAM1B1T0mtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YE8H1Qb0DdY4Z0mtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF9lsKwlzpqsB0mtoKug6n4_ivYORwFHej4/item.JPG"
         ];
 
         let currentIndex = 0;
 
-        const updateImage = () => {
-            const imageElement = document.getElementById('slideshow-image');
-            imageElement.src = imageUrls[currentIndex];
-        };
+        function changeSlide(direction) {
+            currentIndex += direction;
 
-        document.getElementById('prev-button').onclick = () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : imageUrls.length - 1;
-            updateImage();
-        };
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
 
-        document.getElementById('next-button').onclick = () => {
-            currentIndex = (currentIndex < imageUrls.length - 1) ? currentIndex + 1 : 0;
-            updateImage();
-        };
-
-        // Initialize the first image
-        updateImage();
+            document.getElementById('slide').src = images[currentIndex];
+        }
     </script>
 </body>
 </html>
