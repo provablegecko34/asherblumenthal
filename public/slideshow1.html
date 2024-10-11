@@ -62,6 +62,7 @@
     <script src="js/slideshow1.js"></script>
     <script>
         const images = [
+            "https://img.gg/jYTVNp4",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEPP730CKG3yAmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEqQ4zN7b2dkU-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEvLdTzQMnl0wmtoKug6n4_ivYORwFHej4/item.JPG",
@@ -85,27 +86,24 @@
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGtIMsfiH6CdAmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEDy8-fVyK83AmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEQhB6J3q7PIQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEUv2pF0gSjtwmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEvLdTzQMnl0wmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YEXe3xrWMr6SwmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF0FmqBmVx3TQmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF8MQ68hRmFuM0mtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFe54nAM1B1T0mtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YE8H1Qb0DdY4Z0mtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF9lsKwlzpqsB0mtoKug6n4_ivYORwFHej4/item.JPG"
-                    ];
-     let currentIndex = 0;
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YE0DhtAA34pTAmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YErLDAHEE-P0QmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YDBfoQQYLSnd0-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YBBITd9ap2_50-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YB7ZKLPy1M_r1-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YBBN-x9ScvB_zQmtoKug6n4_ivYORwFHej4/item.JPG"
+        ];
+        
+        let currentIndex = 0;
 
         function changeSlide(direction) {
             currentIndex += direction;
-
             if (currentIndex < 0) {
                 currentIndex = images.length - 1;
             } else if (currentIndex >= images.length) {
                 currentIndex = 0;
             }
-
-            document.getElementById('slide').src = images[currentIndex];
+            document.getElementById("slide").src = images[currentIndex];
         }
     </script>
 </body>
