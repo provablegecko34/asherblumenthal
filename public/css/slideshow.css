@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+#slideshow-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem; /* Size of the Font Awesome icons */
+    color: black;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.nav-text {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .nav-button {
+        font-size: 1.5rem; /* Adjust icon size for smaller screens */
+    }
+
+    .nav-text {
+        font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+}
