@@ -6,11 +6,54 @@
     <link rel="stylesheet" href="css/slideshow1.css">
     <link rel="stylesheet" href="css/navbar.css">
     <title>Baruch Yehudaa's Mitzva</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        .slideshow-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh; /* Full-page height */
+            overflow: hidden; /* Hide overflow */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slideshow-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 48px;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .prev {
+            left: 10px; /* Adjusted for closer positioning */
+        }
+        .next {
+            right: 10px; /* Adjusted for closer positioning */
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="slideshow-container">
         <div class="slideshow-image">
-            <img id="slide" src="https://img.gg/jYTVNp4" alt="Slideshow Image" style="width: 100%; height: auto;">
+            <img id="slide" src="https://img.gg/jYTVNp4" alt="Slideshow Image">
         </div>
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
@@ -50,9 +93,8 @@
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YFe54nAM1B1T0mtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YE8H1Qb0DdY4Z0mtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YF9lsKwlzpqsB0mtoKug6n4_ivYORwFHej4/item.JPG"
-        ];
-
-        let currentIndex = 0;
+                    ];
+     let currentIndex = 0;
 
         function changeSlide(direction) {
             currentIndex += direction;
