@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baruch Yehuda's Mitzvah</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/slideshow.css">
     <style>
         body {
             margin: 0;
@@ -55,7 +55,6 @@
         <a href="#" id="slideshow-link">
             <img id="slideshow-image" src="" alt="Slideshow Image">
         </a>
-
         <button id="prev-button" class="nav-button prev"><i class="fas fa-chevron-left"></i></button>
         <button id="next-button" class="nav-button next"><i class="fas fa-chevron-right"></i></button>
     </div>
@@ -85,4 +84,36 @@
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGtIMsfiH6CdAmtoKug6n4_ivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGsfK5Kj2O9O668KbvZiioPivYORwFHej4/item.JPG",
             "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGq_tJXZALdbAmtoKug6n4_ivYORwFHej4/item.JPG",
-            "https://img.nikonsrc.com/image/h
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGA3Gz8_SQ9PQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGFbNSkY8EqfQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGGF1OrNEI4h8nQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGE_zTIV_aENwmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGEH96g3v5b0FU-cZqK6FRuk7Hqg0Ht7A24/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGEIyV-QC9E2dwMtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGEGxqzgLl30T0mtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGE5ZyZ9FZ2sECgZ6HG3kOQmtoKug6n4_ivYORwFHej4/item.JPG",
+            "https://img.nikonsrc.com/image/hm6uR3ZIM2lTx8AyszEaGNmv121erxS56ztw9oWb4YGD6FX1D_yl2wQmtoKug6n4_ivYORwFHej4/item.JPG"
+        ];
+
+        let currentIndex = 0;
+
+        const updateImage = () => {
+            const imageElement = document.getElementById('slideshow-image');
+            imageElement.src = imageUrls[currentIndex];
+        };
+
+        document.getElementById('prev-button').onclick = () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : imageUrls.length - 1;
+            updateImage();
+        };
+
+        document.getElementById('next-button').onclick = () => {
+            currentIndex = (currentIndex < imageUrls.length - 1) ? currentIndex + 1 : 0;
+            updateImage();
+        };
+
+        // Initialize the first image
+        updateImage();
+    </script>
+</body>
+</html>
