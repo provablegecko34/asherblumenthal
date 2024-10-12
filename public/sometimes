@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>""The Synthesis and Structural Design of Narcotic Compounds"</title>
+    <title>The Synthesis and Structural Design of Narcotic Compounds</title>
     <style>
         html, body {
             height: 100%;
@@ -40,52 +40,64 @@
     </style>
 </head>
 <body>
- Sometimes, the world feels quiet, like a Sunday morning before 
-anyone else wakes. On those days, I wake to a familiar feeling—stillness, 
-an unspoken pause. The kind that creeps into your chest, like the weight of 
-a thousand moments you never fully lived. Sometimes, I don’t know how to move 
-through it, this vast emptiness that settles in the spaces between my thoughts, 
-where hope is supposed to reside.
-<br>
-On those days, I try to breathe in rhythm with the world, but the air feels heavier. 
-The sun rises, persistent as always, casting soft light through my window. The curtains
- sway, barely, a subtle reminder that time is passing, but I don’t always feel it. Time, 
-like the seconds on my wristwatch, slips unnoticed. On those days, I ask myself where it’s 
-all going—this time we have, this life we claim to live so fully.
-<br>
-Sometimes, I wonder if everyone feels this way. Not lost, exactly, but wandering through a maze 
-that doesn’t seem to end. Each turn familiar, each path leading back to where I began. And yet, 
-on those days, I remember the moments that broke through. The times when the world’s stillness 
-shattered, if only for a moment, and I was left with something new—something that reminded me 
-of life’s rhythm.
-<br>
-Like that afternoon in summer when I stood barefoot in the rain, the sky torn open, laughing. 
-I was twelve, and for once, I didn’t care about wet shoes or muddy footprints. I danced, spinning 
-in circles until the grass beneath my feet turned to mush, until the cool water washed away the 
-dust of ordinary days. On those days, I felt alive in a way that echoed through my bones, like 
-the earth itself was whispering secrets only I could hear.
-<br>
-And sometimes, I still hear those whispers. On those days, they come to me in quiet moments—like 
-when I’m watching the evening sky shift from orange to purple, the stars hesitating before making
- their entrance. It’s in those in-between spaces, the transitions of light to dark, of storm to 
-calm, where I find the answers I didn’t know I was seeking.
-<br>
-Sometimes, the answers aren’t clear, and that’s okay. I’ve learned to sit with the questions, to 
-let them be. On those days, I allow myself the space to not know, to not have it all figured out. 
-There’s a kind of peace in the uncertainty, a strange comfort in knowing that life is full 
-of unanswered questions. Sometimes, we are the questions, and our journey is not about finding 
-the answers, but about learning to live within the question itself.
-<br>
-On those days, I find myself standing at the edge of something bigger than I can understand. 
-Sometimes it’s the vastness of the ocean, with waves that crash in a rhythm that seems to match
- the beating of my heart. Sometimes it’s the expanse of the sky, where clouds drift like thoughts—slow, 
-weightless, disappearing as quickly as they form. And sometimes, it’s just the stillness again, a 
-reminder that the world will keep spinning, even when I don’t have the strength to move with it.
-<br>
-But on those days, I move anyway. I remind myself that sometimes, all we can do is keep walking. Keep breathing. Keep moving forward, even when forward feels like a concept too abstract to grasp. And in those moments, when I take that next step, however small, I feel it—the shift. The quiet turning of the earth beneath my feet, the subtle promise that life is waiting for me on the other side.
-<br>
-And so, on those days, I hold onto that. The knowledge that sometimes, it’s enough just to keep going. To trust that the stillness will pass, that the heaviness will lift, and that the world will open up again, like it always does. Sometimes, that’s all we need to know.
-<br>
-On those days, I remember to listen. To the rain, to the wind, to the quiet murmur of my own thoughts. And sometimes, I hear something new. Something small, but meaningful—a reminder that even in the quietest moments, life is still happening. And that, sometimes, is enough.
+    <div class="container">
+        <h1>The Synthesis and Structural Design of Narcotic Compounds</h1>
+        <div class="structure">
+            Sometimes, the world feels quiet, like a Sunday morning before 
+            anyone else wakes. On those days, I wake to a familiar feeling—stillness, 
+            an unspoken pause. The kind that creeps into your chest, like the weight of 
+            a thousand moments you never fully lived. Sometimes, I don’t know how to move 
+            through it, this vast emptiness that settles in the spaces between my thoughts, 
+            where hope is supposed to reside.
+            <br>
+            On those days, I try to breathe in rhythm with the world, but the air feels heavier. 
+            The sun rises, persistent as always, casting soft light through my window. The curtains
+            sway, barely, a subtle reminder that time is passing, but I don’t always feel it. Time, 
+            like the seconds on my wristwatch, slips unnoticed. On those days, I ask myself where it’s 
+            all going—this time we have, this life we claim to live so fully.
+            <br>
+            Sometimes, I wonder if everyone feels this way. Not lost, exactly, but wandering through a maze 
+            that doesn’t seem to end. Each turn familiar, each path leading back to where I began. And yet, 
+            on those days, I remember the moments that broke through. The times when the world’s stillness 
+            shattered, if only for a moment, and I was left with something new—something that reminded me 
+            of life’s rhythm.
+            <br>
+            Like that afternoon in summer when I stood barefoot in the rain, the sky torn open, laughing. 
+            I was twelve, and for once, I didn’t care about wet shoes or muddy footprints. I danced, spinning 
+            in circles until the grass beneath my feet turned to mush, until the cool water washed away the 
+            dust of ordinary days. On those days, I felt alive in a way that echoed through my bones, like 
+            the earth itself was whispering secrets only I could hear.
+            <br>
+            And sometimes, I still hear those whispers. On those days, they come to me in quiet moments—like 
+            when I’m watching the evening sky shift from orange to purple, the stars hesitating before making
+            their entrance. It’s in those in-between spaces, the transitions of light to dark, of storm to 
+            calm, where I find the answers I didn’t know I was seeking.
+            <br>
+            Sometimes, the answers aren’t clear, and that’s okay. I’ve learned to sit with the questions, to 
+            let them be. On those days, I allow myself the space to not know, to not have it all figured out. 
+            There’s a kind of peace in the uncertainty, a strange comfort in knowing that life is full 
+            of unanswered questions. Sometimes, we are the questions, and our journey is not about finding 
+            the answers, but about learning to live within the question itself.
+            <br>
+            On those days, I find myself standing at the edge of something bigger than I can understand. 
+            Sometimes it’s the vastness of the ocean, with waves that crash in a rhythm that seems to match
+            the beating of my heart. Sometimes it’s the expanse of the sky, where clouds drift like thoughts—slow, 
+            weightless, disappearing as quickly as they form. And sometimes, it’s just the stillness again, a 
+            reminder that the world will keep spinning, even when I don’t have the strength to move with it.
+            <br>
+            But on those days, I move anyway. I remind myself that sometimes, all we can do is keep walking. 
+            Keep breathing. Keep moving forward, even when forward feels like a concept too abstract to grasp. 
+            And in those moments, when I take that next step, however small, I feel it—the shift. The quiet 
+            turning of the earth beneath my feet, the subtle promise that life is waiting for me on the other side.
+            <br>
+            And so, on those days, I hold onto that. The knowledge that sometimes, it’s enough just to keep going. 
+            To trust that the stillness will pass, that the heaviness will lift, and that the world will open up again, 
+            like it always does. Sometimes, that’s all we need to know.
+            <br>
+            On those days, I remember to listen. To the rain, to the wind, to the quiet murmur of my own thoughts. 
+            And sometimes, I hear something new. Something small, but meaningful—a reminder that even in the quietest 
+            moments, life is still happening. And that, sometimes, is enough.
+        </div>
+    </div>
 </body>
 </html>
