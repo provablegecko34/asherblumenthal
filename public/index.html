@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <title>Asher Blumenthal</title>
-    <link rel="preconnect" href="https://fonts.go ogleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
@@ -35,12 +35,20 @@
             padding: 10px;
             color: white;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 24px; /* Increased size for visibility */
             user-select: none;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            border-radius: 5px; /* Rounded corners */
+            z-index: 10; /* Make sure they are above the images */
+            transform: translateY(-50%); /* Center vertically */
         }
 
         .next {
-            right: 0;
+            right: 10px; /* Positioning from the right */
+        }
+
+        .prev {
+            left: 10px; /* Positioning from the left */
         }
 
         /* Footer at the bottom without pushing content */
