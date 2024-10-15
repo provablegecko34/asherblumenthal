@@ -1,8 +1,10 @@
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%; /* Makes it responsive to the screen size */
   position: relative;
   margin: auto;
 }
@@ -10,6 +12,15 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+
+/* Style the images to maintain a 35mm (3:2) aspect ratio and fit fully on any screen */
+.mySlides img {
+  width: 100%;
+  height: auto;  /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits without cropping */
+  aspect-ratio: 3 / 2; /* 35mm aspect ratio */
+  max-height: 90vh; /* Prevent scrolling by fitting within the viewport height */
 }
 
 /* Next & previous buttons */
@@ -36,7 +47,7 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -82,6 +93,10 @@
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  } 
+  to {
+    opacity: 1;
+  }
 }
