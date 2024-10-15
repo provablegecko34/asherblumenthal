@@ -8,36 +8,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
     <style>
-        /* Fit the slideshow container on screen */
+        /* Ensure body fills the screen and flex layout */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* change the layout for the main section */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;  
+        }
+
+        /* Slideshow container styling */
         .slideshow-container {
             max-width: 100%;
-            height: 80vh;  /* Take 80% of the screen height */
+            height: 70vh; /* leave room for footer */
             position: relative;
             margin: auto;
         }
 
-        /* Set image aspect ratio and make it fit within the container */
+        /* Image styling to prevent cutting off */
         .mySlides img {
             width: 100%;
             height: auto;
-            object-fit: cover; /* Ensures images fill the container */
-            max-height: 70vh;  /* Image fits within 70% of the viewport height */
+            object-fit: contain;
+            max-height: 100%; 
         }
 
-        /* Adjust navigation dots to fit on the screen */
-        .dot {
-            height: 10px;
-            width: 10px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
+        /* Footer styling */
+        footer {
+            height: 10vh;
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+            position: relative;
         }
 
-        /* Previous and next buttons */
+        /* Navigation buttons for the slideshow */
         .prev, .next {
             cursor: pointer;
             position: absolute;
@@ -52,28 +66,6 @@
 
         .next {
             right: 0;
-        }
-
-        /* Footer at the bottom without pushing content */
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 10vh; /* Footer takes 10% of the screen height */
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 10px;
-        }
-
-        /* Fade animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {opacity: 0.4} 
-            to {opacity: 1}
         }
     </style>
 </head>
@@ -106,90 +98,53 @@
         </div>
     </header>
     
-    <!-- Main content of the webpage -->
     <main>
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <div class="numbertext">1 / 15</div>
                 <img src="img_nature_wide1.jpg" alt="Caption 1">
-                <div class="text">Caption 1</div>
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 15</div>
                 <img src="img_nature_wide2.jpg" alt="Caption 2">
-                <div class="text">Caption 2</div>
             </div>
 
-            <!-- Add remaining 13 images here... -->
+            <!-- Additional slides here -->
 
             <div class="mySlides fade">
-                <div class="numbertext">15 / 15</div>
                 <img src="img_nature_wide15.jpg" alt="Caption 15">
-                <div class="text">Caption 15</div>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
-        <br>
-
-        <!-- Dots for the slideshow -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
-            <span class="dot" onclick="currentSlide(11)"></span>
-            <span class="dot" onclick="currentSlide(12)"></span>
-            <span class="dot" onclick="currentSlide(13)"></span>
-            <span class="dot" onclick="currentSlide(14)"></span>
-            <span class="dot" onclick="currentSlide(15)"></span>
-        </div>
-
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}    
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-            }
-        </script>
     </main>
     
-    <!-- Footer section -->
     <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 </html>
