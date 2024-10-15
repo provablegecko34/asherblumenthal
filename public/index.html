@@ -10,48 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <style>
-        /* Make sure body fills the screen and footer is visible */
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Ensure the slideshow container fits on the remaining screen */
-        main {
-            flex: 1;  /* Allow main content to take up remaining space */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
+        /* Fit the slideshow container on screen */
         .slideshow-container {
             max-width: 100%;
-            height: 70vh; /* Adjust to leave space for the footer */
+            height: 80vh;  /* Take 80% of the screen height */
             position: relative;
             margin: auto;
         }
 
-        /* Set the image aspect ratio and fit within the container */
+        /* Set image aspect ratio and make it fit within the container */
         .mySlides img {
             width: 100%;
             height: auto;
-            object-fit: cover;
-            max-height: 100%; /* Ensure images fit within the container */
+            object-fit: cover; /* Ensures images fill the container */
+            max-height: 80vh;  /* Image fits within 80% of the viewport height */
         }
 
-        /* Dots and navigation buttons */
-        .dot {
-            height: 10px;
-            width: 10px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
+        /* Previous and next buttons */
         .prev, .next {
             cursor: pointer;
             position: absolute;
@@ -68,14 +43,15 @@
             right: 0;
         }
 
-        /* Footer section */
+        /* Footer at the bottom without pushing content */
         footer {
-            height: 10vh;
+            position: fixed;
+            bottom: 0;
             width: 100%;
+            height: 10vh; /* Footer takes 10% of the screen height */
             text-align: center;
             background-color: #f1f1f1;
             padding: 10px;
-            position: relative; /* Keeps footer at the bottom without overlapping */
         }
 
         /* Fade animation */
@@ -119,6 +95,7 @@
         </div>
     </header>
     
+    <!-- Main content of the webpage -->
     <main>
         <div class="slideshow-container" id="slideshow-container">
             <div class="mySlides fade">
@@ -132,78 +109,9 @@
                 <img src="img_nature_wide2.jpg" alt="Caption 2">
                 <div class="text">Caption 2</div>
             </div>
-            <div class="slideshow-container" id="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 15</div>
-                    <img src="img_nature_wide1.jpg" alt="Caption 1">
-                    <div class="text">Caption 1</div>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext">4 / 15</div>
-                    <img src="img_nature_wide2.jpg" alt="Caption 2">
-                    <div class="text">Caption 2</div>
-                </div>
-                <div class="slideshow-container" id="slideshow-container">
-                    <div class="mySlides fade">
-                        <div class="numbertext">5 / 15</div>
-                        <img src="img_nature_wide1.jpg" alt="Caption 1">
-                        <div class="text">Caption 1</div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="numbertext">6 / 15</div>
-                        <img src="img_nature_wide2.jpg" alt="Caption 2">
-                        <div class="text">Caption 2</div>
-                    </div>
-                    <div class="slideshow-container" id="slideshow-container">
-                        <div class="mySlides fade">
-                            <div class="numbertext">7 / 15</div>
-                            <img src="img_nature_wide1.jpg" alt="Caption 1">
-                            <div class="text">Caption 1</div>
-                        </div>
-            
-                        <div class="mySlides fade">
-                            <div class="numbertext">8 / 15</div>
-                            <img src="img_nature_wide2.jpg" alt="Caption 2">
-                            <div class="text">Caption 2</div>
-                        </div>
-                        <div class="slideshow-container" id="slideshow-container">
-                            <div class="mySlides fade">
-                                <div class="numbertext">9 / 15</div>
-                                <img src="img_nature_wide1.jpg" alt="Caption 1">
-                                <div class="text">Caption 1</div>
-                            </div>
-                
-                            <div class="mySlides fade">
-                                <div class="numbertext">10 / 15</div>
-                                <img src="img_nature_wide2.jpg" alt="Caption 2">
-                                <div class="text">Caption 2</div>
-                            </div>
-                            <div class="slideshow-container" id="slideshow-container">
-                                <div class="mySlides fade">
-                                    <div class="numbertext">11 / 15</div>
-                                    <img src="img_nature_wide1.jpg" alt="Caption 1">
-                                    <div class="text">Caption 1</div>
-                                </div>
-                    
-                                <div class="mySlides fade">
-                                    <div class="numbertext">12 / 15</div>
-                                    <img src="img_nature_wide2.jpg" alt="Caption 2">
-                                    <div class="text">Caption 2</div>
-                                </div>
-                                <div class="slideshow-container" id="slideshow-container">
-                                    <div class="mySlides fade">
-                                        <div class="numbertext">13 / 15</div>
-                                        <img src="img_nature_wide1.jpg" alt="Caption 1">
-                                        <div class="text">Caption 1</div>
-                                    </div>
-                        
-                                    <div class="mySlides fade">
-                                        <div class="numbertext">14 / 15</div>
-                                        <img src="img_nature_wide2.jpg" alt="Caption 2">
-                                        <div class="text">Caption 2</div>
-                                    </div>
+
+            <!-- Add remaining 13 images here... -->
+
             <div class="mySlides fade">
                 <div class="numbertext">15 / 15</div>
                 <img src="img_nature_wide15.jpg" alt="Caption 15">
@@ -213,47 +121,64 @@
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
+        <br>
+
+        <!-- Dots for the slideshow -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+            <span class="dot" onclick="currentSlide(15)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
     </main>
     
+    <!-- Footer section -->
     <footer>
-        <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+        <div class="footer-container">
+            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script>
-        let slideIndex = 1;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-
-        // Shuffle the slides on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            shuffleSlides();
-            showSlides(slideIndex);
-        });
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            slides[slideIndex-1].style.display = "block";  
-        }
-
-        // Shuffle the slides by changing their order in the DOM
-        function shuffleSlides() {
-            const container = document.getElementById('slideshow-container');
-            const slideArray = Array.from(slides);
-            slideArray.sort(() => Math.random() - 0.5);
-            slideArray.forEach(slide => container.appendChild(slide));
-        }
-    </script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
