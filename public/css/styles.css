@@ -34,14 +34,18 @@ footer {
 }
 
 .footer-container {
-  background-color: #333;
-  color: rgb(241, 241, 241); /* Updated font color */
+  background-color: #333; /* Original footer color */
+  color: #F1F1F1; /* Updated font color */
   text-align: center;
   padding: 10px 0;
   width: 100%;
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
