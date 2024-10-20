@@ -3,30 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
     <title>Asher Blumenthal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
     <style>
-        /* Fit the slideshow container on screen */
         .slideshow-container {
             max-width: 100%;
-            height: 80vh;  /* Take 80% of the screen height */
+            height: 80vh;
             position: relative;
             margin: auto;
         }
 
-        /* Set image aspect ratio and make it fit within the container */
         .mySlides img {
             width: 100%;
             height: auto;
-            object-fit: cover; /* Ensures images fill the container */
-            max-height: 80vh;  /* Image fits within 80% of the viewport height */
+            aspect-ratio: 3 / 2;
+            object-fit: contain;
+            max-height: 80vh;
         }
 
-        /* Previous and next buttons */
         .prev, .next {
             cursor: pointer;
             position: absolute;
@@ -35,35 +31,22 @@
             padding: 10px;
             color: white;
             font-weight: bold;
-            font-size: 24px; /* Increased size for visibility */
+            font-size: 24px;
             user-select: none;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-            border-radius: 5px; /* Rounded corners */
-            z-index: 10; /* Make sure they are above the images */
-            transform: translateY(-50%); /* Center vertically */
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            z-index: 10;
+            transform: translateY(-50%);
         }
 
         .next {
-            right: 10px; /* Positioning from the right */
+            right: 10px;
         }
 
         .prev {
-            left: 10px; /* Positioning from the left */
+            left: 10px;
         }
 
-        /* Footer at the bottom without pushing content */
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            height: 10vh; /* Footer takes 10% of the screen height */
-            text-align: center;
-            background-color: #f1f1f1; /* Change this to your preferred color */
-            padding: 10px;
-            left: 0; /* Make footer edge to edge */
-        }
-
-        /* Fade animation */
         .fade {
             animation-name: fade;
             animation-duration: 1.5s;
@@ -72,6 +55,17 @@
         @keyframes fade {
             from {opacity: 0.4} 
             to {opacity: 1}
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 10vh;
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+            left: 0;
         }
     </style>
 </head>
@@ -103,122 +97,24 @@
             </nav>
         </div>
     </header>
-    
-    <!-- Main content of the webpage -->
+
     <main>
         <div class="slideshow-container" id="slideshow-container">
             <div class="mySlides fade">
-                <div class="numbertext">1 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Marani 01.jpg" alt="Caption 1">
-                <div class="text">Caption 1</div>
+                <img src="/assets/Images/Home_slideshow/Esther 01.jpeg" alt="Esther 01">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">2 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Marani 02.jpg" alt="Caption 2">
-                <div class="text">Caption 2</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Esther 02.jpeg" alt="Caption 3">
-                <div class="text">Caption 3</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Esther 01.jpeg" alt="Caption 4">
-                <div class="text">Caption 4</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">5 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Fall 01.JPG" alt="Caption 5">
-                <div class="text">Caption 5</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">6 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Flower 01.jpeg" alt="Caption 6">
-                <div class="text">Caption 6</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">7 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Bird 03.jpeg" alt="Caption 7">
-                <div class="text">Caption 7</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">8 / 15</div>
-                <img src="/assets/Images/Home_slideshow/Bird 01.jpeg" alt="Caption 8">
-                <div class="text">Caption 8</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">9 / 15</div>
-                <img src="img_nature_wide9.jpg" alt="Caption 9">
-                <div class="text">Caption 9</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">10 / 15</div>
-                <img src="img_nature_wide10.jpg" alt="Caption 10">
-                <div class="text">Caption 10</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">11 / 15</div>
-                <img src="img_nature_wide11.jpg" alt="Caption 11">
-                <div class="text">Caption 11</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">12 / 15</div>
-                <img src="img_nature_wide12.jpg" alt="Caption 12">
-                <div class="text">Caption 12</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">13 / 15</div>
-                <img src="img_nature_wide13.jpg" alt="Caption 13">
-                <div class="text">Caption 13</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">14 / 15</div>
-                <img src="img_nature_wide14.jpg" alt="Caption 14">
-                <div class="text">Caption 14</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">15 / 15</div>
-                <img src="img_nature_wide15.jpg" alt="Caption 15">
-                <div class="text">Caption 15</div>
+                <img src="/assets/Images/Home_slideshow/Esther 02.jpeg" alt="Esther 02">
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
 
-        <!-- Dots for the slideshow -->
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
-            <span class="dot" onclick="currentSlide(11)"></span>
-            <span class="dot" onclick="currentSlide(12)"></span>
-            <span class="dot" onclick="currentSlide(13)"></span>
-            <span class="dot" onclick="currentSlide(14)"></span>
-            <span class="dot" onclick="currentSlide(15)"></span>
         </div>
 
         <script>
@@ -250,14 +146,9 @@
             }
         </script>
     </main>
-    
-    <!-- Footer section -->
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
-        </div>
-    </footer>
 
-    <script src="/js/script.js"></script>
+    <footer>
+        <p>Asher Blumenthal &copy; 2024</p>
+    </footer>
 </body>
 </html>
