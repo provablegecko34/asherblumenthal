@@ -1,5 +1,5 @@
 :root {
-  --primary: #ffffff;
+  --primary: #f3f1f6;
   --primaryLight: #cccccc;
   --headerColor: #1a1a1a;
   --bodyTextColor: #4e4b66;
@@ -35,7 +35,7 @@ footer {
 
 .footer-container {
   background-color: #333; /* Original footer color */
-  color: #F1F1F1; /* Updated font color */
+  color: #f3f1f6; /* Updated font color */
   text-align: center;
   padding: 10px 0;
   width: 100%;
