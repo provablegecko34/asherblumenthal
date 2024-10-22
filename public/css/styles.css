@@ -34,8 +34,8 @@ footer {
 }
 
 .footer-container {
-  background-color: #333; /* Original footer color */
-  color: #f3f1f6; /* Updated font color */
+  background-color: #333;
+  color: #f3f1f6; /* Ensured correct font color */
   text-align: center;
   padding: 10px 0;
   width: 100%;
