@@ -35,7 +35,7 @@ footer {
 
 .footer-container {
   background-color: #333;
-  color: #f3f1f6; /* Ensured correct font color */
+  color: #f3f1f6;
   text-align: center;
   padding: 10px 0;
   width: 100%;
@@ -43,8 +43,8 @@ footer {
 }
 
 img {
-  max-width: 100%; /* Ensure images are responsive */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100%;
+  height: auto;
 }
 
 *, *:before, *:after {
@@ -115,7 +115,6 @@ img {
   align-items: center;
 }
 
-/* Desktop Navigation */
 #cs-navigation .cs-container {
   display: flex;
   justify-content: space-between;
