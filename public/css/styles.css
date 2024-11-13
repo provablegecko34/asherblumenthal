@@ -115,6 +115,7 @@ img {
   align-items: center;
 }
 
+/* Desktop Navigation */
 #cs-navigation .cs-container {
   display: flex;
   justify-content: space-between;
@@ -260,7 +261,7 @@ img {
   }
 
   #cs-navigation .cs-li {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em; /* Increased margin for more spacing between items */
   }
 
   #cs-navigation .cs-ul-wrapper a {
@@ -270,6 +271,7 @@ img {
     background-color: var(--primary);
     border-radius: 5px;
     font-size: 1rem;
+    margin-bottom: 0.5rem; /* Adds more spacing */
   }
 
   #cs-navigation .cs-ul-wrapper a:hover {
