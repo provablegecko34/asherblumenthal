@@ -58,7 +58,7 @@ ${message}
 
 // Serve the contact page from the public directory
 app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'contact.html'));
+  res.sendFile(path.join(__dirname, 'src', 'contact.html'));
 });
 
 // Start the server
