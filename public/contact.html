@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+        }
+        .contact-form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .contact-form .form-group {
+            margin-bottom: 15px;
+        }
+        .contact-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form .form-group input,
+        .contact-form .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .contact-form .form-group input:focus,
+        .contact-form .form-group textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .contact-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <!-- Nav Logo -->
+            <a href="index.html" class="cs-logo" aria-label="Back to home">
+                <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!-- Navigation Links -->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
+                    <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
+                    <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
+                        <li class="cs-li"><a href="/events.html" class="cs-li-link">Events</a></li>
+                    <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
+                    <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content of the webpage -->
+    <main>
+        <div class="contact-form-container">
+            <form action="/submit-form" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <p>If you have any questions or would like to get in touch, please feel free to reach out with the form above; it can literally be about anything, I do not care.</p>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.querySelector('body');
+            const navbarMenu = document.querySelector('#cs-navigation');
+            const hamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+
+            if (hamburgerMenu) {
+                hamburgerMenu.addEventListener('click', function() {
+                    hamburgerMenu.classList.toggle('cs-active');
+                    navbarMenu.classList.toggle('cs-active');
+                    body.classList.toggle('cs-open');
+                    toggleAriaExpanded();
+                });
+            }
+
+            function toggleAriaExpanded() {
+                const csUL = document.querySelector('#cs-expanded');
+                const isExpanded = csUL.getAttribute('aria-expanded') === 'true';
+                csUL.setAttribute('aria-expanded', !isExpanded);
+            }
+        });
+    </script>
+</body>
+</html>
