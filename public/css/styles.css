@@ -1,6 +1,6 @@
 :root {
   --primary: #f3f1f6;
-  --primaryLight: #cccccc;
+  --primaryLight: #f3f1f6;
   --headerColor: #1a1a1a;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #1a1a1a;
@@ -35,7 +35,7 @@ footer {
 
 .footer-container {
   background-color: #333;
-  color: #f3f1f6;
+  color: #f3f1f6; /* Ensured correct font color */
   text-align: center;
   padding: 10px 0;
   width: 100%;
@@ -44,7 +44,7 @@ footer {
 
 img {
   max-width: 100%;
-  height: auto;
+  height: auto; /* Maintain aspect ratio */
 }
 
 *, *:before, *:after {
@@ -245,36 +245,4 @@ img {
     border-radius: 0 0 0.25rem 0.25rem;
   }
 
-  #cs-navigation.cs-active .cs-ul-wrapper {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-
-  #cs-navigation .cs-ul {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    overflow-y: auto;
-  }
-
-  #cs-navigation .cs-li {
-    margin-bottom: 1em; /* Increased margin for more spacing between items */
-  }
-
-  #cs-navigation .cs-ul-wrapper a {
-    width: 100%;
-    text-align: center;
-    padding: 16px 24px;
-    background-color: var(--primary);
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 0.5rem; /* Adds more spacing */
-  }
-
-  #cs-navigation .cs-ul-wrapper a:hover {
-    background-color: var(--primaryLight);
-  }
-}
+  #cs-navigation.cs-active .cs
