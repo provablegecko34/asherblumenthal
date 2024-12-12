@@ -1,7 +1,7 @@
 :root {
   --primary: #ffffff;
   --primaryLight: #ffffff; /* Pure white */
-  --headerColor: #ffffff; 
+  --headerColor: #1a1a1a; 
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #1a1a1a;
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
