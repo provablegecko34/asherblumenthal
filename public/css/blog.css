@@ -1,9 +1,6 @@
-/* Global Styles */
 :root {
     --primary: #ff6a3e;
     --primaryLight: #ffba43;
-    --secondary: #ffba43;
-    --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
@@ -58,7 +55,7 @@ body {
 
 #blog-1347 .cs-topper {
     font-size: var(--topperFontSize);
-    color: var(--secondary);
+    color: var(--primaryLight);
 }
 
 #blog-1347 .cs-card-group {
@@ -97,18 +94,8 @@ body {
     border-color: var(--bodyTextColorWhite);
 }
 
-#blog-1347 .cs-item:hover .cs-icon,
-#blog-1347 .cs-item:hover .cs-date-icon {
-    filter: brightness(1000%) grayscale(1);
-}
-
 #blog-1347 .cs-item:hover .cs-icon {
     transform: rotate(45deg);
-}
-
-#blog-1347 .cs-item:hover .cs-category::before {
-    background-color: var(--bodyTextColorWhite);
-    opacity: 0.2;
 }
 
 #blog-1347 .cs-link {
@@ -158,26 +145,6 @@ body {
     text-align: left;
     margin: 0;
     color: var(--headerColor);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
-    padding: 1rem;
-}
-
-#blog-1347 .cs-h3::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: -1;
-    transform: translateY(-50%);
-    filter: blur(10px);
 }
 
 #blog-1347 .cs-icon-wrapper {
@@ -195,7 +162,7 @@ body {
 #blog-1347 .cs-icon {
     width: auto;
     height: 0.75rem;
-    transition: filter 0.3s, transform 0.3s;
+    transition: transform 0.3s;
 }
 
 #blog-1347 .cs-info {
@@ -218,12 +185,6 @@ body {
     transition: color 0.3s;
 }
 
-#blog-1347 .cs-date-icon {
-    width: auto;
-    height: 1.5rem;
-    transition: filter 0.3s;
-}
-
 #blog-1347 .cs-category {
     font-size: 0.875rem;
     text-align: center;
@@ -232,119 +193,21 @@ body {
     border-radius: 5rem;
     position: relative;
     overflow: hidden;
-}
-
-#blog-1347 .cs-category::before {
-    content: "";
-    width: 100%;
-    height: 100%;
     background: #e8e8e8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    transition: background-color 0.3s;
 }
 
-#blog-1347 .cs-bubbles {
-    width: 20.0625rem;
-    height: 26.4375rem;
-    display: none;
-    position: absolute;
-    top: 66.4375rem;
-    right: -8.75rem;
-    z-index: -1;
-}
-
-#blog-1347 .cs-bubbles:before {
-    content: "";
-    width: 16.5rem;
-    height: 16.5rem;
-    background: transparent;
-    border: 1px solid var(--headerColor);
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    animation: floatAnimation 5s ease-in-out infinite;
-}
-
-#blog-1347 .cs-bubbles:after {
-    content: "";
-    width: 16.5rem;
-    height: 16.5rem;
-    background: var(--primary);
-    opacity: 0.1;
-    border-radius: 50%;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    animation: floatAnimation2 14s ease-in-out infinite;
+#blog-1347 .cs-category:hover {
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
 }
 
 /* Media Queries */
 @media only screen and (min-width: 48rem) {
-    #blog-1347 .cs-bubbles {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 64rem) {
     #blog-1347 .cs-container {
         max-width: 80rem;
     }
     #blog-1347 .cs-item {
         grid-column: span 4;
     }
-    #blog-1347 .cs-bubbles {
-        top: 17.5625rem;
-    }
-}
-
-@media only screen and (min-width: 90rem) {
-    #blog-1347 .cs-bubbles {
-        top: 22.5625rem;
-        right: -12.5rem;
-    }
-}
-
-/* Keyframes for bubble animation */
-@keyframes floatAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes floatAnimation2 {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-40px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Bubble around text effect */
-.cs-item-text::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: -1;
-    filter: blur(8px);
 }
