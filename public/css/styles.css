@@ -1,7 +1,7 @@
 :root {
   --primary: #ffffff;
   --primaryLight: #ffffff; /* Pure white */
-  --headerColor: #1a1a1a; 
+  --headerColor: #ffffff; 
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #1a1a1a;
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -163,9 +163,9 @@ img {
 
 /* Mobile Navigation */
 @media only screen and (max-width: 63.9375rem) {
-  body.cs-open {
-    overflow: hidden;
-  }
+  #cs-navigation .cs-ul-wrapper a {
+    display: block; 
+}
 
   #cs-navigation {
     padding: 0.75rem 1rem;
