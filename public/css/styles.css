@@ -1,9 +1,10 @@
 :root {
   --primary: #ffffff;
-  --primaryLight: #ffffff; /* Pure white */
+  --primaryLight: #ffffff;
   --headerColor: #ffffff;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #1a1a1a;
+  --footerBackgroundColor: #333;
   --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
   --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
   --bodyFontSize: 1rem;
@@ -12,7 +13,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('photo-backround.JPG');
+  background-image: url('photo-backround.JPG'); /* Make sure this path is correct */
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
@@ -34,7 +35,7 @@ footer {
 }
 
 .footer-container {
-  background-color: #333;
+  background-color: var(--footerBackgroundColor);
   color: #f3f1f6;
   text-align: center;
   padding: 10px 0;
@@ -44,10 +45,12 @@ footer {
 
 img {
   max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -96,7 +99,7 @@ img {
 }
 
 #cs-navigation {
-  background-color: var(--headerColor);
+  background-color: transparent; /* IMPORTANT: Transparent by default */
   width: 100%;
   padding: 0.75rem 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -106,13 +109,14 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s ease; /*Smooth background change*/
 }
 
 #cs-navigation .cs-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 #cs-navigation .cs-logo {
@@ -153,8 +157,15 @@ img {
 @media only screen and (max-width: 63.9375rem) {
   #cs-navigation {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align items to the left */
+    padding: 0.5rem 1rem;  /* Reduced padding */
+    background-color: var(--headerColor); /* Background ONLY on mobile */
   }
+
+    #cs-navigation .cs-ul {
+        display: block;
+        width: 100%;
+    }
 
   #cs-navigation .cs-toggle {
     display: flex;
@@ -164,6 +175,7 @@ img {
     border: none;
     align-items: center;
     justify-content: center;
+    cursor: pointer; /* Make it clickable */
   }
 
   #cs-navigation .cs-box {
@@ -175,7 +187,7 @@ img {
   #cs-navigation .cs-line {
     width: 100%;
     height: 2px;
-    background-color: var(--headerColor);
+    background-color: var(--bodyTextColor);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -216,10 +228,13 @@ img {
     right: 0;
     width: 100%;
     background-color: var(--headerColor);
-    transform: scaleY(0);
-    transform-origin: top;
-    opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
     border-radius: 0 0 0.25rem 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  #cs-navigation.cs-active .cs-ul-wrapper {
+    max-height: 500px; /* Adjust as needed */
   }
 }
