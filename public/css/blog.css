@@ -58,20 +58,16 @@ body {
     color: var(--primaryLight);
 }
 
-#blog-1347 .cs-card-group {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+#blog-1347 .cs-button-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 #blog-1347 .cs-item {
     list-style: none;
     display: flex;
     flex-direction: column;
-    grid-column: span 12;
     transition: transform 0.3s;
     position: relative;
 }
