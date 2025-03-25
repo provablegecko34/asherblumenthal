@@ -2,102 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sometimes</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #ffffff;
-            color: #000000;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            flex-direction: column;
-        }
-        .container {
-            padding: 20px;
-            max-width: 90%;
-            max-height: 90%;
-            overflow: auto; /* Allow container to scroll if necessary */
-            box-sizing: border-box; /* Include padding in width/height calculations */
-            border: 1px solid #ddd; /* Optional: border for better visibility */
-        }
-        h1 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        .structure {
-            white-space: pre;
-            margin-bottom: 20px;
-            text-align: left; /* Align text to the left */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sometimes</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-     
-        <div class="structure">
-            Sometimes, the world feels quiet, like a Sunday morning before 
-            anyone else wakes. On those days, I wake to a familiar feeling—stillness, 
-            an unspoken pause. The kind that creeps into your chest, like the weight of 
-            a thousand moments you never fully lived. Sometimes, I don’t know how to move 
-            through it, this vast emptiness that settles in the spaces between my thoughts, 
-            where hope is supposed to reside.
-            <br>
-            On those days, I try to breathe in rhythm with the world, but the air feels heavier. 
-            The sun rises, persistent as always, casting soft light through my window. The curtains
-            sway, barely, a subtle reminder that time is passing, but I don’t always feel it. Time, 
-            like the seconds on my wristwatch, slips unnoticed. On those days, I ask myself where it’s 
-            all going—this time we have, this life we claim to live so fully.
-            <br>
-            Sometimes, I wonder if everyone feels this way. Not lost, exactly, but wandering through a maze 
-            that doesn’t seem to end. Each turn familiar, each path leading back to where I began. And yet, 
-            on those days, I remember the moments that broke through. The times when the world’s stillness 
-            shattered, if only for a moment, and I was left with something new—something that reminded me 
-            of life’s rhythm.
-            <br>
-            Like that afternoon in summer when I stood barefoot in the rain, the sky torn open, laughing. 
-            I was twelve, and for once, I didn’t care about wet shoes or muddy footprints. I danced, spinning 
-            in circles until the grass beneath my feet turned to mush, until the cool water washed away the 
-            dust of ordinary days. On those days, I felt alive in a way that echoed through my bones, like 
-            the earth itself was whispering secrets only I could hear.
-            <br>
-            And sometimes, I still hear those whispers. On those days, they come to me in quiet moments—like 
-            when I’m watching the evening sky shift from orange to purple, the stars hesitating before making
-            their entrance. It’s in those in-between spaces, the transitions of light to dark, of storm to 
-            calm, where I find the answers I didn’t know I was seeking.
-            <br>
-            Sometimes, the answers aren’t clear, and that’s okay. I’ve learned to sit with the questions, to 
-            let them be. On those days, I allow myself the space to not know, to not have it all figured out. 
-            There’s a kind of peace in the uncertainty, a strange comfort in knowing that life is full 
-            of unanswered questions. Sometimes, we are the questions, and our journey is not about finding 
-            the answers, but about learning to live within the question itself.
-            <br>
-            On those days, I find myself standing at the edge of something bigger than I can understand. 
-            Sometimes it’s the vastness of the ocean, with waves that crash in a rhythm that seems to match
-            the beating of my heart. Sometimes it’s the expanse of the sky, where clouds drift like thoughts—slow, 
-            weightless, disappearing as quickly as they form. And sometimes, it’s just the stillness again, a 
-            reminder that the world will keep spinning, even when I don’t have the strength to move with it.
-            <br>
-            But on those days, I move anyway. I remind myself that sometimes, all we can do is keep walking. 
-            Keep breathing. Keep moving forward, even when forward feels like a concept too abstract to grasp. 
-            And in those moments, when I take that next step, however small, I feel it—the shift. The quiet 
-            turning of the earth beneath my feet, the subtle promise that life is waiting for me on the other side.
-            <br>
-            And so, on those days, I hold onto that. The knowledge that sometimes, it’s enough just to keep going. 
-            To trust that the stillness will pass, that the heaviness will lift, and that the world will open up again, 
-            like it always does. Sometimes, that’s all we need to know.
-            <br>
-            On those days, I remember to listen. To the rain, to the wind, to the quiet murmur of my own thoughts. 
-            And sometimes, I hear something new. Something small, but meaningful—a reminder that even in the quietest 
-            moments, life is still happening. And that, sometimes, is enough.
+    <header id="cs-navigation" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;">
+        <div class="cs-container">
+            <a href="/index.html" class="cs-logo" aria-label="Back to home">
+                <img src="/assets/Images/logo.png" alt="Logo" aria-hidden="true" decoding="async">
+            </a>
+            <nav class="cs-nav" role="navigation">
+                <button class="cs-toggle" aria-label="Mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
+                        <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
+                        <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
+                        <li class="cs-li"><a href="/works.html" class="cs-li-link">Works</a></li>
+                        <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
+                        <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container" style="margin-top: 120px;">
+        <div class="content" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; max-width: 900px; margin: auto;">
+            <div class="main-content" style="flex: 1; line-height: 1.6; font-size: 1.1rem; max-width: 600px;">
+                <article>
+                    <h1>Sometimes</h1>
+                    <p style="margin-bottom: 10px;">Sometimes, the world feels quiet, like a Sunday morning before anyone else wakes...</p>
+                    <p style="margin-bottom: 10px;">On those days, I wake to a familiar feeling—stillness, an unspoken pause...</p>
+                    <p style="margin-bottom: 10px;">Sometimes, I wonder if everyone feels this way. Not lost, exactly, but wandering...</p>
+                    <p style="margin-bottom: 10px;">Like that afternoon in summer when I stood barefoot in the rain, the sky torn open, laughing...</p>
+                    <p style="margin-bottom: 10px;">And sometimes, I still hear those whispers...</p>
+                    <p style="margin-bottom: 10px;">Sometimes, the answers aren’t clear, and that’s okay...</p>
+                    <p style="margin-bottom: 10px;">On those days, I find myself standing at the edge of something bigger than I can understand...</p>
+                    <p style="margin-bottom: 10px;">But on those days, I move anyway...</p>
+                    <p style="margin-bottom: 10px;">And so, on those days, I hold onto that...</p>
+                    <p style="margin-bottom: 10px;">On those days, I remember to listen...</p>
+                </article>
+            </div>
+            <aside class="sidebar" style="width: 25%; min-width: 250px; background: #f4f4f4; padding: 15px; border-left: 2px solid #ddd; align-self: flex-start; margin-top: 20px;">
+                <h3>Sidebar</h3>
+                <ul>
+                    <li><a href="#">Related Article 1</a></li>
+                    <li><a href="#">Related Article 2</a></li>
+                    <li><a href="#">More Resources</a></li>
+                </ul>
+            </aside>
         </div>
     </div>
+    <footer>
+        <div class="footer-container">
+            <p style="margin-bottom: 10px;">&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
