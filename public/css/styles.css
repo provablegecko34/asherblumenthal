@@ -14,7 +14,7 @@ body {
   font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('photo-background.JPG');
+  background-image: url('photo-backround.JPG'); /* Ensure correct path */
   background-position: center top;
   background-size: cover;
   background-attachment: fixed;
@@ -32,6 +32,9 @@ main {
 
 footer {
   margin-top: auto;
+}
+
+.footer-container {
   background-color: var(--footerBackgroundColor);
   color: #f3f1f6;
   text-align: center;
@@ -45,8 +48,22 @@ img {
   height: auto;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+}
+
+/* Typography */
+.cs-topper {
+  font-size: var(--topperFontSize);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: block;
 }
 
 .cs-title {
@@ -81,8 +98,9 @@ img {
   background-color: var(--primaryLight);
 }
 
+/* Fixed Navigation Styles */
 #cs-navigation {
-  background-color: var(--headerColor);
+  background-color: #ffffff;
   width: 100%;
   padding: 0.75rem 1rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -106,56 +124,128 @@ img {
   max-width: 18rem;
 }
 
-#cs-navigation .cs-ul-wrapper {
+/* Desktop Navigation */
+.cs-nav {
   display: flex;
-  justify-content: space-around;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
-#cs-navigation .cs-ul {
+.cs-ul {
   display: flex;
+  list-style: none;
   padding: 0;
   margin: 0;
-  list-style: none;
 }
 
-#cs-navigation .cs-li {
+.cs-li {
   margin: 0 1rem;
 }
 
-#cs-navigation .cs-ul-wrapper a {
-  background-color: var(--primary);
-  color: var(--bodyTextColorWhite);
+.cs-li a {
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  background-color: var(--primary);
+  color: var(--bodyTextColorWhite);
 }
 
-#cs-navigation .cs-ul-wrapper a:hover {
+.cs-li a:hover {
   background-color: var(--primaryLight);
 }
 
-@media only screen and (max-width: 63.9375rem) {
-  #cs-navigation {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem 1rem;
+/* Mobile Navigation - Scrollable Row Instead of Stacking */
+@media only screen and (max-width: 768px) {
+  .cs-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 5px;
   }
 
-  #cs-navigation .cs-ul {
-    display: block;
-    width: 100%;
-  }
-
-  #cs-navigation .cs-toggle {
+  .cs-ul {
     display: flex;
-    width: clamp(3.5rem, 7vw, 4rem);
-    height: clamp(3.5rem, 7vw, 4rem);
-    background-color: transparent;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    flex-wrap: nowrap;
+    gap: 10px;
   }
+
+  .cs-li {
+    flex: 0 0 auto;
+  }
+
+  .cs-li a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Slideshow Styling */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Dots Navigation */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Iframes */
+iframe {
+  width: 100%;
+  height: calc(100vh - 150px);
+  border: none;
 }
