@@ -65,6 +65,110 @@
         .active, .dot:hover {
             background-color: #717171;
         }
+
+        /* Navbar Styles */
+        #cs-navigation {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .cs-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .cs-logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .cs-nav {
+            position: relative;
+        }
+
+        .cs-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cs-box {
+            width: 30px;
+            height: 21px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cs-line {
+            height: 4px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        .cs-ul-wrapper {
+            display: flex;
+        }
+
+        .cs-ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cs-li {
+            margin-right: 20px;
+        }
+
+        .cs-li-link {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .cs-li-link:hover {
+            color: #f0a500;
+        }
+
+        .cs-li-link.cs-active {
+            color: #f0a500;
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .cs-toggle {
+                display: block;
+            }
+
+            .cs-ul-wrapper {
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #333;
+                padding: 20px;
+                display: none;
+                flex-direction: column;
+                width: 200px;
+            }
+
+            .cs-ul-wrapper.cs-expanded {
+                display: flex;
+            }
+
+            .cs-li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .cs-li-link {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
