@@ -10,6 +10,85 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <style>
+        /* Basic styles for page and navbar */
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .cs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-logo img {
+            width: 150px;
+        }
+
+        .cs-nav {
+            position: relative;
+        }
+
+        .cs-toggle {
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .cs-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 21px;
+            width: 30px;
+        }
+
+        .cs-line {
+            background-color: white;
+            height: 3px;
+            width: 100%;
+            border-radius: 3px;
+        }
+
+        .cs-ul-wrapper {
+            display: flex;
+        }
+
+        .cs-ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .cs-li-link {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+
+        .cs-li-link:hover, .cs-active {
+            background-color: gold;
+        }
+
         /* Slideshow Styles */
         .mySlides {
             display: none;
@@ -44,7 +123,7 @@
         }
 
         .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0,0,0,0.8);
         }
 
         .dot-container {
@@ -67,110 +146,35 @@
             background-color: #717171;
         }
 
-        /* Navbar Styles */
-        header {
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        .cs-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .cs-logo img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .cs-nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .cs-toggle {
-            display: none;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cs-toggle .cs-box {
-            width: 30px;
-            height: 21px;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .cs-line {
-            width: 100%;
-            height: 3px;
-            background-color: #fff;
-            border-radius: 5px;
-        }
-
-        .cs-ul-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cs-ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .cs-li {
-            margin: 0 20px;
-        }
-
-        .cs-li-link {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .cs-li-link:hover {
-            color: #f1c40f;
-        }
-
-        .cs-active {
-            color: #f1c40f;
-        }
-
-        @media (max-width: 768px) {
+        /* Mobile Styles */
+        @media screen and (max-width: 768px) {
             .cs-toggle {
                 display: block;
             }
 
-            .cs-ul-wrapper {
-                position: absolute;
-                top: 60px;
-                right: 20px;
-                background-color: #333;
-                padding: 20px;
+            .cs-ul {
                 display: none;
                 flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: #333;
                 width: 200px;
-            }
-
-            .cs-ul-wrapper.cs-expanded {
-                display: flex;
-            }
-
-            .cs-ul {
-                flex-direction: column;
+                padding: 10px 0;
             }
 
             .cs-li {
-                margin: 10px 0;
+                text-align: right;
+                padding: 10px 20px;
+            }
+
+            .cs-expanded {
+                display: block;
+            }
+
+            .cs-li-link {
+                font-size: 16px;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -183,7 +187,7 @@
                 <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
             </a>
             <nav class="cs-nav" role="navigation">
-                <button class="cs-toggle" aria-label="Mobile menu toggle">
+                <button class="cs-toggle" aria-label="Mobile menu toggle" onclick="toggleMenu()">
                     <div class="cs-box" aria-hidden="true">
                         <span class="cs-line cs-line1" aria-hidden="true"></span>
                         <span class="cs-line cs-line2" aria-hidden="true"></span>
@@ -203,7 +207,7 @@
             </nav>
         </div>
     </header>
-
+    
     <main>
         <div class="slideshow-container" id="slideshow-container">
             <!-- 14 Image Slots -->
@@ -228,59 +232,59 @@
         <br>
 
         <div class="dot-container">
-            <!-- Generate dots dynamically -->
+            <!-- Dots for slideshow -->
         </div>
 
         <script>
+            let slideIndex = 0;
             let slides = Array.from(document.getElementsByClassName("mySlides"));
             slides.sort(() => Math.random() - 0.5);
-            let slideIndex = 0;
 
             function showSlides() {
                 slides.forEach(slide => slide.style.display = "none");
                 slideIndex = (slideIndex + 1) % slides.length;
                 slides[slideIndex].style.display = "block";
                 updateDots();
-                setTimeout(showSlides, 5000); 
+                setTimeout(showSlides, 5000); // Change image every 5 seconds
             }
 
             function plusSlides(n) {
-                slideIndex += n - 1;
-                showSlides();
+                slideIndex = (slideIndex + n + slides.length) % slides.length;
+                slides.forEach(slide => slide.style.display = "none");
+                slides[slideIndex].style.display = "block";
+                updateDots();
             }
 
             function currentSlide(n) {
-                slideIndex = n - 1;
-                showSlides();
+                slideIndex = n;
+                slides.forEach(slide => slide.style.display = "none");
+                slides[slideIndex].style.display = "block";
+                updateDots();
             }
 
             function updateDots() {
-                let dots = document.querySelectorAll(".dot");
+                const dots = Array.from(document.getElementsByClassName("dot"));
                 dots.forEach(dot => dot.classList.remove("active"));
                 dots[slideIndex].classList.add("active");
             }
 
             function createDots() {
-                let dotContainer = document.querySelector(".dot-container");
+                const dotContainer = document.querySelector('.dot-container');
                 slides.forEach((_, index) => {
-                    let dot = document.createElement("span");
-                    dot.classList.add("dot");
-                    dot.addEventListener("click", () => currentSlide(index + 1));
+                    const dot = document.createElement('span');
+                    dot.classList.add('dot');
+                    dot.addEventListener('click', () => currentSlide(index));
                     dotContainer.appendChild(dot);
                 });
-                updateDots();
+            }
+
+            function toggleMenu() {
+                const menu = document.getElementById("cs-expanded");
+                menu.classList.toggle("cs-expanded");
             }
 
             createDots();
             showSlides();
-
-            // Hamburger button toggle
-            const toggleButton = document.querySelector('.cs-toggle');
-            const menuWrapper = document.querySelector('.cs-ul-wrapper');
-
-            toggleButton.addEventListener('click', () => {
-                menuWrapper.classList.toggle('cs-expanded');
-            });
         </script>
     </main>
 
