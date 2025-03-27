@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <style>
+        /* Slideshow Styles */
         .mySlides {
             display: none;
         }
@@ -43,7 +44,7 @@
         }
 
         .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         .dot-container {
@@ -67,7 +68,7 @@
         }
 
         /* Navbar Styles */
-        #cs-navigation {
+        header {
             background-color: #333;
             padding: 10px 0;
         }
@@ -85,61 +86,65 @@
         }
 
         .cs-nav {
-            position: relative;
+            display: flex;
+            align-items: center;
         }
 
         .cs-toggle {
             display: none;
-            background: transparent;
+            background-color: transparent;
             border: none;
             cursor: pointer;
         }
 
-        .cs-box {
+        .cs-toggle .cs-box {
             width: 30px;
             height: 21px;
             display: flex;
-            flex-direction: column;
             justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
         }
 
         .cs-line {
-            height: 4px;
-            background-color: white;
-            border-radius: 2px;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 5px;
         }
 
         .cs-ul-wrapper {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .cs-ul {
             display: flex;
-            list-style-type: none;
+            list-style: none;
             padding: 0;
             margin: 0;
         }
 
         .cs-li {
-            margin-right: 20px;
+            margin: 0 20px;
         }
 
         .cs-li-link {
+            color: #fff;
             text-decoration: none;
-            color: white;
-            font-size: 18px;
-            transition: color 0.3s;
+            font-weight: bold;
+            font-size: 16px;
         }
 
         .cs-li-link:hover {
-            color: #f0a500;
+            color: #f1c40f;
         }
 
-        .cs-li-link.cs-active {
-            color: #f0a500;
+        .cs-active {
+            color: #f1c40f;
         }
 
-        /* Responsive Navbar */
         @media (max-width: 768px) {
             .cs-toggle {
                 display: block;
@@ -160,13 +165,12 @@
                 display: flex;
             }
 
-            .cs-li {
-                margin-right: 0;
-                margin-bottom: 10px;
+            .cs-ul {
+                flex-direction: column;
             }
 
-            .cs-li-link {
-                font-size: 16px;
+            .cs-li {
+                margin: 10px 0;
             }
         }
     </style>
@@ -199,7 +203,7 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
         <div class="slideshow-container" id="slideshow-container">
             <!-- 14 Image Slots -->
@@ -216,66 +220,4 @@
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694397_8549be232a_z.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952490_f58c1d614b_z.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568286_f618d2f0c2_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412814338_63635f7663_z.jpg"></div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <div class="dot-container">
-            <!-- Generate dots dynamically -->
-        </div>
-
-        <script>
-            let slides = Array.from(document.getElementsByClassName("mySlides"));
-            slides.sort(() => Math.random() - 0.5);
-            let slideIndex = 0;
-
-            function showSlides() {
-                slides.forEach(slide => slide.style.display = "none");
-                slideIndex = (slideIndex + 1) % slides.length;
-                slides[slideIndex].style.display = "block";
-                updateDots();
-                setTimeout(showSlides, 5000); 
-            }
-
-            function plusSlides(n) {
-                slideIndex += n - 1;
-                showSlides();
-            }
-
-            function currentSlide(n) {
-                slideIndex = n - 1;
-                showSlides();
-            }
-
-            function updateDots() {
-                let dots = document.querySelectorAll(".dot");
-                dots.forEach(dot => dot.classList.remove("active"));
-                dots[slideIndex].classList.add("active");
-            }
-
-            function createDots() {
-                let dotContainer = document.querySelector(".dot-container");
-                slides.forEach((_, index) => {
-                    let dot = document.createElement("span");
-                    dot.classList.add("dot");
-                    dot.addEventListener("click", () => currentSlide(index + 1));
-                    dotContainer.appendChild(dot);
-                });
-                updateDots();
-            }
-
-            createDots();
-            showSlides();
-        </script>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+            <div class="mySlides fade"><img src="https://
