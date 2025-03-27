@@ -220,4 +220,74 @@
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694397_8549be232a_z.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952490_f58c1d614b_z.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568286_f618d2f0c2_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412814338_63635f7663_z.jpg"></div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div class="dot-container">
+            <!-- Generate dots dynamically -->
+        </div>
+
+        <script>
+            let slides = Array.from(document.getElementsByClassName("mySlides"));
+            slides.sort(() => Math.random() - 0.5);
+            let slideIndex = 0;
+
+            function showSlides() {
+                slides.forEach(slide => slide.style.display = "none");
+                slideIndex = (slideIndex + 1) % slides.length;
+                slides[slideIndex].style.display = "block";
+                updateDots();
+                setTimeout(showSlides, 5000); 
+            }
+
+            function plusSlides(n) {
+                slideIndex += n - 1;
+                showSlides();
+            }
+
+            function currentSlide(n) {
+                slideIndex = n - 1;
+                showSlides();
+            }
+
+            function updateDots() {
+                let dots = document.querySelectorAll(".dot");
+                dots.forEach(dot => dot.classList.remove("active"));
+                dots[slideIndex].classList.add("active");
+            }
+
+            function createDots() {
+                let dotContainer = document.querySelector(".dot-container");
+                slides.forEach((_, index) => {
+                    let dot = document.createElement("span");
+                    dot.classList.add("dot");
+                    dot.addEventListener("click", () => currentSlide(index + 1));
+                    dotContainer.appendChild(dot);
+                });
+                updateDots();
+            }
+
+            createDots();
+            showSlides();
+
+            // Hamburger button toggle
+            const toggleButton = document.querySelector('.cs-toggle');
+            const menuWrapper = document.querySelector('.cs-ul-wrapper');
+
+            toggleButton.addEventListener('click', () => {
+                menuWrapper.classList.toggle('cs-expanded');
+            });
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
