@@ -11,9 +11,60 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <style>
+        .mySlides {
+            display: none;
+        }
+
         .mySlides img {
-            width: 100%; /* Makes image responsive */
-            height: auto; /* Maintains aspect ratio */
+            width: 100%;
+            height: auto;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
         }
     </style>
 </head>
@@ -48,64 +99,80 @@
     
     <main>
         <div class="slideshow-container" id="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 2</div>
-                <img src="/assets/" alt="Caption 1">
-                <div class="text">Caption 1</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 2</div>
-                <img src="/assets/Images/" alt="Caption 2">
-                <div class="text">Caption 2</div>
-            </div>
+            <!-- 14 Image Slots -->
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952405_dcaeaf7d9c_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412813643_8fae8e407f_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694422_23f0b94568_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952615_ca3e200f99_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568091_813444140f_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952855_88ebe07060_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952785_1a9073e596_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568296_2179891230_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412756904_17e6763978_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412814333_83122f1682_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694397_8549be232a_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952490_f58c1d614b_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568286_f618d2f0c2_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412814338_63635f7663_z.jpg"></div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
 
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
+        <div class="dot-container">
+            <!-- Generate dots dynamically -->
         </div>
 
         <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
+            let slides = Array.from(document.getElementsByClassName("mySlides"));
+            slides.sort(() => Math.random() - 0.5);
+            let slideIndex = 0;
+
+            function showSlides() {
+                slides.forEach(slide => slide.style.display = "none");
+                slideIndex = (slideIndex + 1) % slides.length;
+                slides[slideIndex].style.display = "block";
+                updateDots();
+                setTimeout(showSlides, 5000); 
+            }
 
             function plusSlides(n) {
-                showSlides(slideIndex += n);
+                slideIndex += n - 1;
+                showSlides();
             }
 
             function currentSlide(n) {
-                showSlides(slideIndex = n);
+                slideIndex = n - 1;
+                showSlides();
             }
 
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                let dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}    
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
+            function updateDots() {
+                let dots = document.querySelectorAll(".dot");
+                dots.forEach(dot => dot.classList.remove("active"));
+                dots[slideIndex].classList.add("active");
             }
+
+            function createDots() {
+                let dotContainer = document.querySelector(".dot-container");
+                slides.forEach((_, index) => {
+                    let dot = document.createElement("span");
+                    dot.classList.add("dot");
+                    dot.addEventListener("click", () => currentSlide(index + 1));
+                    dotContainer.appendChild(dot);
+                });
+                updateDots();
+            }
+
+            createDots();
+            showSlides();
         </script>
     </main>
-    
+
     <footer>
         <div class="footer-container">
             <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="/js/script.js"></script>
 </body>
 </html>
