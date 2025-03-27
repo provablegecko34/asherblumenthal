@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-image: url('photo-backround.JPG'); /* Ensure correct path */
@@ -19,6 +19,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   transition: background-color 0.5s ease;
+  font-family: "Raleway", sans-serif;
   color: var(--bodyTextColor);
   min-height: 100vh;
   display: flex;
@@ -54,7 +55,6 @@ img {
   box-sizing: border-box;
 }
 
-/* Typography */
 .cs-topper {
   font-size: var(--topperFontSize);
   line-height: 1.2em;
@@ -89,6 +89,7 @@ img {
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 5px;
+  font-family: "Raleway", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   transition: background-color 0.3s ease;
@@ -98,7 +99,7 @@ img {
   background-color: var(--primaryLight);
 }
 
-/* Fixed Navigation Styles */
+/* --- Desktop Navigation --- */
 #cs-navigation {
   background-color: #ffffff;
   width: 100%;
@@ -124,51 +125,60 @@ img {
   max-width: 18rem;
 }
 
-/* Desktop Navigation */
-.cs-nav {
+#cs-navigation .cs-ul-wrapper {
   display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
-.cs-ul {
+#cs-navigation .cs-ul {
   display: flex;
-  list-style: none;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
-.cs-li {
+#cs-navigation .cs-li {
   margin: 0 1rem;
 }
 
-.cs-li a {
+#cs-navigation .cs-ul-wrapper a {
+  background-color: var(--primary);
+  color: var(--bodyTextColorWhite);
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.3s ease;
-  background-color: var(--primary);
-  color: var(--bodyTextColorWhite);
 }
 
-.cs-li a:hover {
+#cs-navigation .cs-ul-wrapper a:hover {
   background-color: var(--primaryLight);
 }
 
-/* Mobile Navigation - Scrollable Row Instead of Stacking */
+/* --- Mobile Navigation Fix (Horizontal Scroll) --- */
 @media only screen and (max-width: 768px) {
+  #cs-navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: var(--headerColor);
+  }
+
   .cs-nav {
+    display: flex;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 5px;
+    scrollbar-width: none; /* Hide scrollbar */
+    width: 100%;
   }
 
   .cs-ul {
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
+    padding: 0;
+    margin: 0;
   }
 
   .cs-li {
@@ -180,70 +190,13 @@ img {
     padding: 10px 15px;
     font-size: 0.9rem;
   }
+
+  /* Hide scrollbar for Webkit browsers */
+  .cs-nav::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-/* Slideshow Styling */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-  display: none;
-}
-
-.mySlides img {
-  width: 100%;
-  height: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Dots Navigation */
-.dot-container {
-  text-align: center;
-  padding: 20px;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Iframes */
 iframe {
   width: 100%;
   height: calc(100vh - 150px);
