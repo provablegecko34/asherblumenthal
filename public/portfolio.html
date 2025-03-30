@@ -102,7 +102,65 @@
         <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067">
     </div>
 
-    <!-- Other slides... -->
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418977520_0f5b1ac2c6_z.jpg" alt="IMG_3907">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418784209_8d57ccdf40_z.jpg" alt="IMG_3908">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54417726477_d7676180d7_z.jpg" alt="IMG_3910">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418837293_0baf7e0c17_z.jpg" alt="IMG_3917">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418784414_57181c2c39_z.jpg" alt="IMG_3921">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418589711_4c87c72b3f_z.jpg" alt="IMG_3926">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418977535_1d63c58d12_z.jpg" alt="IMG_3932">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418589746_d2da282446_z.jpg" alt="IMG_3937">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418589751_f182cbfdd4_z.jpg" alt="IMG_3935">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418837418_266f3a6455_z.jpg" alt="IMG_3940">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="https://live.staticflickr.com/65535/54418784484_4b9e313418_z.jpg" alt="IMG_3939">
+    </div>
 
 </div>
 
@@ -110,12 +168,44 @@
 <div class="dot-container">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
-    <!-- Other dots... -->
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
+    <span class="dot" onclick="currentSlide(13)"></span>
+    <span class="dot" onclick="currentSlide(14)"></span>
+    <span class="dot" onclick="currentSlide(15)"></span>
+    <span class="dot" onclick="currentSlide(16)"></span>
+    <span class="dot" onclick="currentSlide(17)"></span>
+    <span class="dot" onclick="currentSlide(18)"></span>
+    <span class="dot" onclick="currentSlide(19)"></span>
+    <span class="dot" onclick="currentSlide(20)"></span>
+    <span class="dot" onclick="currentSlide(21)"></span>
+    <span class="dot" onclick="currentSlide(22)"></span>
+    <span class="dot" onclick="currentSlide(23)"></span>
+    <span class="dot" onclick="currentSlide(24)"></span>
+    <span class="dot" onclick="currentSlide(25)"></span>
+    <span class="dot" onclick="currentSlide(26)"></span>
+    <span class="dot" onclick="currentSlide(27)"></span>
+    <span class="dot" onclick="currentSlide(28)"></span>
+    <span class="dot" onclick="currentSlide(29)"></span>
+    <span class="dot" onclick="currentSlide(30)"></span>
 </div>
-    
+
 <script>
     let slideIndex = 1;
     showSlides(slideIndex);
+
+    // Auto-slide every 3 seconds
+    setInterval(function() {
+        plusSlides(1);
+    }, 3000);
 
     function plusSlides(n) {
         showSlides(slideIndex += n);
@@ -129,18 +219,21 @@
         let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
-        
+
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
-        
+
+        // Hide all slides
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        
+
+        // Remove the "active" class from all dots
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        
+
+        // Show the current slide and highlight the corresponding dot
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
     }
