@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
   <style>
-    /* Basic styles for page and navbar */
     body {
       font-family: 'Raleway', sans-serif;
       margin: 0;
@@ -18,14 +17,12 @@
       background-color: #fff;
       color: #333;
     }
-
     header {
       background-color: #333;
       padding: 10px 0;
       position: relative;
-      z-index: 10; /* Ensure header stays on top */
+      z-index: 10;
     }
-
     .cs-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -34,15 +31,12 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .cs-logo img {
       width: 150px;
     }
-
     .cs-nav {
       position: relative;
     }
-
     .cs-toggle {
       display: none;
       background-color: transparent;
@@ -50,7 +44,6 @@
       cursor: pointer;
       z-index: 2;
     }
-
     .cs-box {
       display: flex;
       flex-direction: column;
@@ -58,18 +51,15 @@
       height: 21px;
       width: 30px;
     }
-
     .cs-line {
       background-color: white;
       height: 3px;
       width: 100%;
       border-radius: 3px;
     }
-
     .cs-ul-wrapper {
       display: flex;
     }
-
     .cs-ul {
       list-style-type: none;
       padding: 0;
@@ -77,7 +67,6 @@
       display: flex;
       gap: 20px;
     }
-
     .cs-li-link {
       text-decoration: none;
       color: white;
@@ -86,27 +75,21 @@
       padding: 5px 10px;
       transition: background 0.3s;
     }
-
     .cs-li-link:hover, .cs-active {
       background-color: gold;
     }
-
-    /* Slideshow Styles */
     .mySlides {
       display: none;
     }
-
-    .mySlides img {
+    .mySlides a img {
       width: 100%;
       height: auto;
     }
-
     .slideshow-container {
       position: relative;
       max-width: 100%;
-      z-index: 1; /* Make sure slideshow stays below header */
+      z-index: 1;
     }
-
     .prev, .next {
       cursor: pointer;
       position: absolute;
@@ -120,20 +103,16 @@
       border-radius: 3px;
       user-select: none;
     }
-
     .next {
       right: 0;
     }
-
     .prev:hover, .next:hover {
       background-color: rgba(0,0,0,0.8);
     }
-
     .dot-container {
       text-align: center;
       padding: 20px;
     }
-
     .dot {
       cursor: pointer;
       height: 15px;
@@ -144,12 +123,9 @@
       display: inline-block;
       transition: background-color 0.6s ease;
     }
-
     .active, .dot:hover {
       background-color: #717171;
     }
-
-    /* Mobile Styles */
     @media screen and (max-width: 768px) {
       .cs-toggle {
         display: block;
@@ -176,10 +152,8 @@
         padding: 10px 20px;
       }
     }
-
-    /* Add padding to main content to avoid overlap with header */
     main {
-      padding-top: 80px; /* Adjust if necessary */
+      padding-top: 80px;
     }
   </style>
 </head>
@@ -210,70 +184,140 @@
       </nav>
     </div>
   </header>
-
   <main>
     <div class="slideshow-container">
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54417664942_a2a7a4fcdf_z.jpg" alt="Library - 2827 of 6067"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977520/in/album-72177720324747351" title="IMG_3907">
+          <img src="https://live.staticflickr.com/65535/54418977520_0f5b1ac2c6_z.jpg" width="640" height="582" alt="IMG_3907"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54418776368_353a26bf57_z.jpg" alt="Library - 2755 of 6067"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784209/in/album-72177720324747351/" title="IMG_3908">
+          <img src="https://live.staticflickr.com/65535/54418784209_8d57ccdf40_z.jpg" width="640" height="512" alt="IMG_3908"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54417664997_1d7760c071_z.jpg" alt="Library - 2772 of 6067"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589591/in/album-72177720324747351/" title="IMG_3914">
+          <img src="https://live.staticflickr.com/65535/54418589591_c782f5b537_z.jpg" width="488" height="640" alt="IMG_3914"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54418722614_94e13a8eb2_z.jpg" alt="Library - 4711 of 6067"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54417726477/in/album-72177720324747351/" title="IMG_3910">
+          <img src="https://live.staticflickr.com/65535/54417726477_d7676180d7_z.jpg" width="426" height="640" alt="IMG_3910"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54417726477/in/album-72177720324747351/" title="IMG_3910">
+          <img src="https://live.staticflickr.com/65535/54417726477_d7676180d7_z.jpg" width="426" height="640" alt="IMG_3910"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977555/in/album-72177720324747351/" title="IMG_3913">
+          <img src="https://live.staticflickr.com/65535/54418977555_e04dfe22b7_z.jpg" width="426" height="640" alt="IMG_3913"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837238/in/album-72177720324747351/" title="IMG_3911">
+          <img src="https://live.staticflickr.com/65535/54418837238_d7ff733d4f_z.jpg" width="457" height="640" alt="IMG_3911"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837293/in/album-72177720324747351/" title="IMG_3917">
+          <img src="https://live.staticflickr.com/65535/54418837293_0baf7e0c17_z.jpg" width="640" height="512" alt="IMG_3917"/>
+        </a>
       </div>
       <div class="mySlides">
-        <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171"/>
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837313/in/album-72177720324747351/" title="IMG_3919">
+          <img src="https://live.staticflickr.com/65535/54418837313_36f6bcb7c6_z.jpg" width="640" height="426" alt="IMG_3919"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784414/in/album-72177720324747351/" title="IMG_3921">
+          <img src="https://live.staticflickr.com/65535/54418784414_57181c2c39_z.jpg" width="426" height="640" alt="IMG_3921"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784419/in/album-72177720324747351/" title="IMG_3920">
+          <img src="https://live.staticflickr.com/65535/54418784419_5cc127a5e1_z.jpg" width="426" height="640" alt="IMG_3920"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977620/in/album-72177720324747351/" title="IMG_3931">
+          <img src="https://live.staticflickr.com/65535/54418977620_b2dd4d9bee_z.jpg" width="457" height="640" alt="IMG_3931"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589711/in/album-72177720324747351/" title="IMG_3926">
+          <img src="https://live.staticflickr.com/65535/54418589711_4c87c72b3f_z.jpg" width="426" height="640" alt="IMG_3926"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977535/in/album-72177720324747351/" title="IMG_3932">
+          <img src="https://live.staticflickr.com/65535/54418977535_1d63c58d12_z.jpg" width="426" height="640" alt="IMG_3932"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589746/in/album-72177720324747351/" title="IMG_3937">
+          <img src="https://live.staticflickr.com/65535/54418589746_d2da282446_z.jpg" width="640" height="426" alt="IMG_3937"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589671/in/album-72177720324747351/" title="IMG_3925">
+          <img src="https://live.staticflickr.com/65535/54418589671_a6a3c128b4_z.jpg" width="640" height="426" alt="IMG_3925"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589751/in/album-72177720324747351/" title="IMG_3935">
+          <img src="https://live.staticflickr.com/65535/54418589751_f182cbfdd4_z.jpg" width="640" height="426" alt="IMG_3935"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54417726692/in/album-72177720324747351/" title="IMG_3933">
+          <img src="https://live.staticflickr.com/65535/54417726692_a01644fd58_z.jpg" width="426" height="640" alt="IMG_3933"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837418/in/album-72177720324747351/" title="IMG_3940">
+          <img src="https://live.staticflickr.com/65535/54418837418_266f3a6455_z.jpg" width="426" height="640" alt="IMG_3940"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784484/in/album-72177720324747351/" title="IMG_3939">
+          <img src="https://live.staticflickr.com/65535/54418784484_4b9e313418_z.jpg" width="640" height="426" alt="IMG_3939"/>
+        </a>
+      </div>
+      <div class="mySlides">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784519/in/album-72177720324747351/" title="IMG_3943">
+          <img src="https://live.staticflickr.com/65535/54418784519_ae09495d60_z.jpg" width="640" height="426" alt="IMG_3943"/>
+        </a>
       </div>
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-
-    <div class="dot-container">
-      <!-- Dots for slideshow will be generated here -->
-    </div>
-
+    <div class="dot-container"></div>
+    <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
     <script>
       let slideIndex = 0;
-      let slides = Array.from(document.getElementsByClassName("mySlides"));
-
+      const slides = Array.from(document.getElementsByClassName("mySlides"));
       function showSlides() {
         slides.forEach(slide => slide.style.display = "none");
         slideIndex = (slideIndex + 1) % slides.length;
         slides[slideIndex].style.display = "block";
         updateDots();
-        setTimeout(showSlides, 5000); // Change image every 5 seconds
+        setTimeout(showSlides, 5000);
       }
-
       function plusSlides(n) {
         slideIndex = (slideIndex + n + slides.length) % slides.length;
         slides.forEach(slide => slide.style.display = "none");
         slides[slideIndex].style.display = "block";
         updateDots();
       }
-
       function currentSlide(n) {
         slideIndex = n;
         slides.forEach(slide => slide.style.display = "none");
         slides[slideIndex].style.display = "block";
         updateDots();
       }
-
       function updateDots() {
         const dots = Array.from(document.getElementsByClassName("dot"));
         if(dots.length > 0) {
@@ -281,7 +325,6 @@
           dots[slideIndex].classList.add("active");
         }
       }
-
       function createDots() {
         const dotContainer = document.querySelector('.dot-container');
         slides.forEach((_, index) => {
@@ -291,17 +334,14 @@
           dotContainer.appendChild(dot);
         });
       }
-
       function toggleMenu() {
         const menu = document.getElementById("cs-expanded");
         menu.classList.toggle("cs-expanded");
       }
-
       createDots();
       showSlides();
     </script>
   </main>
-
   <footer>
     <div class="footer-container">
       <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
