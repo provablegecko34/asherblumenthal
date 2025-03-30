@@ -23,7 +23,7 @@
             background-color: #333;
             padding: 10px 0;
             position: relative;
-            z-index: 10; /* Ensure header is above the slideshow */
+            z-index: 10; /* Ensure header stays on top */
         }
 
         .cs-container {
@@ -104,7 +104,7 @@
         .slideshow-container {
             position: relative;
             max-width: 100%;
-            z-index: 1; /* Keep the slideshow below the header */
+            z-index: 1; /* Make sure slideshow stays below header */
         }
 
         .prev, .next {
@@ -181,9 +181,9 @@
             }
         }
 
-        /* Add padding to main content to prevent overlap with header */
+        /* Add padding to the main content */
         main {
-            padding-top: 80px; /* Adjust this value if necessary to fit your header height */
+            padding-top: 80px; /* Adjust this to make sure slideshow is visible below header */
         }
     </style>
 </head>
@@ -217,20 +217,37 @@
     </header>
     
     <main>
-        <div class="slideshow-container" id="slideshow-container">
-            <img src="https://live.staticflickr.com/65535/54417664942_a2a7a4fcdf_z.jpg" alt="Library - 2827 of 6067"/>
-            <img src="https://live.staticflickr.com/65535/54418776368_353a26bf57_z.jpg" alt="Library - 2755 of 6067"/>
-            <img src="https://live.staticflickr.com/65535/54417664997_1d7760c071_z.jpg" alt="Library - 2772 of 6067"/>
-            <img src="https://live.staticflickr.com/65535/54418722614_94e13a8eb2_z.jpg" alt="Library - 4711 of 6067"/>
-            <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067"/>
-            <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067"/>
-            <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169"/>
-            <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170"/>
-            <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171"/>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54417664942_a2a7a4fcdf_z.jpg" alt="Library - 2827 of 6067"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54418776368_353a26bf57_z.jpg" alt="Library - 2755 of 6067"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54417664997_1d7760c071_z.jpg" alt="Library - 2772 of 6067"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54418722614_94e13a8eb2_z.jpg" alt="Library - 4711 of 6067"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170"/>
+            </div>
+            <div class="mySlides">
+                <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171"/>
+            </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <br>
 
         <div class="dot-container">
             <!-- Dots for slideshow -->
@@ -239,7 +256,6 @@
         <script>
             let slideIndex = 0;
             let slides = Array.from(document.getElementsByClassName("mySlides"));
-            slides.sort(() => Math.random() - 0.5);
 
             function showSlides() {
                 slides.forEach(slide => slide.style.display = "none");
@@ -253,46 +269,3 @@
                 slideIndex = (slideIndex + n + slides.length) % slides.length;
                 slides.forEach(slide => slide.style.display = "none");
                 slides[slideIndex].style.display = "block";
-                updateDots();
-            }
-
-            function currentSlide(n) {
-                slideIndex = n;
-                slides.forEach(slide => slide.style.display = "none");
-                slides[slideIndex].style.display = "block";
-                updateDots();
-            }
-
-            function updateDots() {
-                const dots = Array.from(document.getElementsByClassName("dot"));
-                dots.forEach(dot => dot.classList.remove("active"));
-                dots[slideIndex].classList.add("active");
-            }
-
-            function createDots() {
-                const dotContainer = document.querySelector('.dot-container');
-                slides.forEach((_, index) => {
-                    const dot = document.createElement('span');
-                    dot.classList.add('dot');
-                    dot.addEventListener('click', () => currentSlide(index));
-                    dotContainer.appendChild(dot);
-                });
-            }
-
-            function toggleMenu() {
-                const menu = document.getElementById("cs-expanded");
-                menu.classList.toggle("cs-expanded");
-            }
-
-            createDots();
-            showSlides();
-        </script>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
