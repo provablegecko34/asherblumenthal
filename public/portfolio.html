@@ -334,10 +334,15 @@
           dotContainer.appendChild(dot);
         });
       }
-      function toggleMenu() {
-        const menu = document.getElementById("cs-expanded");
-        menu.classList.toggle("cs-expanded");
+      function shuffleSlides() {
+        let arr = Array.from(slides);
+        arr.sort(() => Math.random() - 0.5);
+        arr.forEach(slide => {
+          slide.style.display = "none";
+          document.querySelector('.slideshow-container').appendChild(slide);
+        });
       }
+      shuffleSlides();
       createDots();
       showSlides();
     </script>
