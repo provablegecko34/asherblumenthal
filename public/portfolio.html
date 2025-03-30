@@ -1,271 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-    <title>Asher Blumenthal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <style>
-        /* Basic styles for page and navbar */
-        body {
-            font-family: 'Raleway', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <title>Asher Blumenthal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    /* Basic styles for page and navbar */
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
 
-        header {
-            background-color: #333;
-            padding: 10px 0;
-            position: relative;
-            z-index: 10; /* Ensure header stays on top */
-        }
+    header {
+      background-color: #333;
+      padding: 10px 0;
+      position: relative;
+      z-index: 10; /* Ensure header stays on top */
+    }
 
-        .cs-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .cs-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .cs-logo img {
-            width: 150px;
-        }
+    .cs-logo img {
+      width: 150px;
+    }
 
-        .cs-nav {
-            position: relative;
-        }
+    .cs-nav {
+      position: relative;
+    }
 
-        .cs-toggle {
-            display: none;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 2;
-        }
+    .cs-toggle {
+      display: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+    }
 
-        .cs-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 21px;
-            width: 30px;
-        }
+    .cs-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 21px;
+      width: 30px;
+    }
 
-        .cs-line {
-            background-color: white;
-            height: 3px;
-            width: 100%;
-            border-radius: 3px;
-        }
+    .cs-line {
+      background-color: white;
+      height: 3px;
+      width: 100%;
+      border-radius: 3px;
+    }
 
-        .cs-ul-wrapper {
-            display: flex;
-        }
+    .cs-ul-wrapper {
+      display: flex;
+    }
 
-        .cs-ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
+    .cs-ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
 
-        .cs-li-link {
-            text-decoration: none;
-            color: white;
-            font-weight: 400;
-            font-size: 18px;
-            padding: 5px 10px;
-            transition: background 0.3s;
-        }
+    .cs-li-link {
+      text-decoration: none;
+      color: white;
+      font-weight: 400;
+      font-size: 18px;
+      padding: 5px 10px;
+      transition: background 0.3s;
+    }
 
-        .cs-li-link:hover, .cs-active {
-            background-color: gold;
-        }
+    .cs-li-link:hover, .cs-active {
+      background-color: gold;
+    }
 
-        /* Slideshow Styles */
-        .mySlides {
-            display: none;
-        }
+    /* Slideshow Styles */
+    .mySlides {
+      display: none;
+    }
 
-        .mySlides img {
-            width: 100%;
-            height: auto;
-        }
+    .mySlides img {
+      width: 100%;
+      height: auto;
+    }
 
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            z-index: 1; /* Make sure slideshow stays below header */
-        }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      z-index: 1; /* Make sure slideshow stays below header */
+    }
 
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px;
-            user-select: none;
-        }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px;
+      user-select: none;
+    }
 
-        .next {
-            right: 0;
-        }
+    .next {
+      right: 0;
+    }
 
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
 
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-        }
+    .dot-container {
+      text-align: center;
+      padding: 20px;
+    }
 
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
 
-        .active, .dot:hover {
-            background-color: #717171;
-        }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
 
-        /* Mobile Styles */
-        @media screen and (max-width: 768px) {
-            .cs-toggle {
-                display: block;
-            }
+    /* Mobile Styles */
+    @media screen and (max-width: 768px) {
+      .cs-toggle {
+        display: block;
+      }
+      .cs-ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 10px 0;
+      }
+      .cs-li {
+        text-align: right;
+        padding: 10px 20px;
+      }
+      .cs-expanded {
+        display: block;
+      }
+      .cs-li-link {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
 
-            .cs-ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 50px;
-                right: 0;
-                background-color: #333;
-                width: 200px;
-                padding: 10px 0;
-            }
-
-            .cs-li {
-                text-align: right;
-                padding: 10px 20px;
-            }
-
-            .cs-expanded {
-                display: block;
-            }
-
-            .cs-li-link {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
-
-        /* Add padding to the main content */
-        main {
-            padding-top: 80px; /* Adjust this to make sure slideshow is visible below header */
-        }
-    </style>
+    /* Add padding to main content to avoid overlap with header */
+    main {
+      padding-top: 80px; /* Adjust if necessary */
+    }
+  </style>
 </head>
-
 <body>
-    <header id="cs-navigation">
-        <div class="cs-container">
-            <a href="/index.html" class="cs-logo" aria-label="Back to home">
-                <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
-            </a>
-            <nav class="cs-nav" role="navigation">
-                <button class="cs-toggle" aria-label="Mobile menu toggle" onclick="toggleMenu()">
-                    <div class="cs-box" aria-hidden="true">
-                        <span class="cs-line cs-line1" aria-hidden="true"></span>
-                        <span class="cs-line cs-line2" aria-hidden="true"></span>
-                        <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    </div>
-                </button>
-                <div class="cs-ul-wrapper">
-                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                        <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
-                        <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
-                        <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
-                        <li class="cs-li"><a href="/events.html" class="cs-li-link">Events</a></li>
-                        <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
-                        <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <header id="cs-navigation">
+    <div class="cs-container">
+      <a href="/index.html" class="cs-logo" aria-label="Back to home">
+        <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
+      </a>
+      <nav class="cs-nav" role="navigation">
+        <button class="cs-toggle" aria-label="Mobile menu toggle" onclick="toggleMenu()">
+          <div class="cs-box" aria-hidden="true">
+            <span class="cs-line cs-line1" aria-hidden="true"></span>
+            <span class="cs-line cs-line2" aria-hidden="true"></span>
+            <span class="cs-line cs-line3" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
+            <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
+            <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
+            <li class="cs-li"><a href="/events.html" class="cs-li-link">Events</a></li>
+            <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
+            <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
+          </ul>
         </div>
-    </header>
-    
-    <main>
-        <div class="slideshow-container">
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54417664942_a2a7a4fcdf_z.jpg" alt="Library - 2827 of 6067"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54418776368_353a26bf57_z.jpg" alt="Library - 2755 of 6067"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54417664997_1d7760c071_z.jpg" alt="Library - 2772 of 6067"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54418722614_94e13a8eb2_z.jpg" alt="Library - 4711 of 6067"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170"/>
-            </div>
-            <div class="mySlides">
-                <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171"/>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+      </nav>
+    </div>
+  </header>
 
-        <div class="dot-container">
-            <!-- Dots for slideshow -->
-        </div>
+  <main>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54417664942_a2a7a4fcdf_z.jpg" alt="Library - 2827 of 6067"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54418776368_353a26bf57_z.jpg" alt="Library - 2755 of 6067"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54417664997_1d7760c071_z.jpg" alt="Library - 2772 of 6067"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54418722614_94e13a8eb2_z.jpg" alt="Library - 4711 of 6067"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170"/>
+      </div>
+      <div class="mySlides">
+        <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171"/>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
 
-        <script>
-            let slideIndex = 0;
-            let slides = Array.from(document.getElementsByClassName("mySlides"));
+    <div class="dot-container">
+      <!-- Dots for slideshow will be generated here -->
+    </div>
 
-            function showSlides() {
-                slides.forEach(slide => slide.style.display = "none");
-                slideIndex = (slideIndex + 1) % slides.length;
-                slides[slideIndex].style.display = "block";
-                updateDots();
-                setTimeout(showSlides, 5000); // Change image every 5 seconds
-            }
+    <script>
+      let slideIndex = 0;
+      let slides = Array.from(document.getElementsByClassName("mySlides"));
 
-            function plusSlides(n) {
-                slideIndex = (slideIndex + n + slides.length) % slides.length;
-                slides.forEach(slide => slide.style.display = "none");
-                slides[slideIndex].style.display = "block";
+      function showSlides() {
+        slides.forEach(slide => slide.style.display = "none");
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].style.display = "block";
+        updateDots();
+        setTimeout(showSlides, 5000); // Change image every 5 seconds
+      }
+
+      function plusSlides(n) {
+        slideIndex = (slideIndex + n + slides.length) % slides.length;
+        slides.forEach(slide => slide.style.display = "none");
+        slides[slideIndex].style.display = "block";
+        updateDots();
+      }
+
+      function currentSlide(n) {
+        slideIndex = n;
+        slides.forEach(slide => slide.style.display = "none");
+        slides[slideIndex].style.display = "block";
+        updateDots();
+      }
+
+      function updateDots() {
+        const dots = Array.from(document.getElementsByClassName("dot"));
+        if(dots.length > 0) {
+          dots.forEach(dot => dot.classList.remove("active"));
+          dots[slideIndex].classList.add("active");
+        }
+      }
+
+      function createDots() {
+        const dotContainer = document.querySelector('.dot-container');
+        slides.forEach((_, index) => {
+          const dot = document.createElement('span');
+          dot.classList.add('dot');
+          dot.addEventListener('click', () => currentSlide(index));
+          dotContainer.appendChild(dot);
+        });
+      }
+
+      function toggleMenu() {
+        const menu = document.getElementById("cs-expanded");
+        menu.classList.toggle("cs-expanded");
+      }
+
+      createDots();
+      showSlides();
+    </script>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
