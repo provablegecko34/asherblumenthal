@@ -1,297 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-    <title>Asher Blumenthal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <style>
-        /* Basic styles for page and navbar */
-        body {
-            font-family: 'Raleway', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        .cs-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cs-logo img {
-            width: 150px;
-        }
-
-        .cs-nav {
-            position: relative;
-        }
-
-        .cs-toggle {
-            display: none;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 2;
-        }
-
-        .cs-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 21px;
-            width: 30px;
-        }
-
-        .cs-line {
-            background-color: white;
-            height: 3px;
-            width: 100%;
-            border-radius: 3px;
-        }
-
-        .cs-ul-wrapper {
-            display: flex;
-        }
-
-        .cs-ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        .cs-li-link {
-            text-decoration: none;
-            color: white;
-            font-weight: 400;
-            font-size: 18px;
-            padding: 5px 10px;
-            transition: background 0.3s;
-        }
-
-        .cs-li-link:hover, .cs-active {
-            background-color: gold;
-        }
-
-        /* Slideshow Styles */
-        .mySlides {
-            display: none;
-        }
-
-        .mySlides img {
-            width: 100%;
-            height: auto;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active, .dot:hover {
-            background-color: #717171;
-        }
-
-        /* Mobile Styles */
-        @media screen and (max-width: 768px) {
-            .cs-toggle {
-                display: block;
-            }
-
-            .cs-ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 50px;
-                right: 0;
-                background-color: #333;
-                width: 200px;
-                padding: 10px 0;
-            }
-
-            .cs-li {
-                text-align: right;
-                padding: 10px 20px;
-            }
-
-            .cs-expanded {
-                display: block;
-            }
-
-            .cs-li-link {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+  <title>Asher Blumenthal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      padding: 10px 0;
+    }
+    .cs-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cs-logo img {
+      width: 150px;
+    }
+    .cs-nav {
+      position: relative;
+    }
+    .cs-toggle {
+      display: none;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .cs-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 21px;
+      width: 30px;
+    }
+    .cs-line {
+      background-color: white;
+      height: 3px;
+      width: 100%;
+      border-radius: 3px;
+    }
+    .cs-ul-wrapper {
+      display: flex;
+    }
+    .cs-ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+    .cs-li-link {
+      text-decoration: none;
+      color: white;
+      font-weight: 400;
+      font-size: 18px;
+      padding: 5px 10px;
+      transition: background 0.3s;
+    }
+    .cs-li-link:hover, .cs-active {
+      background-color: gold;
+    }
+    .mySlides {
+      display: none;
+    }
+    .mySlides img {
+      width: 100%;
+      height: auto;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px;
+      user-select: none;
+    }
+    .next {
+      right: 0;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    .dot-container {
+      text-align: center;
+      padding: 20px;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    @media screen and (max-width: 768px) {
+      .cs-toggle {
+        display: block;
+      }
+      .cs-ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 10px 0;
+      }
+      .cs-li {
+        text-align: right;
+        padding: 10px 20px;
+      }
+      .cs-expanded {
+        display: block;
+      }
+      .cs-li-link {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <header id="cs-navigation">
-        <div class="cs-container">
-            <a href="/index.html" class="cs-logo" aria-label="Back to home">
-                <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
-            </a>
-            <nav class="cs-nav" role="navigation">
-                <button class="cs-toggle" aria-label="Mobile menu toggle" onclick="toggleMenu()">
-                    <div class="cs-box" aria-hidden="true">
-                        <span class="cs-line cs-line1" aria-hidden="true"></span>
-                        <span class="cs-line cs-line2" aria-hidden="true"></span>
-                        <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    </div>
-                </button>
-                <div class="cs-ul-wrapper">
-                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                        <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
-                        <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
-                        <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
-                        <li class="cs-li"><a href="/events.html" class="cs-li-link">Events</a></li>
-                        <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
-                        <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <header id="cs-navigation">
+    <div class="cs-container">
+      <a href="/index.html" class="cs-logo" aria-label="Back to home">
+        <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
+      </a>
+      <nav class="cs-nav" role="navigation">
+        <button class="cs-toggle" aria-label="Mobile menu toggle" onclick="toggleMenu()">
+          <div class="cs-box" aria-hidden="true">
+            <span class="cs-line cs-line1" aria-hidden="true"></span>
+            <span class="cs-line cs-line2" aria-hidden="true"></span>
+            <span class="cs-line cs-line3" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
+            <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
+            <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
+            <li class="cs-li"><a href="/events.html" class="cs-li-link">Events</a></li>
+            <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
+            <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
+          </ul>
         </div>
-    </header>
-    
-    <main>
-        <div class="slideshow-container" id="slideshow-container">
-            <!-- 14 Image Slots with direct links to avoid watermark -->
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952405_dcaeaf7d9c_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412813643_8fae8e407f_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694422_23f0b94568_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952615_ca3e200f99_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568091_813444140f_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952855_88ebe07060_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952785_1a9073e596_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568296_2179891230_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412756904_17e6763978_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412814333_83122f1682_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694397_8549be232a_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952490_f58c1d614b_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568286_f618d2f0c2_z.jpg"></div>
-            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412814338_63635f7663_z.jpg"></div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <div class="dot-container">
-            <!-- Dots for slideshow -->
-        </div>
-
-        <script>
-            let slideIndex = 0;
-            let slides = Array.from(document.getElementsByClassName("mySlides"));
-            slides.sort(() => Math.random() - 0.5);
-
-            function showSlides() {
-                slides.forEach(slide => slide.style.display = "none");
-                slideIndex = (slideIndex + 1) % slides.length;
-                slides[slideIndex].style.display = "block";
-                updateDots();
-                setTimeout(showSlides, 5000); // Change image every 5 seconds
-            }
-
-            function plusSlides(n) {
-                slideIndex = (slideIndex + n + slides.length) % slides.length;
-                slides.forEach(slide => slide.style.display = "none");
-                slides[slideIndex].style.display = "block";
-                updateDots();
-            }
-
-            function currentSlide(n) {
-                slideIndex = n;
-                slides.forEach(slide => slide.style.display = "none");
-                slides[slideIndex].style.display = "block";
-                updateDots();
-            }
-
-            function updateDots() {
-                const dots = Array.from(document.getElementsByClassName("dot"));
-                dots.forEach(dot => dot.classList.remove("active"));
-                dots[slideIndex].classList.add("active");
-            }
-
-            function createDots() {
-                const dotContainer = document.querySelector('.dot-container');
-                slides.forEach((_, index) => {
-                    const dot = document.createElement('span');
-                    dot.classList.add('dot');
-                    dot.addEventListener('click', () => currentSlide(index));
-                    dotContainer.appendChild(dot);
-                });
-            }
-
-            function toggleMenu() {
-                const menu = document.getElementById("cs-expanded");
-                menu.classList.toggle("cs-expanded");
-            }
-
-            createDots();
-            showSlides();
-        </script>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
-        </div>
-    </footer>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="slideshow-container" id="slideshow-container">
+      <!-- 21 Image Slides -->
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977520/in/album-72177720324747351" title="IMG_3907">
+          <img src="https://live.staticflickr.com/65535/54418977520_0f5b1ac2c6_z.jpg" width="640" height="582" alt="IMG_3907">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784209/in/album-72177720324747351/" title="IMG_3908">
+          <img src="https://live.staticflickr.com/65535/54418784209_8d57ccdf40_z.jpg" width="640" height="512" alt="IMG_3908">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589591/in/album-72177720324747351/" title="IMG_3914">
+          <img src="https://live.staticflickr.com/65535/54418589591_c782f5b537_z.jpg" width="488" height="640" alt="IMG_3914">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54417726477/in/album-72177720324747351/" title="IMG_3910">
+          <img src="https://live.staticflickr.com/65535/54417726477_d7676180d7_z.jpg" width="426" height="640" alt="IMG_3910">
+        </a>
+      </div>
+      <!-- Duplicate IMG_3910 as provided -->
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54417726477/in/album-72177720324747351/" title="IMG_3910">
+          <img src="https://live.staticflickr.com/65535/54417726477_d7676180d7_z.jpg" width="426" height="640" alt="IMG_3910">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977555/in/album-72177720324747351/" title="IMG_3913">
+          <img src="https://live.staticflickr.com/65535/54418977555_e04dfe22b7_z.jpg" width="426" height="640" alt="IMG_3913">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837238/in/album-72177720324747351/" title="IMG_3911">
+          <img src="https://live.staticflickr.com/65535/54418837238_d7ff733d4f_z.jpg" width="457" height="640" alt="IMG_3911">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837293/in/album-72177720324747351/" title="IMG_3917">
+          <img src="https://live.staticflickr.com/65535/54418837293_0baf7e0c17_z.jpg" width="640" height="512" alt="IMG_3917">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837313/in/album-72177720324747351/" title="IMG_3919">
+          <img src="https://live.staticflickr.com/65535/54418837313_36f6bcb7c6_z.jpg" width="640" height="426" alt="IMG_3919">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784414/in/album-72177720324747351/" title="IMG_3921">
+          <img src="https://live.staticflickr.com/65535/54418784414_57181c2c39_z.jpg" width="426" height="640" alt="IMG_3921">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784419/in/album-72177720324747351/" title="IMG_3920">
+          <img src="https://live.staticflickr.com/65535/54418784419_5cc127a5e1_z.jpg" width="426" height="640" alt="IMG_3920">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977620/in/album-72177720324747351/" title="IMG_3931">
+          <img src="https://live.staticflickr.com/65535/54418977620_b2dd4d9bee_z.jpg" width="457" height="640" alt="IMG_3931">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589711/in/album-72177720324747351/" title="IMG_3926">
+          <img src="https://live.staticflickr.com/65535/54418589711_4c87c72b3f_z.jpg" width="426" height="640" alt="IMG_3926">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418977535/in/album-72177720324747351/" title="IMG_3932">
+          <img src="https://live.staticflickr.com/65535/54418977535_1d63c58d12_z.jpg" width="426" height="640" alt="IMG_3932">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589746/in/album-72177720324747351/" title="IMG_3937">
+          <img src="https://live.staticflickr.com/65535/54418589746_d2da282446_z.jpg" width="640" height="426" alt="IMG_3937">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589671/in/album-72177720324747351/" title="IMG_3925">
+          <img src="https://live.staticflickr.com/65535/54418589671_a6a3c128b4_z.jpg" width="640" height="426" alt="IMG_3925">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418589751/in/album-72177720324747351/" title="IMG_3935">
+          <img src="https://live.staticflickr.com/65535/54418589751_f182cbfdd4_z.jpg" width="640" height="426" alt="IMG_3935">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54417726692/in/album-72177720324747351/" title="IMG_3933">
+          <img src="https://live.staticflickr.com/65535/54417726692_a01644fd58_z.jpg" width="426" height="640" alt="IMG_3933">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418837418/in/album-72177720324747351/" title="IMG_3940">
+          <img src="https://live.staticflickr.com/65535/54418837418_266f3a6455_z.jpg" width="426" height="640" alt="IMG_3940">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784484/in/album-72177720324747351/" title="IMG_3939">
+          <img src="https://live.staticflickr.com/65535/54418784484_4b9e313418_z.jpg" width="640" height="426" alt="IMG_3939">
+        </a>
+      </div>
+      <div class="mySlides fade">
+        <a data-flickr-embed="true" href="https://www.flickr.com/photos/202474560@N07/54418784519/in/album-72177720324747351/" title="IMG_3943">
+          <img src="https://live.staticflickr.com/65535/54418784519_ae09495d60_z.jpg" width="640" height="426" alt="IMG_3943">
+        </a>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div class="dot-container"></div>
+    <script>
+      let slideIndex = 0;
+      let slides = Array.from(document.getElementsByClassName("mySlides"));
+      slides.sort(() => Math.random() - 0.5);
+      function showSlides() {
+        slides.forEach(slide => slide.style.display = "none");
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].style.display = "block";
+        updateDots();
+        setTimeout(showSlides, 5000);
+      }
+      function plusSlides(n) {
+        slideIndex = (slideIndex + n + slides.length) % slides.length;
+        slides.forEach(slide => slide.style.display = "none");
+        slides[slideIndex].style.display = "block";
+        updateDots();
+      }
+      function currentSlide(n) {
+        slideIndex = n;
+        slides.forEach(slide => slide.style.display = "none");
+        slides[slideIndex].style.display = "block";
+        updateDots();
+      }
+      function updateDots() {
+        const dots = Array.from(document.getElementsByClassName("dot"));
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[slideIndex].classList.add("active");
+      }
+      function createDots() {
+        const dotContainer = document.querySelector('.dot-container');
+        slides.forEach((_, index) => {
+          const dot = document.createElement('span');
+          dot.classList.add('dot');
+          dot.addEventListener('click', () => currentSlide(index));
+          dotContainer.appendChild(dot);
+        });
+      }
+      function toggleMenu() {
+        const menu = document.getElementById("cs-expanded");
+        menu.classList.toggle("cs-expanded");
+      }
+      createDots();
+      showSlides();
+    </script>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
