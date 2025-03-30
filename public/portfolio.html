@@ -178,79 +178,92 @@
             }
         }
     </style>
+</head>
+
 <body>
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <a href="/index.html" class="cs-logo" aria-label="Back to home">
+                <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <nav class="cs-nav" role="navigation">
+                <button class="cs-toggle" aria-label="Mobile menu toggle" onclick="toggleMenu()">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
+                        <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
+                        <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
+                        <li class="cs-li"><a href="/events.html" class="cs-li-link">Events</a></li>
+                        <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
+                        <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="slideshow-container" id="slideshow-container">
+            <!-- Image Slides -->
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418722614_94e13a8eb2_z.jpg" alt="Library - 4711 of 6067">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418977520_0f5b1ac2c6_z.jpg" alt="IMG_3907">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418784209_8d57ccdf40_z.jpg" alt="IMG_3908">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54417726477_d7676180d7_z.jpg" alt="IMG_3910">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418837293_0baf7e0c17_z.jpg" alt="IMG_3917">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418784414_57181c2c39_z.jpg" alt="IMG_3921">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418589711_4c87c72b3f_z.jpg" alt="IMG_3926">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418977535_1d63c58d12_z.jpg" alt="IMG_3932">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418589746_d2da282446_z.jpg" alt="IMG_3937">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418589751_f182cbfdd4_z.jpg" alt="IMG_3935">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418837418_266f3a6455_z.jpg" alt="IMG_3940">
+            </div>
+            <div class="mySlides fade">
+                <img src="https://live.staticflickr.com/65535/54418784484_4b9e313418_z.jpg" alt="IMG_3939">
+            </div>
 
-<div class="slideshow-container">
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418722614_94e13a8eb2_z.jpg" alt="Library - 4711 of 6067">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418776403_b7355ec7e1_z.jpg" alt="Library - 4696 of 6067">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418722639_d738b2d6ba_z.jpg" alt="Library - 4690 of 6067">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418528156_623fb5831c_z.jpg" alt="IMG_3169">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54417665007_75e5a28c58_z.jpg" alt="IMG_3170">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418528171_482984f7b9_z.jpg" alt="IMG_3171">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418977520_0f5b1ac2c6_z.jpg" alt="IMG_3907">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418784209_8d57ccdf40_z.jpg" alt="IMG_3908">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54417726477_d7676180d7_z.jpg" alt="IMG_3910">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418837293_0baf7e0c17_z.jpg" alt="IMG_3917">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418784414_57181c2c39_z.jpg" alt="IMG_3921">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418589711_4c87c72b3f_z.jpg" alt="IMG_3926">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418977535_1d63c58d12_z.jpg" alt="IMG_3932">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418589746_d2da282446_z.jpg" alt="IMG_3937">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418589751_f182cbfdd4_z.jpg" alt="IMG_3935">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418837418_266f3a6455_z.jpg" alt="IMG_3940">
-    </div>
-
-    <div class="mySlides fade">
-        <img src="https://live.staticflickr.com/65535/54418784484_4b9e313418_z.jpg" alt="IMG_3939">
-    </div>
-
-</div>
+        </div>
 
 <!-- Dots for navigation -->
 <div class="dot-container">
