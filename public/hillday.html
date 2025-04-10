@@ -238,55 +238,57 @@
     </main>    
 
     <script>
-        let slideIndex = 0;
-        let slides = Array.from(document.getElementsByClassName("mySlides"));
-        slides.sort(() => Math.random() - 0.5);
+       let slideIndex = 0;
+let slides = Array.from(document.getElementsByClassName("mySlides"));
+// Remove the line that randomizes the slides order
+// slides.sort(() => Math.random() - 0.5);
 
-        function showSlides() {
-            slides.forEach(slide => slide.style.display = "none");
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].style.display = "block";
-            updateDots();
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
-        }
+function showSlides() {
+    slides.forEach(slide => slide.style.display = "none");
+    slideIndex = (slideIndex + 1) % slides.length;
+    slides[slideIndex].style.display = "block";
+    updateDots();
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
 
-        function plusSlides(n) {
-            slideIndex = (slideIndex + n + slides.length) % slides.length;
-            slides.forEach(slide => slide.style.display = "none");
-            slides[slideIndex].style.display = "block";
-            updateDots();
-        }
+function plusSlides(n) {
+    slideIndex = (slideIndex + n + slides.length) % slides.length;
+    slides.forEach(slide => slide.style.display = "none");
+    slides[slideIndex].style.display = "block";
+    updateDots();
+}
 
-        function currentSlide(n) {
-            slideIndex = n;
-            slides.forEach(slide => slide.style.display = "none");
-            slides[slideIndex].style.display = "block";
-            updateDots();
-        }
+function currentSlide(n) {
+    slideIndex = n;
+    slides.forEach(slide => slide.style.display = "none");
+    slides[slideIndex].style.display = "block";
+    updateDots();
+}
 
-        function updateDots() {
-            const dots = Array.from(document.getElementsByClassName("dot"));
-            dots.forEach(dot => dot.classList.remove("active"));
-            dots[slideIndex].classList.add("active");
-        }
+function updateDots() {
+    const dots = Array.from(document.getElementsByClassName("dot"));
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[slideIndex].classList.add("active");
+}
 
-        function createDots() {
-            const dotContainer = document.querySelector('.dot-container');
-            slides.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                dot.addEventListener('click', () => currentSlide(index));
-                dotContainer.appendChild(dot);
-            });
-        }
+function createDots() {
+    const dotContainer = document.querySelector('.dot-container');
+    slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => currentSlide(index));
+        dotContainer.appendChild(dot);
+    });
+}
 
-        function toggleMenu() {
-            const menu = document.getElementById("cs-expanded");
-            menu.classList.toggle("cs-expanded");
-        }
+function toggleMenu() {
+    const menu = document.getElementById("cs-expanded");
+    menu.classList.toggle("cs-expanded");
+}
 
-        createDots();
-        showSlides();
+createDots();
+showSlides();
+
     </script>
 
     <footer>
