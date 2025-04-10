@@ -9,59 +9,83 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <style>
-<<<<<<< HEAD
-        /* Ensure body fills the screen and flex layout */
-        html, body {
-            height: 100%;
+        /* Basic styles for page and navbar */
+        body {
+            font-family: 'Raleway', sans-serif;
             margin: 0;
-            display: flex;
-            flex-direction: column;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
         }
 
-        /* change the layout for the main section */
-        main {
-            flex: 1;
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .cs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 20px 0;  
         }
 
-        /* Slideshow container styling */
-        .slideshow-container {
-            max-width: 100%;
-            height: 70vh; /* leave room for footer */
-=======
-        /* Fit the slideshow container on screen */
-        .slideshow-container {
-            max-width: 100%;
-            height: 80vh;  /* Take 80% of the screen height */
->>>>>>> a27b810 (Update index.html)
+        .cs-logo img {
+            width: 150px;
+        }
+
+        .cs-nav {
             position: relative;
             margin: auto;
         }
 
-<<<<<<< HEAD
-        /* Image styling to prevent cutting off */
-        .mySlides img {
+        .cs-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 21px;
+            width: 30px;
+        }
+
+        .cs-line {
+            background-color: white;
+            height: 3px;
             width: 100%;
-            height: auto;
-            object-fit: contain;
-            max-height: 100%; 
+            border-radius: 3px;
         }
 
-        /* Footer styling */
-        footer {
-            height: 10vh;
-            text-align: center;
-            background-color: #f1f1f1;
-            padding: 10px;
-            position: relative;
+        .cs-ul-wrapper {
+            display: flex;
         }
 
-        /* Navigation buttons for the slideshow */
-=======
-        /* Set image aspect ratio and make it fit within the container */
+        .cs-ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .cs-li-link {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+
+        .cs-li-link:hover, .cs-active {
+            background-color: gold;
+        }
+
+        /* Slideshow Styles */
+        .mySlides {
+            display: none;
+        }
+
         .mySlides img {
             width: 100%;
             height: auto;
@@ -69,8 +93,6 @@
             max-height: 80vh;  /* Image fits within 80% of the viewport height */
         }
 
-        /* Previous and next buttons */
->>>>>>> a27b810 (Update index.html)
         .prev, .next {
             cursor: pointer;
             position: absolute;
@@ -86,8 +108,6 @@
         .next {
             right: 0;
         }
-<<<<<<< HEAD
-=======
 
         /* Footer at the bottom without pushing content */
         footer {
@@ -100,17 +120,37 @@
             padding: 10px;
         }
 
-        /* Fade animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
+        /* Mobile Styles */
+        @media screen and (max-width: 768px) {
+            .cs-toggle {
+                display: block;
+            }
 
-        @keyframes fade {
-            from {opacity: 0.4} 
-            to {opacity: 1}
+            .cs-ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: #333;
+                width: 200px;
+                padding: 10px 0;
+            }
+
+            .cs-li {
+                text-align: right;
+                padding: 10px 20px;
+            }
+
+            .cs-expanded {
+                display: block;
+            }
+
+            .cs-li-link {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
         }
->>>>>>> a27b810 (Update index.html)
     </style>
 </head>
 
@@ -144,101 +184,16 @@
     
     <!-- Main content of the webpage -->
     <main>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="img_nature_wide1.jpg" alt="Caption 1">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="img_nature_wide2.jpg" alt="Caption 2">
-            </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <!-- Additional slides here -->
-
-=======
-            <div class="slideshow-container" id="slideshow-container">
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 15</div>
-                    <img src="img_nature_wide1.jpg" alt="Caption 1">
-                    <div class="text">Caption 1</div>
-                </div>
-    
-                <div class="mySlides fade">
-                    <div class="numbertext">4 / 15</div>
-                    <img src="img_nature_wide2.jpg" alt="Caption 2">
-                    <div class="text">Caption 2</div>
-                </div>
-                <div class="slideshow-container" id="slideshow-container">
-                    <div class="mySlides fade">
-                        <div class="numbertext">5 / 15</div>
-                        <img src="img_nature_wide1.jpg" alt="Caption 1">
-                        <div class="text">Caption 1</div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="numbertext">6 / 15</div>
-                        <img src="img_nature_wide2.jpg" alt="Caption 2">
-                        <div class="text">Caption 2</div>
-                    </div>
-                    <div class="slideshow-container" id="slideshow-container">
-                        <div class="mySlides fade">
-                            <div class="numbertext">7 / 15</div>
-                            <img src="img_nature_wide1.jpg" alt="Caption 1">
-                            <div class="text">Caption 1</div>
-                        </div>
-            
-                        <div class="mySlides fade">
-                            <div class="numbertext">8 / 15</div>
-                            <img src="img_nature_wide2.jpg" alt="Caption 2">
-                            <div class="text">Caption 2</div>
-                        </div>
-                        <div class="slideshow-container" id="slideshow-container">
-                            <div class="mySlides fade">
-                                <div class="numbertext">9 / 15</div>
-                                <img src="img_nature_wide1.jpg" alt="Caption 1">
-                                <div class="text">Caption 1</div>
-                            </div>
-                
-                            <div class="mySlides fade">
-                                <div class="numbertext">10 / 15</div>
-                                <img src="img_nature_wide2.jpg" alt="Caption 2">
-                                <div class="text">Caption 2</div>
-                            </div>
-                            <div class="slideshow-container" id="slideshow-container">
-                                <div class="mySlides fade">
-                                    <div class="numbertext">11 / 15</div>
-                                    <img src="img_nature_wide1.jpg" alt="Caption 1">
-                                    <div class="text">Caption 1</div>
-                                </div>
-                    
-                                <div class="mySlides fade">
-                                    <div class="numbertext">12 / 15</div>
-                                    <img src="img_nature_wide2.jpg" alt="Caption 2">
-                                    <div class="text">Caption 2</div>
-                                </div>
-                                <div class="slideshow-container" id="slideshow-container">
-                                    <div class="mySlides fade">
-                                        <div class="numbertext">13 / 15</div>
-                                        <img src="img_nature_wide1.jpg" alt="Caption 1">
-                                        <div class="text">Caption 1</div>
-                                    </div>
-                        
-                                    <div class="mySlides fade">
-                                        <div class="numbertext">14 / 15</div>
-                                        <img src="img_nature_wide2.jpg" alt="Caption 2">
-                                        <div class="text">Caption 2</div>
-                                    </div>
->>>>>>> d8c9787 (Update index.html)
-=======
-
-            <!-- Add remaining 13 images here... -->
-
->>>>>>> a27b810 (Update index.html)
-            <div class="mySlides fade">
-                <img src="img_nature_wide15.jpg" alt="Caption 15">
-            </div>
+        <div class="slideshow-container" id="slideshow-container">
+            <!-- 14 Image Slots -->
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952405_dcaeaf7d9c_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412813643_8fae8e407f_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694422_23f0b94568_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952855_88ebe07060_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412952785_1a9073e596_z.jpg"></div> 
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54411694397_8549be232a_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412568286_f618d2f0c2_z.jpg"></div>
+            <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54412814338_63635f7663_z.jpg"></div>
 
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
@@ -300,33 +255,5 @@
             <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
         </div>
     </footer>
-
-<<<<<<< HEAD
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
-=======
-    <script src="/js/script.js"></script>
->>>>>>> a27b810 (Update index.html)
 </body>
 </html>
