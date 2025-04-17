@@ -1,212 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-    <title>DFTBA :)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <style>
-        body {
-            font-family: 'Raleway', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sartre’s Being and Nothingness</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    body {
+      padding: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1, h2, h3 {
+      margin: 20px 0;
+    }
+    p {
+      margin: 10px 0;
+    }
 
-        header {
-            background-color: #333;
-            padding: 10px 0;
-        }
-
-        .cs-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cs-logo img {
-            width: 150px;
-        }
-
-        .cs-nav {
-            position: relative;
-        }
-
-        .cs-toggle {
-            display: none;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            z-index: 2;
-        }
-
-        .cs-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 21px;
-            width: 30px;
-        }
-
-        .cs-line {
-            background-color: white;
-            height: 3px;
-            width: 100%;
-            border-radius: 3px;
-        }
-
-        .cs-ul-wrapper {
-            display: flex;
-        }
-
-        .cs-ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        .cs-li-link {
-            text-decoration: none;
-            color: white;
-            font-weight: 400;
-            font-size: 18px;
-            padding: 5px 10px;
-            transition: background 0.3s;
-        }
-
-        .cs-li-link:hover, .cs-active {
-            background-color: gold;
-        }
-
-        .mySlides {
-            display: none;
-        }
-
-        .mySlides img {
-            width: 100%;
-            height: auto;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px;
-            user-select: none;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active, .dot:hover {
-            background-color: #717171;
-        }
-
-        @media screen and (max-width: 768px) {
-            .cs-toggle {
-                display: block;
-            }
-
-            .cs-ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 50px;
-                right: 0;
-                background-color: #333;
-                width: 200px;
-                padding: 10px 0;
-            }
-
-            .cs-li {
-                text-align: right;
-                padding: 10px 20px;
-            }
-
-            .cs-expanded {
-                display: block;
-            }
-
-            .cs-li-link {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
-    </style>
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto 40px auto;
+    }
+    .mySlides {
+      display: none;
+    }
+    .mySlides img {
+      width: 100%;
+      height: auto;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .next {
+      right: 0;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    .dot-container {
+      text-align: center;
+      padding: 20px;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+  </style>
 </head>
-
 <body>
-    <header id="cs-navigation">
-        <div class="cs-container">
-            <a href="/index.html" class="cs-logo" aria-label="Back to home">
-                <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
-            </a>
-            <nav class="cs-nav" role="navigation">
-                <button class="cs-toggle" aria-label="Mobile menu toggle" onclick="toggleMenu()">
-                    <div class="cs-box" aria-hidden="true">
-                        <span class="cs-line cs-line1" aria-hidden="true"></span>
-                        <span class="cs-line cs-line2" aria-hidden="true"></span>
-                        <span class="cs-line cs-line3" aria-hidden="true"></span>
-                    </div>
-                </button>
-                <div class="cs-ul-wrapper">
-                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
-                        <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
-                        <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
-                        <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
-                        <li class="cs-li"><a href="/events.html" class="cs-li-link">Events</a></li>
-                        <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
-                        <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
+  <!-- Navigation -->
+  <header id="cs-navigation">
+    <div class="cs-container">
+      <a href="/index.html" class="cs-logo" aria-label="Back to home">
+        <img src="/assets/Images/logo.png" alt="Logo" width="210" height="29" aria-hidden="true" decoding="async">
+      </a>
+      <nav class="cs-nav" role="navigation">
+        <button class="cs-toggle" aria-label="Mobile menu toggle">
+          <div class="cs-box" aria-hidden="true">
+            <span class="cs-line cs-line1"></span>
+            <span class="cs-line cs-line2"></span>
+            <span class="cs-line cs-line3"></span>
+          </div>
+        </button>
+        <div class="cs-ul-wrapper">
+          <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+            <li class="cs-li"><a href="/index.html" class="cs-li-link cs-active">Home</a></li>
+            <li class="cs-li"><a href="/about.html" class="cs-li-link">About</a></li>
+            <li class="cs-li"><a href="/blog.html" class="cs-li-link">Blog</a></li>
+            <li class="cs-li"><a href="/works.html" class="cs-li-link">Works</a></li>
+            <li class="cs-li"><a href="/novel.html" class="cs-li-link">Novel</a></li>
+            <li class="cs-li"><a href="/contact.html" class="cs-li-link">Contact</a></li>
+          </ul>
         </div>
-    </header>
-    
-    <main>
-        <div class="slideshow-container" id="slideshow-container">
+      </nav>
+    </div>
+  </header>
+
+  <!-- Slideshow -->
+          <div class="slideshow-container" id="slideshow-container">
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54442437675_9a91a71781_k.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54442437470_c60bb71953_k.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54442255984_7366de9300_k.jpg"></div>
@@ -228,80 +132,91 @@
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54442069131_0fa787f7df_k.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54441210462_39436af55d_k.jpg"></div>
             <div class="mySlides fade"><img src="https://live.staticflickr.com/65535/54441210417_395af9770e_k.jpg"></div>
-            <!-- Slide navigation -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <div class="dot-container"></div>
 
-        <!-- Dots -->
-        <div class="dot-container"></div>
-    </main>    
+  <!-- Essay Content -->
+  <<!-- Essay Content -->
+<div class="container">
+    <h1>I went to Capitol Hill to talk about TB.</h1>
+    <h2></h2>
+    <h3>
+      That sentence alone feels strange to write—like something you’d say if you were in a documentary about advocacy, or if you were someone who routinely uses “Capitol Hill” in conversation. I am not that person. But on April 9, I was.
+      <br><br>
+      It was my first TB Hill Day, and I didn’t really know what I was walking into. I’d heard the buzzwords—meetings, talking points, the polite fatigue that comes from trying to forge something human in a legislative space—but you don’t understand it until you’re in it.
+      <br><br>
+      I met with Senator Schumer’s office—which, as a New Yorker, felt like something. They listened. They took notes. They didn’t rush us. And in a place where time is rationed down to the second, that felt like a win.
+      <br><br>
+      Later, I met with Congresswoman Haley Stevens’s office. That meeting only happened because someone I knew knew someone she knew—and I asked for a favor. I don’t think that detail matters, but also, I do. So much of this work is about relationships. Someone opens a door, and you walk through it, ready or not.
+      <br><br>
+      Advocates from TB Fighters, Partners in Health, and We are TB weaved through hallways, recharged phones and social energy on marble floors. No one was trying to impress. We just wanted to be heard.
+      <br><br>
+      What really blew me away, though, was the TB Fighters/Nerdfighteria community. It’s a group powered almost entirely by volunteers—and yet somehow, there were handmade stickers, bracelets, and even clothespins floating around, made by people who just wanted to contribute something. With over 150 of us there, it became its own ecosystem of support. Totally unforced. Just people showing up for each other. It was one of the most quietly impressive things I’ve seen.
+      <br><br>
+      What felt especially real was how myself I could be. I didn’t need a fake persona. Everyone here was here for the same reason, and everyone understood each other. People I’d never met before invited me to lunch and coffee; We were a network before we even started talking. That kind of connection, that instant community, was more than I expected.
+      <br><br>
+      There were no speeches. No drama. No viral moments. Just a lot of tired, committed people doing the kind of slow, necessary work advocacy demands.
+      <br><br>
+      Would I do it again? Yes. With better shoes. More snacks. But yes.
+    </h3>
+  </div>
+  
 
-    <script>
-        // Slideshow code
-        let slideIndex = 0;
-        let slides = Array.from(document.getElementsByClassName("mySlides"));
-        
-        // Show the slides one by one
-        function showSlides() {
-            slides.forEach(slide => slide.style.display = "none");
-            slideIndex = (slideIndex + 1) % slides.length;
-            slides[slideIndex].style.display = "block";
-            updateDots();
-            setTimeout(showSlides, 5000);  // Change image every 5 seconds
-        }
-    
-        // Change slide when prev/next is clicked
-        function plusSlides(n) {
-            slideIndex = (slideIndex + n + slides.length) % slides.length;
-            slides.forEach(slide => slide.style.display = "none");
-            slides[slideIndex].style.display = "block";
-            updateDots();
-        }
-    
-        // Change slide when a dot is clicked
-        function currentSlide(n) {
-            slideIndex = n;
-            slides.forEach(slide => slide.style.display = "none");
-            slides[slideIndex].style.display = "block";
-            updateDots();
-        }
-    
-        // Update dots to match the current slide
-        function updateDots() {
-            const dots = Array.from(document.getElementsByClassName("dot"));
-            dots.forEach(dot => dot.classList.remove("active"));
-            dots[slideIndex].classList.add("active");
-        }
-    
-        // Create dots for each slide
-        function createDots() {
-            const dotContainer = document.querySelector('.dot-container');
-            slides.forEach((_, index) => {
-                const dot = document.createElement('span');
-                dot.classList.add('dot');
-                dot.addEventListener('click', () => currentSlide(index));
-                dotContainer.appendChild(dot);
-            });
-        }
-    
-        // Mobile menu toggle function
-        function toggleMenu() {
-            const menu = document.getElementById("cs-expanded");
-            menu.classList.toggle("cs-expanded");
-        }
-    
-        // Initial setup of dots and start slideshow
-        createDots();
-        showSlides();
-    
-    </script>
-    
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2024 Asher Blumenthal. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Slideshow Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let slideIndex = 0;
+      const slides = document.getElementsByClassName("mySlides");
+      const dotContainer = document.querySelector('.dot-container');
+
+      function showSlide(n) {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[n].style.display = "block";
+        dots[n].className += " active";
+      }
+
+      function plusSlides(n) {
+        slideIndex = (slideIndex + n + slides.length) % slides.length;
+        showSlide(slideIndex);
+      }
+
+      function currentSlide(n) {
+        slideIndex = n;
+        showSlide(slideIndex);
+      }
+
+      function createDots() {
+        for (let i = 0; i < slides.length; i++) {
+          const dot = document.createElement("span");
+          dot.classList.add("dot");
+          dot.addEventListener("click", () => currentSlide(i));
+          dotContainer.appendChild(dot);
+        }
+      }
+
+      createDots();
+      const dots = document.getElementsByClassName("dot");
+      showSlide(slideIndex);
+
+      setInterval(() => {
+        plusSlides(1);
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
+
