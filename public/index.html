@@ -9,79 +9,183 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
     <style>
-        html, body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-          font-family: 'Helvetica Neue', Arial, sans-serif;
-          background-color: #ffffff;
-          color: #000000;
-        }
         body {
-          padding: 40px;
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
         }
-        .container {
-          max-width: 800px;
-          margin: 0 auto;
+
+        header {
+            background-color: #fff;
+            padding: 10px 0;
         }
-        h1, h2, h3 {
-          margin: 20px 0;
+
+        .cs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        p {
-          margin: 10px 0;
+
+        .cs-logo img {
+            width: 150px;
         }
-    
-        /* Slideshow */
-        .slideshow-container {
-          position: relative;
-          max-width: 100%;
-          margin: 0 auto 40px auto;
+
+        .cs-nav {
+            position: relative;
         }
+
+        .cs-toggle {
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .cs-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 21px;
+            width: 30px;
+        }
+
+        .cs-line {
+            background-color: white;
+            height: 3px;
+            width: 100%;
+            border-radius: 3px;
+        }
+
+        .cs-ul-wrapper {
+            display: flex;
+        }
+
+        .cs-ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .cs-li-link {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+
+        .cs-li-link:hover, .cs-active {
+            background-color: gold;
+        }
+
+        /* Updated Footer Styles */
+        footer {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Slideshow Styles */
         .mySlides {
-          display: none;
+            display: none;
         }
+
         .mySlides img {
-          width: 100%;
-          height: auto;
+            width: 100%;
+            height: auto;
         }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+        }
+
         .prev, .next {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          padding: 16px;
-          margin-top: -22px;
-          color: white;
-          font-weight: bold;
-          font-size: 18px;
-          transition: 0.6s ease;
-          border-radius: 3px;
-          user-select: none;
-          background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
         }
+
         .next {
-          right: 0;
+            right: 0;
         }
+
         .prev:hover, .next:hover {
-          background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.8);
         }
+
         .dot-container {
-          text-align: center;
-          padding: 20px;
+            text-align: center;
+            padding: 20px;
         }
+
         .dot {
-          cursor: pointer;
-          height: 15px;
-          width: 15px;
-          margin: 0 5px;
-          background-color: #bbb;
-          border-radius: 50%;
-          display: inline-block;
-          transition: background-color 0.6s ease;
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
         }
+
         .active, .dot:hover {
-          background-color: #717171;
+            background-color: #717171;
         }
-      </style>
+
+        @media screen and (max-width: 768px) {
+            .cs-toggle {
+                display: block;
+            }
+
+            .cs-ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: #333;
+                width: 200px;
+                padding: 10px 0;
+            }
+
+            .cs-li {
+                text-align: right;
+                padding: 10px 20px;
+            }
+
+            .cs-expanded {
+                display: block;
+            }
+
+            .cs-li-link {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
