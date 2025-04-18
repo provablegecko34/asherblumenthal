@@ -6,78 +6,133 @@
   <title>DFTBA :)</title>
   <link rel="stylesheet" href="/css/styles.css" />
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-    }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body {
+    padding: 40px;
+    max-width: 100%; /* Ensures body doesn't overflow horizontally */
+    margin: 0 auto; /* Centers the content */
+}
+
+.container {
+    max-width: 1200px; /* Ensures content is constrained to 1200px width */
+    margin: 0 auto; /* Centers the container */
+}
+
+h1, h2, h3 {
+    margin: 20px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto 40px auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Make header and footer responsive */
+header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
     body {
-      padding: 40px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    h1, h2, h3 {
-      margin: 20px 0;
-    }
-    p {
-      margin: 10px 0;
+        padding: 10px;
     }
 
-    /* Slideshow */
+    .container {
+        max-width: 100%;
+    }
+
     .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: 0 auto 40px auto;
+        max-width: 100%;
+        margin: 0 auto;
     }
-    .mySlides {
-      display: none;
+
+    header {
+        padding: 10px;
     }
-    .mySlides img {
-      width: 100%;
-      height: auto;
+
+    footer {
+        padding: 10px;
     }
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 3px;
-      user-select: none;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .next {
-      right: 0;
-    }
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-    .dot-container {
-      text-align: center;
-      padding: 20px;
-    }
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    .active, .dot:hover {
-      background-color: #717171;
-    }
+}
+
   </style>
 </head>
 <body>

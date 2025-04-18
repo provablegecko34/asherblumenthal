@@ -5,6 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nalaxone to Morphine: a step by step guide</title>
     <link rel="stylesheet" href="css/styles.css">
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+    }
+    
+    body {
+        padding: 40px;
+        max-width: 100%; /* Ensures body doesn't overflow horizontally */
+        margin: 0 auto; /* Centers the content */
+    }
+    
+    .container {
+        max-width: 1200px; /* Ensures content is constrained to 1200px width */
+        margin: 0 auto; /* Centers the container */
+    }
+    
+    h1, h2, h3 {
+        margin: 20px 0;
+    }
+    
+    p {
+        margin: 10px 0;
+    }
+    
+    /* Slideshow */
+    .slideshow-container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto 40px auto;
+    }
+    
+    .mySlides {
+        display: none;
+    }
+    
+    .mySlides img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .next {
+        right: 0;
+    }
+    
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+    
+    .dot-container {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+    
+    /* Make header and footer responsive */
+    #cs-navigation {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 20px;
+    }
+    
+    footer {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    /* Media Queries for smaller screens */
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+    
+        .container {
+            max-width: 100%;
+        }
+    
+        .slideshow-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    
+        #cs-navigation {
+            padding: 10px;
+        }
+    
+        footer {
+            padding: 10px;
+        }
+    }    
 </head>
 <body>
     <header id="cs-navigation" style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;">
