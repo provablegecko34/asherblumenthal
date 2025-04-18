@@ -1,3 +1,4 @@
+/* Root CSS Variables */
 :root {
   --primary: #ffffff;
   --primaryLight: #ffffff;
@@ -10,27 +11,137 @@
   --bodyFontSize: 1rem;
 }
 
-body {
-  font-family: Arial, sans-serif;
+/* Global layout */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url('photo-backround.JPG'); /* Ensure correct path */
-  background-position: center top;
-  background-size: cover;
-  background-attachment: fixed;
-  transition: background-color 0.5s ease;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body {
+  padding: 40px;
   font-family: "Raleway", sans-serif;
   color: var(--bodyTextColor);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url('photo-backround.JPG'); /* Ensure correct path */
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-color 0.5s ease;
 }
 
-main {
-  flex: 1;
+/* Navbar styles */
+#cs-navigation {
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1000;
+}
+
+.cs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cs-logo img {
+  vertical-align: middle;
+}
+
+.cs-ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.cs-li-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.cs-li-link:hover,
+.cs-li-link.cs-active {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto 40px auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot-container {
+  text-align: center;
   padding: 20px;
 }
 
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Footer styles */
 footer {
   margin-top: auto;
 }
@@ -44,45 +155,7 @@ footer {
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.cs-topper {
-  font-size: var(--topperFontSize);
-  line-height: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 0.25rem;
-  display: block;
-}
-
-.cs-title {
-  font-size: var(--headerFontSize);
-  font-weight: 900;
-  line-height: 1.2em;
-  max-width: 43.75rem;
-  margin: 0 0 1rem;
-  color: var(--headerColor);
-}
-
-.cs-text {
-  font-size: var(--bodyFontSize);
-  line-height: 1.5em;
-  max-width: 40.625rem;
-  margin: 0;
-  color: var(--bodyTextColor);
-}
-
+/* Button styles */
 .cs-button-solid {
   background-color: var(--primary);
   color: var(--bodyTextColorWhite);
@@ -97,6 +170,15 @@ img {
 
 .cs-button-solid:hover {
   background-color: var(--primaryLight);
+}
+
+/* Heading & text styles */
+h1, h2, h3 {
+  margin: 20px 0;
+}
+
+p {
+  margin: 10px 0;
 }
 
 /* --- Desktop Navigation --- */
