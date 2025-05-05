@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url>
 	<loc>asherblumenthal.com</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
 	<image:image>
@@ -40,45 +40,45 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/about/</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
-	<image:loc>asherblumenthal.com/img/IMG_2714.PNG</image:loc>
+	<image:loc>asherblumenthal.com/img/profile%202.png</image:loc>
 	<image:title>IMG_2714.PNG</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>asherblumenthal.com/img/IMG_2714.webp</image:loc>
+	<image:loc>asherblumenthal.com/img/profile%202.webp</image:loc>
 	<image:title>IMG_2714.PNG</image:title>
 	</image:image>
 </url>
 <url>
 	<loc>asherblumenthal.com/blog/</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/novel/</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/contact/</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/beingandnothingness/</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/hillday/</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -140,7 +140,7 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/drugs/</loc>
-	<lastmod>2025-04-27</lastmod>
+	<lastmod>2025-05-04</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
