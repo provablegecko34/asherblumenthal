@@ -289,11 +289,6 @@ button{
 	box-shadow: 0 1px 3px rgba(0,0,1,.25), inset 0 1px 0 0 rgba(255,255,255,.15);
 }
 
-/* = Icons
--------------------------------------------------------------- */
-.icon-md{
-	font-size:30px!important;
-}
 
 
 
@@ -484,9 +479,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .blocs-card-width{
 	width:25%;
 }
-.card-style{
-	width:27.08%;
-}
 .card-2-style{
 	width:27.08%;
 }
@@ -516,7 +508,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:300px;
 }
 .img-style{
-	border-radius:1px 1px 1px 1px;
+	border-radius:0px 0px 0px 0px;
+	width:730px;
 }
 .p-6-style{
 	width:100%;
@@ -964,6 +957,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	
 	--swatch-var-4593:#000000;
 	
+	--swatch-var-7628:rgba(255,255,255,0.5);
+	
 }
 
 
@@ -977,6 +972,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 .tc-57{
 	color:var(--swatch-var-57)!important;
+}
+.tc-5183{
+	color:var(--swatch-var-5183)!important;
 }
 .tc-4593{
 	color:var(--swatch-var-4593)!important;
