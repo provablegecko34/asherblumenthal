@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 	Asher Blumenthal
-	About: A shiny new Blocs website.
+	About: asherblumenthal.com
 	Author: Asher Blumenthal
 	Version: 1.0
 	Built with Blocs
@@ -111,6 +111,23 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .full-width-bloc .carousel img{
 	width:100%;
 	height:auto;
+}
+
+
+/* Background Textures */
+
+.bloc-bg-texture::before{
+	content:"";
+	background-size: 2px 2px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+.texture-paper::before{
+	background: url("img/texture-paper.png");
+	background-size: 280px 280px;
 }
 
 
@@ -990,6 +1007,14 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 /* Button colour styles */
 
+.btn-c-3614{
+	background:var(--swatch-var-3614);
+	color:#FFFFFF!important;
+}
+.btn-c-3614:hover{
+	background:#000000!important;
+	color:#FFFFFF!important;
+}
 .btn-c-57{
 	background:var(--swatch-var-57);
 	color:#FFFFFF!important;
