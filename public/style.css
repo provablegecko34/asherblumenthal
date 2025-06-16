@@ -536,6 +536,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	text-decoration:none;
 	font-size:20px;
 }
+.link-style{
+	font-weight:bold;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -1001,6 +1004,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .tc-4593{
 	color:var(--swatch-var-4593)!important;
 }
+.tc-3614{
+	color:var(--swatch-var-3614)!important;
+}
 .tc-6328{
 	color:var(--swatch-var-6328)!important;
 }
@@ -1024,11 +1030,23 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	color:#FFFFFF!important;
 }
 
+/* Link colour styles */
+
+.ltc-3614{
+	color:var(--swatch-var-3614)!important;
+}
+.ltc-3614:hover{
+	color:#000000!important;
+}
+.ltc-57{
+	color:var(--swatch-var-57)!important;
+}
+.ltc-57:hover{
+	color:#000000!important;
+}
+
 /* Bloc image backgrounds */
 
-
-/* = Custom Bric Data
--------------------------------------------------------------- */
 
 
 
