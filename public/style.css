@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------------
-	Asher Blumenthal
+	asherblumenthal.com
 	About: asherblumenthal.com
 	Author: Asher Blumenthal
 	Version: 1.0
@@ -302,6 +302,19 @@ button{
 
 
 
+/* = Text & Icon Styles
+-------------------------------------------------------------- */
+.blockquote{
+	padding:0 20px;
+	border-left:2px solid;
+}
+.blockquote.text-end{
+	border-left:0;
+	border-right:2px solid;
+}
+.text-justify{
+	text-align: justify;
+}
 
 
 /* = Cards
@@ -338,6 +351,19 @@ button{
 	display: inline-block;
 	width: 100%;
 }
+}
+/* = Classic Dividers
+-------------------------------------------------------------- */
+.divider-h{
+	min-height: 1px;
+	background-color:rgba(0,0,0,.2);
+	margin: 20px 0;
+}
+.divider-half{
+	width: 50%;
+}
+.dropdown-menu .divider-h{
+	margin:0;
 }
 
 /* = Forms
@@ -388,87 +414,6 @@ button{
 	stroke-linecap:round;
 }
 
-/* Horizontal Scroll Container */
-.blocs-horizontal-scroll-container{
-	position:relative;
-}
-.blocs-horizontal-scroll-area{
-	display:flex;
-	overflow-x:auto;
-	align-items:flex-start;
-	gap:20px;
-}
-.blocs-horizontal-scroll-area > *{
-	flex-shrink:0;
-	max-width:100%;
-}
-.blocs-horizontal-scroll-area::-webkit-scrollbar{
-	display:none;
-}
-.blocs-horizontal-scroll-control{
-	position:absolute;
-	top:50%;
-	transform:translateY(-50%);
-	z-index:1;
-	display:flex;
-	text-align:center;
-	border:0;
-	margin:0 30px;
-}
-.blocs-scroll-control-next{
-	right:0;
-}
-.blocs-round-btn{
-	background:rgba(0,0,0,0.15);
-	border-radius:100%;
-	padding:12px;
-	opacity:0;
-	cursor:pointer;
-	transform:scale(0.5);
-	backdrop-filter:blur(20px);
-	-webkit-backdrop-filter:blur(20px);
-	transition:opacity .50s ease,transform .50s ease;
-}
-.blocs-horizontal-scroll-container:hover .blocs-round-btn,.blocs-horizontal-scroll-container.show-controls .blocs-round-btn{
-	opacity:1;
-	transform:scale(1.0);
-}
-.blocs-round-btn:active{
-	background:rgba(0,0,0,0.3);
-	transform:scale(0.9)!important;
-	transition:transform .30s ease,background .50s ease;
-}
-.compact-blocs-controls .blocs-round-btn{
-	padding:2px;
-	width:30px;
-	height: 30px;
-}
-.compact-blocs-controls .blocs-round-btn svg{
-	width:14px;
-	height:14px;
-}
-.compact-blocs-controls .blocs-horizontal-scroll-control{
-	margin:0 20px;
-}
-.horizontal-scroll-icon{
-	fill:none;
-	stroke:#fff;
-	stroke-width:4px;
-	fill-rule:evenodd;
-	stroke-linecap:round;
-}
-.hide-left-control > .blocs-scroll-control-prev, .hide-right-control > .blocs-scroll-control-next{
-	opacity:0!important;
-	pointer-events: none;
-	transition:opacity .50s ease;
-}
-.show-controls:not(.hide-left-control) > .blocs-scroll-control-prev, .show-controls:not(.hide-right-control) > .blocs-scroll-control-next{
-	opacity:1!important;
-}
-.blocs-horizontal-scroll-area img.lazyload{
-	height:0;
-}
-
 /* = Custom Styling
 -------------------------------------------------------------- */
 
@@ -484,9 +429,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .blocs-card-width{
 	width:25%;
 }
-.card-2-style{
-	width:27.08%;
-}
 .card-body-style{
 	height:300px;
 }
@@ -494,7 +436,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:300px;
 }
 .p-style{
-	width:100%;
+	width:50%;
 }
 .card-body-3-style{
 	width:100%;
@@ -523,6 +465,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .btn-submit-style{
 	border-radius:21px 21px 21px 21px;
+}
+.h2-bloc-4-style{
+	width:60.02%;
+}
+.p-4-style{
+	font-size:23px;
+}
+.p-5-style{
+	font-size:23px;
 }
 
 /* = Colour
@@ -982,12 +933,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 .tc-57{
 	color:var(--swatch-var-57)!important;
-}
-.tc-5183{
-	color:var(--swatch-var-5183)!important;
-}
-.tc-4593{
-	color:var(--swatch-var-4593)!important;
 }
 .tc-3614{
 	color:var(--swatch-var-3614)!important;

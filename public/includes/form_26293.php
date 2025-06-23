@@ -40,7 +40,7 @@
 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; /** or PHPMailer::ENCRYPTION_SMTPS for SSL **/
 		$mail->Port = $smtp_port;
 
-		$mail->setFrom($smtp_username, 'Blocs Website');
+		$mail->setFrom($smtp_username, 'asherblumenthal.com');
 		$mail->addAddress($to);
     	$mail->addReplyTo($replyTo, 'Reply To');
 
