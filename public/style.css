@@ -475,6 +475,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .p-5-style{
 	font-size:23px;
 }
+.card-style{
+	width:100%;
+}
+.h3-bloc-3-style{
+	width:100%;
+}
+.row-style{
+	width:95.9%;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
