@@ -9,11 +9,11 @@
 	$message_24998_47937 = $_POST['message_24998_47937'];
 	
 	// Create Message	
-	$to = 'blumenthala@beloit.edu';
+	$to = 'asherblumenthal@icloud.com';
 	$email_subject = "Message from asherblumenthal.com";
 	$email_body = "You have received a new message! \n\nName_24998_47937: $name_24998_47937 \nEmail_24998_47937: $email_24998_47937 \nMessage_24998_47937: $message_24998_47937 \n";
 	$headers = "MIME-Version: 1.0\r\nContent-type: text/plain; charset=UTF-8\r\n";	
-	$headers .= "From: Contact@asherblumenthal.com\r\n";
+	$headers .= "From: messaget@asherblumenthal.com\r\n";
 	$headers .= "Reply-To: $email_24998_47937";
 
 	// Post Message
