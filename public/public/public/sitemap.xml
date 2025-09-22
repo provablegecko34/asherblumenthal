@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url>
+	<loc>asherblumenthal.com</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>1.0</priority>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/54412813643_8fae8e407f_b.webp</image:loc>
+	<image:title>slide 1</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/54412568286_f618d2f0c2_b.webp</image:loc>
+	<image:title>slide 2</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/54412952785_1a9073e596_b.webp</image:loc>
+	<image:title>slide 3</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/54411694397_8549be232a_b.webp</image:loc>
+	<image:title>placeholder image wide</image:title>
+	</image:image>
+</url>
+<url>
+	<loc>asherblumenthal.com/about/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/profile%202%20Medium.jpeg</image:loc>
+	<image:title>IMG_2714.PNG</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/profile%202%20Medium.webp</image:loc>
+	<image:title>IMG_2714.PNG</image:title>
+	</image:image>
+</url>
+<url>
+	<loc>asherblumenthal.com/blog/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>asherblumenthal.com/novel/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>asherblumenthal.com/hillday/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>asherblumenthal.com/mountaingoats/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>asherblumenthal.com/cat/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>asherblumenthal.com/contact/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>asherblumenthal.com/sent/</loc>
+	<lastmod>2025-09-22</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/d08.gif</image:loc>
+	<image:title>d08</image:title>
+	</image:image>
+</url>
+</urlset>
