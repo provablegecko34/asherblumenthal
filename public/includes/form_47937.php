@@ -18,8 +18,8 @@
 
 	/** SMTP Server Credentials **/
 	$smtp_host = 'imap.mail.me.com';
-	$smtp_username = 'asherblumenthal';
-	$smtp_password = 'ghkc-hqzw-hscd-ueen';
+	$smtp_username = 'asherblumenthal@icloud.com';
+	$smtp_password = 'xjlr-leso-ubls-qpwq';
 	$smtp_port = '993';
 
 	// Create Message	
