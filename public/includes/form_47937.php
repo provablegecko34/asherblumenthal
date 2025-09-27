@@ -17,10 +17,10 @@
 	$message_24998_47937 = $_POST['message_24998_47937'];
 
 	/** SMTP Server Credentials **/
-	$smtp_host = 'smtp.mail.me.com';
-	$smtp_username = 'asherblumenthal@icloud.com';
-	$smtp_password = 'pkdt-leua-lrrn-mpra';
-	$smtp_port = '587';
+	$smtp_host = 'imap.mail.me.com';
+	$smtp_username = 'asherblumenthal';
+	$smtp_password = 'ghkc-hqzw-hscd-ueen';
+	$smtp_port = '993';
 
 	// Create Message	
 	$to = 'asherblumenthal@icloud.com';
