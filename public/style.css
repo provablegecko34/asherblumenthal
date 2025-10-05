@@ -32,18 +32,18 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'TriptychTest';
-	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2');
-	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2') format('woff2');
+	font-family:'AGaramond-Regular';
+	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2');
+	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'AGaramond-Regular';
-	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2');
-	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2') format('woff2');
+	font-family:'TriptychTest';
+	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2');
+	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -572,6 +572,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .link-style{
 	font-weight:bold;
+	font-family:"AGaramond-Regular";
+	font-style:normal;
 }
 .btn-submit-style{
 	border-radius:21px 21px 21px 21px;
@@ -1082,6 +1084,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	
 	--swatch-var-7628:rgba(255,255,255,0.5);
 	
+	--swatch-var-1869:rgba(0,0,0,0.7);
+	
 }
 
 
@@ -1120,6 +1124,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .btn-c-57:hover{
 	background:#000000!important;
 	color:#FFFFFF!important;
+}
+
+/* Link colour styles */
+
+.ltc-3614{
+	color:var(--swatch-var-3614)!important;
+}
+.ltc-3614:hover{
+	color:#000000!important;
 }
 
 /* Bloc image backgrounds */
