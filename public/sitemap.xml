@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url>
 	<loc>asherblumenthal.com</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
 	<image:image>
@@ -24,7 +24,7 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/about/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -38,7 +38,7 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/novel/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -52,25 +52,25 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/hillday/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/mountaingoats/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/contact/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/sent/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -80,19 +80,19 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/film/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/portfolio/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/bsky/</loc>
-	<lastmod>2025-10-18</lastmod>
+	<lastmod>2025-10-28</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
