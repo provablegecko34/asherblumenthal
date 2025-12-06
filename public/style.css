@@ -362,6 +362,11 @@ blocsicon svg {
 }
 }
 
+/* iFrame */
+
+iframe{
+	border:0;
+}
 
 
 /* ScrollToTop button */
@@ -570,6 +575,12 @@ a{
 	width:auto;
 	height:auto;
 	position:relative;
+}
+.form-style{
+	width:100%;
+}
+.text-area-style{
+	width:100%;
 }
 
 /* = Colour
