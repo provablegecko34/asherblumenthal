@@ -1,8 +1,5 @@
 /*-----------------------------------------------------------------------------------
-	asherblumenthal.com
-	About: asherblumenthal.com
-	Author: Asher Blumenthal
-	Version: 1.0
+	public
 	Built with Blocs
 -----------------------------------------------------------------------------------*/
 body{
@@ -35,15 +32,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-family:'AGaramond-Regular';
 	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2');
 	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
-	font-family:'TriptychTest';
-	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2');
-	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -138,74 +126,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .full-width-bloc .carousel img{
 	width:100%;
 	height:auto;
-}
-
-
-/* Background Textures */
-
-.bloc-bg-texture::before{
-	content:"";
-	background-size: 2px 2px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left:0;
-	right:0;
-}
-.texture-paper::before{
-	background: url("img/texture-paper.png");
-	background-size: 280px 280px;
-}
-
-
-/* Dark theme */
-
-.d-bloc{
-	color:rgba(255,255,255,.7);
-}
-.d-bloc button:hover{
-	color:rgba(255,255,255,.9);
-}
-.d-bloc .icon-round,.d-bloc .icon-square,.d-bloc .icon-rounded,.d-bloc .icon-semi-rounded-a,.d-bloc .icon-semi-rounded-b{
-	border-color:rgba(255,255,255,.9);
-}
-.d-bloc .divider-h span{
-	border-color:rgba(255,255,255,.2);
-}
-.d-bloc .a-btn,.d-bloc .navbar a, .d-bloc a .icon-sm, .d-bloc a .icon-md, .d-bloc a .icon-lg, .d-bloc a .icon-xl, .d-bloc h1 a, .d-bloc h2 a, .d-bloc h3 a, .d-bloc h4 a, .d-bloc h5 a, .d-bloc h6 a, .d-bloc p a{
-	color:rgba(255,255,255,.6);
-}
-.d-bloc .a-btn:hover,.d-bloc .navbar a:hover,.d-bloc a:hover .icon-sm, .d-bloc a:hover .icon-md, .d-bloc a:hover .icon-lg, .d-bloc a:hover .icon-xl, .d-bloc h1 a:hover, .d-bloc h2 a:hover, .d-bloc h3 a:hover, .d-bloc h4 a:hover, .d-bloc h5 a:hover, .d-bloc h6 a:hover, .d-bloc p a:hover{
-	color:rgba(255,255,255,1);
-}
-.d-bloc .navbar-toggle .icon-bar{
-	background:rgba(255,255,255,1);
-}
-.d-bloc .btn-wire,.d-bloc .btn-wire:hover{
-	color:rgba(255,255,255,1);
-	border-color:rgba(255,255,255,1);
-}
-.d-bloc .card{
-	color:rgba(0,0,0,.5);
-}
-.d-bloc .card button:hover{
-	color:rgba(0,0,0,.7);
-}
-.d-bloc .card icon{
-	border-color:rgba(0,0,0,.7);
-}
-.d-bloc .card .divider-h span{
-	border-color:rgba(0,0,0,.1);
-}
-.d-bloc .card .a-btn{
-	color:rgba(0,0,0,.6);
-}
-.d-bloc .card .a-btn:hover{
-	color:rgba(0,0,0,1);
-}
-.d-bloc .card .btn-wire, .d-bloc .card .btn-wire:hover{
-	color:rgba(0,0,0,.7);
-	border-color:rgba(0,0,0,.3);
 }
 
 
@@ -311,9 +231,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
-.mg-clear{
-	margin:0;
-}
 .mg-md{
 	margin-top:10px;
 	margin-bottom:20px;
@@ -327,11 +244,12 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	background:rgba(0,0,0,.3);
 }
 
-/* Prevent ugly blue glow on chrome and safari */
-button{
-	outline: none!important;
+.btn-clean{
+	border:1px solid rgba(0,0,0,.08);
+	border-bottom-color:rgba(0,0,0,.1);
+	text-shadow:0 1px 0 rgba(0,0,1,.1);
+	box-shadow: 0 1px 3px rgba(0,0,1,.25), inset 0 1px 0 0 rgba(255,255,255,.15);
 }
-
 
 
 
@@ -382,14 +300,6 @@ button{
 }
 .dropdown-menu .divider-h{
 	margin:0;
-}
-
-/* = Forms
--------------------------------------------------------------- */
-
-.form-control{
-	border-color:rgba(0,0,0,.1);
-	box-shadow:none;
 }
 
 
@@ -527,7 +437,8 @@ a[data-lightbox]:hover img{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"Helvetica";
+	font-family:"AGaramond-Regular";
+	color:var(--swatch-var-57)!important;
 }
 .container{
 	max-width:1140px;
@@ -574,6 +485,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-weight:bold;
 	font-family:"AGaramond-Regular";
 	font-style:normal;
+	padding-top:1px;
+	padding-bottom:1px;
 }
 .btn-submit-style{
 	border-radius:21px 21px 21px 21px;
@@ -624,9 +537,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .h2-tri-x-400-style{
 	font-family:"AGaramond-Regular";
 }
-.h1-bloc-1-style{
-	font-family:"TriptychTest";
-}
 .h4-style{
 	font-family:"AGaramond-Regular";
 }
@@ -638,6 +548,50 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .h1-message-sent--style{
 	font-family:"AGaramond-Regular";
+}
+.divider-style{
+	height:455px;
+}
+a{
+	text-decoration:none;
+}
+.side_nav{
+	padding-right:680px;
+}
+.link_side_nav{
+	padding-right:680px;
+	text-decoration:none;
+	text-align:center;
+	writing-mode:horizontal-tb;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+.link-padding-top{
+	font-size:24px;
+}
+.btn-padding-top{
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:20px 20px 20px 20px;
+}
+.white_text{
+	color:#FFFFFF!important;
+	text-transform:none;
+}
+.custom-form-label{
+	font-size:1.2rem;
+	color:var(--swatch-var-57)!important;
+	font-weight:bold;
+	margin-top:1.5rem;
+	margin-bottom:075px;
+}
+.form-control{
+	border-color:var(--swatch-var-7678)!important;
+	border-radius:0px 0px 0px 0px;
+	border-width:1px 1px 1px 1px;
+}
+.help-block-name-warning{
+	color:var(--swatch-var-3038)!important;
 }
 
 /* = Colour
@@ -926,7 +880,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	
 	--swatch-var-761:rgba(0,102,255,1.00);
 	
-	--swatch-var-642:rgba(0,102,204,1.00);
+	--swatch-var-642:rgba(0,127,204,1.00);
 	
 	--swatch-var-6063:rgba(51,102,204,1.00);
 	
@@ -1089,11 +1043,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 
 
-/* Background colour styles */
-
-.bgc-3614{
-	background-color:var(--swatch-var-3614);
-}
 
 /* Text colour styles */
 
@@ -1102,9 +1051,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .tc-3614{
 	color:var(--swatch-var-3614)!important;
-}
-.tc-6328{
-	color:var(--swatch-var-6328)!important;
 }
 
 /* Button colour styles */
@@ -1126,18 +1072,20 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	color:#FFFFFF!important;
 }
 
-/* Link colour styles */
-
-.ltc-3614{
-	color:var(--swatch-var-3614)!important;
-}
-.ltc-3614:hover{
-	color:#000000!important;
-}
-
 /* Bloc image backgrounds */
 
 
+
+/* Accesibility Enhancements */
+a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)!important;outline-offset: 2px;box-shadow:none!important;}
+
+
+/* = Toggle Visibility
+-------------------------------------------------------------- */
+
+.toggled-item{transition: height 350ms ease-in-out, padding 350ms ease-in-out, opacity 350ms ease-in-out;overflow: hidden;}
+.toggled-item-hidden{padding-top:0!important;padding-bottom:0!important;border-top:0!important;border-bottom:0!important;outline:0!important;opacity: 0;}
+.object-hidden{display:none;}
 
 
 /* = Bloc Padding Multi Breakpoint
@@ -1220,12 +1168,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 
 @media (max-width: 991px){
-	.h2-style{
-		width:91.18%;
-	}
-	.btn-style{
-		border-radius:16px 16px 16px 16px;
-	}
 	.link-style{
 		width:23.54%;
 		padding-top:1px;
@@ -1242,6 +1184,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	}
 	.card-body-bloc-7-style{
 		width:98.92%;
+	}
+	.html-widget-style{
+		height:425px;
+	}
+	.html-widget-bloc-14-style{
+		height:425px;
+	}
+	.html-widget-0-style{
+		height:425px;
 	}
 	
 }
@@ -1266,6 +1217,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		border-radius:15px 15px 15px 15px;
 		padding-top:6px;
 		padding-bottom:6px;
+	}
+	.m{
 	}
 	
 }

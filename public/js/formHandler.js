@@ -1,6 +1,6 @@
 $(function()
 {	
-	$('[data-form-type="blocs-form"] input,[data-form-type="blocs-form"] textarea').jqBootstrapValidation(
+	$('[data-form-type="blocs-form"] input,[data-form-type="blocs-form"] textarea,[data-form-type="blocs-form"] select').jqBootstrapValidation(
     {
      	preventSubmit: true,
      	submitSuccess: function($form, event)
