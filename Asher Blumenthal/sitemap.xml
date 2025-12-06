@@ -41,7 +41,7 @@
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>asherblumenthal.com/sent/</loc>
+	<loc>asherblumenthal.com/forms/sent/</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
@@ -51,7 +51,7 @@
 	</image:image>
 </url>
 <url>
-	<loc>asherblumenthal.com/contact/</loc>
+	<loc>asherblumenthal.com/forms/contact/</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
