@@ -73,6 +73,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .bloc-lg{
 	padding:100px 20px;
 }
+.bloc-md{
+	padding:50px 20px;
+}
 .bloc-sm{
 	padding:20px;
 }
@@ -503,9 +506,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .h1-bloc-14-style{
 	font-family:"AGaramond-Regular";
 }
-.h1-message-sent--style{
-	font-family:"AGaramond-Regular";
-}
 .divider-style{
 	height:455px;
 }
@@ -576,6 +576,14 @@ a{
 }
 .text-area-style{
 	width:100%;
+}
+.h1-message-sent-style{
+	font-size:55px;
+	text-shadow:0.00px -2.00px 2px #CCCCCC;
+	width:92.08%;
+}
+.white-text-background{
+	text-shadow:0.00px -2.00px 2px #CCCCCC;
 }
 
 /* = Colour
@@ -1020,7 +1028,7 @@ a{
 	
 	--swatch-var-4593:#000000;
 	
-	--swatch-var-7628:rgba(255,255,255,0.5);
+	--swatch-var-7628:rgba(255,255,255,0.75);
 	
 	--swatch-var-1869:rgba(0,0,0,0.7);
 	
@@ -1060,6 +1068,9 @@ a{
 
 /* Bloc image backgrounds */
 
+.bg-d08{
+	background-image:url("img/d08.gif");
+}
 
 
 /* Accesibility Enhancements */
@@ -1173,12 +1184,28 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.html-widget-style{
 		height:425px;
+		width:83.89%;
 	}
 	.html-widget-bloc-14-style{
 		height:425px;
 	}
 	.html-widget-0-style{
 		height:425px;
+	}
+	.svg-icon-0-style{
+		width:65px!important;
+	}
+	.svg-icon-bloc-14-style{
+		width:65px!important;
+	}
+	.svg-icon-style{
+		width:65px!important;
+	}
+	.svg-icon-fill{
+		width:65px!important;
+	}
+	.row-style{
+		width:100%;
 	}
 	
 }
@@ -1206,6 +1233,21 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.m{
 	}
+	.svg-icon-fill{
+		width:55px!important;
+	}
+	.svg-icon-style{
+		width:55px!important;
+	}
+	.svg-icon-bloc-14-style{
+		width:55px!important;
+	}
+	.svg-icon-0-style{
+		width:55px!important;
+	}
+	.html-widget-style{
+		height:152px;
+	}
 	
 }
 
@@ -1218,6 +1260,24 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.navbar-logo{
 		font-size:18px;
+	}
+	.svg-icon-fill{
+		width:40px!important;
+	}
+	.svg-icon-style{
+		width:40px!important;
+	}
+	.svg-icon-bloc-14-style{
+		width:40px!important;
+	}
+	.svg-icon-0-style{
+		width:40px!important;
+	}
+	.h1-message-sent-style{
+		font-size:22px;
+	}
+	.html-widget-style{
+		height:167px;
 	}
 	
 }
