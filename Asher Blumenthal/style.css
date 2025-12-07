@@ -1,5 +1,8 @@
 /*-----------------------------------------------------------------------------------
-	public
+	Asher Blumenthal
+	About: Currently on a hiatus of being a jerk; Tried to touch grass but the grass has a podcast now and it’s monetized. Very funny person that understands that it’s a requirement to state that you’re a funny person in one’s bio.
+	Author: Asher Blumenthal
+	Version: 1.0
 	Built with Blocs
 -----------------------------------------------------------------------------------*/
 body{
@@ -1072,6 +1075,31 @@ a{
 	background-image:url("img/d08.gif");
 }
 
+/* = Custom Bric Data
+-------------------------------------------------------------- */
+
+.code-embed{
+	color:#000;
+}
+/* WP Widget Styling */.widget-zone ul{
+	list-style: none;
+	padding: 0;
+}
+.img-hover-tilt-container{
+	position:relative;
+	transform-style: preserve-3d;
+}
+.hover-tilt-label{
+	position:absolute;
+	top: 50%;
+	transform: translateY(-50%) translateZ(20px);
+	width:100%;
+	 text-align:center;
+	font-size:40px;
+}
+.hover-tilt-light-text{
+	color:rgba(255,255,255,.8);
+}
 
 /* Accesibility Enhancements */
 a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)!important;outline-offset: 2px;box-shadow:none!important;}

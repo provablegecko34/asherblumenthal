@@ -5,6 +5,14 @@
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/profile%202%20Medium.jpeg</image:loc>
+	<image:title>profile 2 Medium.jpeg</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/profile%202%20Medium.webp</image:loc>
+	<image:title>profile 2 Medium.jpeg</image:title>
+	</image:image>
 </url>
 <url>
 	<loc>asherblumenthal.com/about.html</loc>
@@ -25,14 +33,6 @@
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
-	<image:image>
-	<image:loc>asherblumenthal.com/img/profile%202%20Medium.jpeg</image:loc>
-	<image:title>profile 2 Medium.jpeg</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>asherblumenthal.com/img/profile%202%20Medium.webp</image:loc>
-	<image:title>profile 2 Medium.jpeg</image:title>
-	</image:image>
 </url>
 <url>
 	<loc>asherblumenthal.com/hillday.html</loc>
