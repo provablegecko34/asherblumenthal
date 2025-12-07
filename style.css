@@ -332,6 +332,11 @@ blocsicon svg {
 }
 
 
+/* = Text & Icon Styles
+-------------------------------------------------------------- */
+.pressed-t{
+	text-shadow:0 1px 0 #FFF;
+}
 
 
 .card-sq, .card-sq .card-header, .card-sq .card-footer{
@@ -434,7 +439,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .img-style{
 	border-radius:0px 0px 0px 0px;
-	width:730px;
+	width:750px;
 }
 .p-6-style{
 	width:100%;
@@ -582,8 +587,16 @@ a{
 	text-shadow:0.00px -2.00px 2px #CCCCCC;
 	width:92.08%;
 }
-.white-text-background{
+.message-text-format{
 	text-shadow:0.00px -2.00px 2px #CCCCCC;
+}
+.ascii-art{
+	font-size:5px;
+}
+.h1-bloc-8-style{
+	font-family:"PT Serif Caption";
+	font-weight:700;
+	font-size:40px;
 }
 
 /* = Colour
@@ -1216,6 +1229,10 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.row-style{
 		width:100%;
+	}
+	.message-text-format{
+		text-transform:capitalize;
+		text-shadow:0.00px -2.00px 2px #999999;
 	}
 	
 }
