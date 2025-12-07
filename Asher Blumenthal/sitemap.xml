@@ -7,7 +7,7 @@
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>asherblumenthal.com/about/</loc>
+	<loc>asherblumenthal.com/about.html</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
@@ -21,7 +21,7 @@
 	</image:image>
 </url>
 <url>
-	<loc>asherblumenthal.com/novel/</loc>
+	<loc>asherblumenthal.com/novel.html</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
@@ -35,25 +35,25 @@
 	</image:image>
 </url>
 <url>
-	<loc>asherblumenthal.com/hillday/</loc>
+	<loc>asherblumenthal.com/hillday.html</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>asherblumenthal.com/sent/</loc>
+	<loc>asherblumenthal.com/sent.html</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>asherblumenthal.com/contact/</loc>
+	<loc>asherblumenthal.com/contact.html</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
-	<loc>asherblumenthal.com/sent-redirect-/</loc>
+	<loc>asherblumenthal.com/sent-redirect-.html</loc>
 	<lastmod>2025-12-06</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
