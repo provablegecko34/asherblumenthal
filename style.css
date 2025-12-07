@@ -503,10 +503,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .h4-style{
 	font-family:"AGaramond-Regular";
 }
-.h3-style{
-	font-family:"AGaramond-Italic";
-	width:100%;
-}
 .h1-bloc-14-style{
 	font-family:"AGaramond-Regular";
 }
@@ -1085,21 +1081,6 @@ a{
 /* WP Widget Styling */.widget-zone ul{
 	list-style: none;
 	padding: 0;
-}
-.img-hover-tilt-container{
-	position:relative;
-	transform-style: preserve-3d;
-}
-.hover-tilt-label{
-	position:absolute;
-	top: 50%;
-	transform: translateY(-50%) translateZ(20px);
-	width:100%;
-	 text-align:center;
-	font-size:40px;
-}
-.hover-tilt-light-text{
-	color:rgba(255,255,255,.8);
 }
 
 /* Accesibility Enhancements */
