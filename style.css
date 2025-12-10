@@ -598,6 +598,13 @@ a{
 	font-weight:700;
 	font-size:40px;
 }
+.svg-img{
+	padding-left:125px;
+	margin-left:235px;
+}
+.center-align{
+	margin-left:220px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -1284,6 +1291,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.html-widget-style{
 		height:152px;
 	}
+	.h1-bloc-8-style{
+		font-size:35px;
+	}
 	
 }
 
@@ -1314,6 +1324,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.html-widget-style{
 		height:167px;
+	}
+	.h1-bloc-8-style{
+		font-size:18px;
 	}
 	
 }
