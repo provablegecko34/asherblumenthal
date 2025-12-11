@@ -1232,7 +1232,8 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 		height:425px;
 	}
 	.html-widget-0-style{
-		height:425px;
+		height:492px;
+		width:63.57%;
 	}
 	.svg-icon-0-style{
 		width:65px!important;
@@ -1252,6 +1253,12 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.message-text-format{
 		text-transform:capitalize;
 		text-shadow:0.00px -2.00px 2px #999999;
+	}
+	.center-align{
+	}
+	.center-align-2{
+		margin-left:115px;
+		padding-left:45px;
 	}
 	
 }
@@ -1297,6 +1304,12 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.h1-bloc-8-style{
 		font-size:35px;
 	}
+	.html-widget-0-style{
+		width:61.13%;
+	}
+	.center-align-sm{
+		margin-left:75px;
+	}
 	
 }
 
@@ -1330,6 +1343,10 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.h1-bloc-8-style{
 		font-size:18px;
+	}
+	.xs-allign{
+		width:1000px;
+		height:450px;
 	}
 	
 }
