@@ -268,6 +268,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	width: 33px;
 	height: 33px;
 }
+.navbar-toggle.menu-icon-thin-bars{
+	margin-top:4px!important;
+}
 /* Handle Multi Level Navigation */
 .dropdown-menu .dropdown-menu{
 	border:none}
@@ -1125,6 +1128,22 @@ a{
 }
 .code-embed{
 	color:#000;
+}
+.social-link-bric a svg{
+	transition: all 0.3s ease-in-out;
+}
+.social-hover-fade a:hover svg{
+	opacity: 0.5;
+}
+.social-hover-grow a:hover svg{
+	transform: scale(1.2);
+}
+.social-hover-shrink a:hover svg{
+	transform: scale(0.9);
+}
+.social-hover-shadow a:hover svg{
+	filter: drop-shadow(0px 6px 2px rgba(0,0,0,0.3));
+	overflow: visible;
 }
 
 /* Accesibility Enhancements */
