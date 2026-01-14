@@ -415,7 +415,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	max-width:1140px;
 }
 .bloc-style{
-	opacity:1.0;
+	opacity:0.3;
 }
 .blocs-card-width{
 	width:25%;
@@ -475,7 +475,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	width:100%;
 }
 .row-style{
-	width:95.9%;
+	width:100%;
 }
 .h2-bloc-8-style{
 	font-family:"AGaramond-Regular";
@@ -561,18 +561,14 @@ a{
 .social-links{
 	text-align:right;
 }
-.svg-icon-style{
-	fill:#2D7DCC!important;
-}
 .svg-icon-fill{
 	fill:#2D7DCC!important;
 	fill-type:evenodd!important;
+	width:42px;
 }
 .svg-icon-bloc-14-style{
 	fill:#2D7DCC!important;
-}
-.svg-icon-0-style{
-	fill:#2D7DCC!important;
+	width:42px;
 }
 .hover-effect{
 	width:auto;
@@ -623,6 +619,22 @@ a{
 .html-widget-28387-style{
 	width:100%;
 	height:490px;
+}
+.svg-icon-bloc-14-fill{
+	fill:#2D7DCC!important;
+}
+.svg-icon-0-fill{
+	fill:#2D7DCC!important;
+}
+.svg-icon-0-bloc-14-fill{
+	fill:#2D7DCC!important;
+}
+.svg-icon-bloc-15-style{
+	fill:#2D7DCC!important;
+}
+.svg-icon-style{
+	width:35px!important;
+	fill:#000000!important;
 }
 
 /* = Colour
@@ -1257,7 +1269,7 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 		width:98.92%;
 	}
 	.html-widget-style{
-		height:425px;
+		height:120px;
 		width:83.89%;
 	}
 	.html-widget-bloc-14-style{
@@ -1267,17 +1279,11 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 		height:367px;
 		width:85.04%;
 	}
-	.svg-icon-0-style{
-		width:65px!important;
-	}
 	.svg-icon-bloc-14-style{
-		width:65px!important;
-	}
-	.svg-icon-style{
-		width:65px!important;
+		width:22px!important;
 	}
 	.svg-icon-fill{
-		width:65px!important;
+		width:22px!important;
 	}
 	.row-style{
 		width:100%;
@@ -1308,6 +1314,56 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.html-widget-0-bloc-13-style{
 		width:61.67%;
 	}
+	.row-25-style{
+		width:100%;
+	}
+	.svg-icon-18717-style{
+		width:35px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-45455-style{
+		width:35px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-42408-style{
+		width:35px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-0-fill{
+		fill:#2D7DCC!important;
+		width:35px!important;
+	}
+	.svg-icon-bloc-15-style{
+		width:45px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-0-bloc-15-style{
+		width:45px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-0-style{
+		width:45px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-style{
+		fill:#2D7DCC!important;
+		width:45px!important;
+	}
+	.row-bloc-15-style{
+		width:100%;
+	}
+	.svg-icon-bloc-15-fill{
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-0-bloc-15-fill{
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-7554-fill{
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-48998-fill{
+		fill:#2D7DCC!important;
+	}
 	
 }
 
@@ -1337,17 +1393,12 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.svg-icon-fill{
 		width:55px!important;
 	}
-	.svg-icon-style{
-		width:55px!important;
-	}
 	.svg-icon-bloc-14-style{
-		width:55px!important;
-	}
-	.svg-icon-0-style{
 		width:55px!important;
 	}
 	.html-widget-style{
 		height:152px;
+		width:98.02%;
 	}
 	.h1-bloc-8-style{
 		font-size:35px;
@@ -1358,6 +1409,25 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.center-align-sm{
 		margin-left:75px;
+	}
+	.svg-icon-28605-style{
+		width:65px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-37660-style{
+		width:65px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-46102-style{
+		width:65px!important;
+		fill:#2D7DCC!important;
+	}
+	.svg-icon-28977-style{
+		width:65px!important;
+		fill:#2D7DCC!important;
+	}
+	.row-bloc-16-style{
+		width:100%;
 	}
 	
 }
@@ -1375,20 +1445,15 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.svg-icon-fill{
 		width:40px!important;
 	}
-	.svg-icon-style{
-		width:40px!important;
-	}
 	.svg-icon-bloc-14-style{
-		width:40px!important;
-	}
-	.svg-icon-0-style{
 		width:40px!important;
 	}
 	.h1-message-sent-style{
 		font-size:22px;
 	}
 	.html-widget-style{
-		height:167px;
+		height:202px;
+		width:100%;
 	}
 	.h1-bloc-8-style{
 		font-size:18px;
@@ -1415,6 +1480,18 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.html-widget-28400-style{
 		width:100%;
+	}
+	.svg-icon-28605-style{
+		width:45px!important;
+	}
+	.svg-icon-37660-style{
+		width:45px!important;
+	}
+	.svg-icon-46102-style{
+		width:45px!important;
+	}
+	.svg-icon-28977-style{
+		width:45px!important;
 	}
 	
 }
