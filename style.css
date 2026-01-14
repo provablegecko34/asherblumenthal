@@ -564,7 +564,7 @@ a{
 .svg-icon-fill{
 	fill:#2D7DCC!important;
 	fill-type:evenodd!important;
-	width:42px;
+	width:45px!important;
 }
 .svg-icon-bloc-14-style{
 	fill:#2D7DCC!important;
@@ -622,12 +622,15 @@ a{
 }
 .svg-icon-bloc-14-fill{
 	fill:#2D7DCC!important;
+	width:45px!important;
 }
 .svg-icon-0-fill{
 	fill:#2D7DCC!important;
+	width:45px!important;
 }
 .svg-icon-0-bloc-14-fill{
 	fill:#2D7DCC!important;
+	width:45px!important;
 }
 .svg-icon-bloc-15-style{
 	fill:#2D7DCC!important;
@@ -1354,15 +1357,19 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.svg-icon-bloc-15-fill{
 		fill:#2D7DCC!important;
+		width:42px!important;
 	}
 	.svg-icon-0-bloc-15-fill{
 		fill:#2D7DCC!important;
+		width:42px!important;
 	}
 	.svg-icon-7554-fill{
 		fill:#2D7DCC!important;
+		width:42px!important;
 	}
 	.svg-icon-48998-fill{
 		fill:#2D7DCC!important;
+		width:42px!important;
 	}
 	
 }
