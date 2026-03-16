@@ -573,10 +573,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .card-body-2-style{
 	height:300px;
 }
-.p-style{
-	width:100%;
-	font-family:"AGaramond-Regular";
-}
 .card-body-3-style{
 	width:100%;
 	height:300px;
@@ -1558,6 +1554,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.img-bloc-11-style{
 		width:722px;
 	}
+	.img-17-style{
+		width:500px;
+	}
 	
 }
 
@@ -1687,6 +1686,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.h4-style{
 		font-family:"AGaramond-Italic";
+	}
+	.label-style{
+		font-size:12px;
 	}
 	
 }
