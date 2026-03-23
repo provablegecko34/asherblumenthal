@@ -85,13 +85,8 @@
 	</image:image>
 </url>
 <url>
-<<<<<<< HEAD
 	<loc>asherblumenthal.com/hillday.html</loc>
 	<lastmod>2026-03-23</lastmod>
-=======
-	<loc>asherblumenthal.com/hill-day.html</loc>
-	<lastmod>2026-03-22</lastmod>
->>>>>>> parent of 7ffae08 (Added modal to SM and XS sized screens)
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
