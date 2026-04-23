@@ -1565,6 +1565,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.img-17-style{
 		width:500px;
 	}
+	.bloc-style{
+		opacity:0.3;
+	}
 	
 }
 
