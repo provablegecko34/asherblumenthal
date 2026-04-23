@@ -616,6 +616,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .h3-bloc-11-style{
 	font-family:"AGaramond-Regular";
+	width:91.43%;
 }
 .p-bloc-12-style{
 	font-family:"AGaramond-Regular";
@@ -800,17 +801,19 @@ a{
 	width:100%;
 }
 .row-bloc-9-style{
-	width:97.82%;
+	width:89.85%;
 }
 .img-6-style{
-	width:491px;
-	height:326px;
-}
-.img-bloc-9-style{
-	width:491px;
+	width:432px;
 }
 .h3-bloc-9-style{
 	width:100%;
+}
+.img-bloc-9-style{
+	width:432px;
+}
+.row-bloc-11-style{
+	width:90.04%;
 }
 
 /* = Colour
