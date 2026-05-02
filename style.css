@@ -32,6 +32,15 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 -------------------------------------------------------------- */
 
 @font-face {
+	font-family:'TriptychTest-Italick';
+	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2');
+	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
 	font-family:'AGaramond-Regular';
 	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2');
 	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2') format('woff2');
@@ -44,6 +53,15 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-family:'AGaramond-Italic';
 	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2');
 	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'TriptychTest';
+	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2');
+	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -149,6 +167,32 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .texture-paper::before{
 	background: url("img/texture-paper.png");
 	background-size: 280px 280px;
+}
+
+
+/* Background Effects */
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index:-1;
+}
+.parallax {
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 
@@ -268,9 +312,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	width: 33px;
 	height: 33px;
 }
-.navbar-toggle.menu-icon-thin-bars{
-	margin-top:4px!important;
-}
 /* Handle Multi Level Navigation */
 .dropdown-menu .dropdown-menu{
 	border:none}
@@ -298,16 +339,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	top:-7px}.navbar-expand-lg .dropdown-menu .submenu-left{
 	right:100%;
 	left:auto}
-}
-/* = Open menus on hover
--------------------------------------------------------------- */
-@media (min-width: 992px){
-	.hover-open-submenu li:hover > .dropdown > .dropdown-menu, .hover-open-submenu .dropdown-menu > li:hover .dropdown-menu{
-	display: block;
-}
-.hover-open-submenu li .dropdown .dropdown-menu{
-	margin-top:0;
-}
 }
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
@@ -350,11 +381,32 @@ blocsicon svg {
 	 display: block;
 }
 
+/* Image Mask */
+.masked-img {
+	object-fit: cover;
+	aspect-ratio: 1/1;
+	width:100%;
+}
+.blocsapp-img-mask-svg{
+	position:absolute;
+}
+.blocsapp-img-mask-svg path{
+	transform:scale(0.0025);
+}
+.brush-mask{
+	clip-path: url(#brush-mask);
+}
+.brush-3-mask{
+	clip-path: url(#brush-3-mask);
+}
 
 /* = Text & Icon Styles
 -------------------------------------------------------------- */
 .pressed-t{
 	text-shadow:0 1px 0 #FFF;
+}
+.text-justify{
+	text-align: justify;
 }
 
 
@@ -407,17 +459,9 @@ blocsicon svg {
 	margin:0;
 }
 
-
-.carousel-nav-icon{
-	fill: none;
-	stroke: #fff;
-	stroke-width: 2px;
-	fill-rule: evenodd;
-	stroke-linecap:round;
-}
-
-.carousel-indicators li::marker{
-	font-size:0;
+/* Scroll FX */
+.scroll-fx-in-range{
+	will-change: opacity;
 }
 
 
@@ -584,7 +628,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .link-style{
 	font-weight:bold;
-	font-family:"AGaramond-Regular";
+	font-family:"TriptychTest-Italick";
 	font-style:normal;
 	padding-top:1px;
 	padding-bottom:1px;
@@ -597,7 +641,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	width:60.02%;
 }
 .p-4-style{
-	font-size:23px;
+	font-size:20px;
 }
 .p-5-style{
 	font-size:23px;
@@ -815,6 +859,58 @@ a{
 .row-bloc-11-style{
 	width:90.04%;
 }
+.img-13-style{
+	height:222px;
+}
+.h3-header-style{
+	font-family:"AGaramond-Italic";
+}
+.h1-5-style{
+	font-size:48px;
+	font-family:"TriptychTest";
+}
+.dropcap-letter{
+	font-size:64px;
+	text-align:left;
+	text-transform:none;
+	line-height:1px;
+	float:left;
+}
+.h5-style{
+	font-family:"AGaramond-Italic";
+	font-size:18px;
+}
+.logo-weight{
+	text-transform:capitalize;
+	text-decoration:none;
+	font-weight:200;
+}
+.p-bloc-13-style{
+	font-size:20px;
+	width:100%;
+}
+.p-bloc-16-style{
+	width:90.8%;
+	font-size:20px;
+}
+.img-bloc-14-style{
+	width:748px;
+}
+.img-bloc-16-style{
+	width:765px;
+}
+.row-bloc-13-style{
+	width:100%;
+}
+.p-bloc-15-style{
+	font-size:20px;
+}
+.row-bloc-15-style{
+	width:100%;
+}
+.row-32-style{
+	width:100%;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -826,7 +922,7 @@ a{
 	
 	--swatch-var-6106:#FFFFFF;
 	
-	--swatch-var-6328:rgba(204,204,204,1.00);
+	--swatch-var-6328:rgba(255,255,255,0.86);
 	
 	--swatch-var-4531:rgba(153,153,153,1.00);
 	
@@ -1278,6 +1374,9 @@ a{
 .tc-57{
 	color:var(--swatch-var-57)!important;
 }
+.tc-6328{
+	color:var(--swatch-var-6328)!important;
+}
 .tc-3614{
 	color:var(--swatch-var-3614)!important;
 }
@@ -1322,6 +1421,13 @@ a{
 
 .bg-d08{
 	background-image:url("img/d08.gif");
+}
+.bg-Hill-Day-Cover-2x{
+	background-image:url("img/Hill-Day-Cover@2x.jpg");
+	background-image: -webkit-image-set(url("img/Hill-Day-Cover@2x.webp") 1x,
+url("img/Hill-Day-Cover@2x.webp") 2x);background-image: image-set(url("img/Hill-Day-Cover@2x.jpg") 1x,
+url("img/Hill-Day-Cover@2x.jpg") 2x,url("img/Hill-Day-Cover@2x.webp") 1x,
+url("img/Hill-Day-Cover@2x.webp") 2x);
 }
 
 /* = Custom Bric Data
@@ -1568,6 +1674,10 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.bloc-style{
 		opacity:0.3;
 	}
+	.img-13-style{
+	}
+	.remove-padding{
+	}
 	
 }
 
@@ -1700,6 +1810,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.btn-bloc-14-style{
 		border-radius:21px 21px 21px 21px;
+	}
+	.h1-5-style{
+		font-size:45px;
 	}
 	
 }
