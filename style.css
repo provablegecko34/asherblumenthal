@@ -59,6 +59,15 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 
 @font-face {
+	font-family:'TriptychTest-Grotesque';
+	src: url('./fonts/TriptychTest-Grotesque/TriptychTest-Grotesque.woff2');
+	src: url('./fonts/TriptychTest-Grotesque/TriptychTest-Grotesque.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
 	font-family:'TriptychTest';
 	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2');
 	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2') format('woff2');
@@ -426,19 +435,6 @@ blocsicon svg {
 	display: inline-block;
 	width: 100%;
 }
-}
-/* = Classic Dividers
--------------------------------------------------------------- */
-.divider-h{
-	min-height: 1px;
-	background-color:rgba(0,0,0,.2);
-	margin: 20px 0;
-}
-.divider-half{
-	width: 50%;
-}
-.dropdown-menu .divider-h{
-	margin:0;
 }
 
 /* Scroll FX */
@@ -905,6 +901,23 @@ a{
 	line-height:13px;
 	font-weight:400;
 }
+.h1-3-style{
+	margin-top:230px;
+}
+.h2-bloc-8-style{
+	font-family:"TriptychTest-Grotesque";
+	font-size:38px;
+	width:54.3%;
+}
+strong{
+	font-weight:bold;
+}
+.h3-bloc-8-style{
+	width:54.02%;
+}
+.img-hill-day-cov-style{
+	width:583px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -918,7 +931,7 @@ a{
 	
 	--swatch-var-6328:rgba(255,255,255,0.86);
 	
-	--swatch-var-4531:rgba(153,153,153,1.00);
+	--swatch-var-4531:rgba(255,255,255,1.00);
 	
 	--swatch-var-5183:rgba(102,102,102,1.00);
 	
@@ -1354,6 +1367,18 @@ a{
 	
 	--swatch-var-2835:rgba(0,0,0,1.00);
 	
+	--swatch-var-7090:rgba(255,255,255,1.00);
+	
+	--swatch-var-6317:rgba(100,100,100,1.00);
+	
+	--swatch-var-7015:rgba(0,0,0,1.00);
+	
+	--swatch-var-4643:rgba(0,100,0,1.00);
+	
+	--swatch-var-7654:rgba(100,200,100,1.00);
+	
+	--swatch-var-2337:rgba(100,100,0,1.00);
+	
 }
 
 
@@ -1417,11 +1442,7 @@ a{
 	background-image:url("img/d08.gif");
 }
 .bg-Hill-Day-Cover-2x{
-	background-image:url("img/Hill-Day-Cover@2x.jpg");
-	background-image: -webkit-image-set(url("img/Hill-Day-Cover@2x.webp") 1x,
-url("img/Hill-Day-Cover@2x.webp") 2x);background-image: image-set(url("img/Hill-Day-Cover@2x.jpg") 1x,
-url("img/Hill-Day-Cover@2x.jpg") 2x,url("img/Hill-Day-Cover@2x.webp") 1x,
-url("img/Hill-Day-Cover@2x.webp") 2x);
+	background-image:url("img/Hill-Day-Background.jpg?timestamp=307");
 }
 
 /* = Custom Bric Data

@@ -65,6 +65,14 @@
 	<lastmod>2026-05-02</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/hill-day-cover.jpg</image:loc>
+	<image:title>Asher Blumenthal-TB Hill Day</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/hill-day-cover.webp</image:loc>
+	<image:title>Asher Blumenthal-TB Hill Day</image:title>
+	</image:image>
 </url>
 <url>
 	<loc>asherblumenthal.com/404.html</loc>
