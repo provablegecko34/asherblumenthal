@@ -1,0 +1,26 @@
+..pull-quote {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #333;
+  position: relative;
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  border-left: 4px solid #555;
+  background: #f9f9f9;
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: #777;
+  text-align: right;
+}
+
+.pull-quote.float-right {
+  float: right;
+  width: 40%;
+  margin: 1rem 0 1rem 2rem;
+}

@@ -381,24 +381,6 @@ blocsicon svg {
 	 display: block;
 }
 
-/* Image Mask */
-.masked-img {
-	object-fit: cover;
-	aspect-ratio: 1/1;
-	width:100%;
-}
-.blocsapp-img-mask-svg{
-	position:absolute;
-}
-.blocsapp-img-mask-svg path{
-	transform:scale(0.0025);
-}
-.brush-mask{
-	clip-path: url(#brush-mask);
-}
-.brush-3-mask{
-	clip-path: url(#brush-3-mask);
-}
 
 /* = Text & Icon Styles
 -------------------------------------------------------------- */
@@ -870,11 +852,16 @@ a{
 	font-family:"TriptychTest";
 }
 .dropcap-letter{
-	font-size:64px;
 	text-align:left;
 	text-transform:none;
-	line-height:1px;
 	float:left;
+	white-space:pre-line;
+	font-weight:700;
+	line-height:8px;
+	margin-top:15px;
+	margin-right:02px;
+	margin-bottom:15px;
+	font-size:4.8rem;
 }
 .h5-style{
 	font-family:"AGaramond-Italic";
@@ -886,8 +873,11 @@ a{
 	font-weight:200;
 }
 .p-bloc-13-style{
-	font-size:20px;
 	width:100%;
+	line-height:1.187rem;
+	letter-spacing:px;
+	word-spacing:2px;
+	font-size:20px;
 }
 .p-bloc-16-style{
 	width:90.8%;
@@ -895,9 +885,6 @@ a{
 }
 .img-bloc-14-style{
 	width:748px;
-}
-.img-bloc-16-style{
-	width:765px;
 }
 .row-bloc-13-style{
 	width:100%;
@@ -910,6 +897,13 @@ a{
 }
 .row-32-style{
 	width:100%;
+}
+.pullquote{
+	width:38%;
+	border-style:empty;
+	font-size:2rem;
+	line-height:13px;
+	font-weight:400;
 }
 
 /* = Colour
