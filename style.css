@@ -32,15 +32,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'TriptychTest-Italick';
-	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2');
-	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
 	font-family:'AGaramond-Regular';
 	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2');
 	src: url('./fonts/AGaramond-Regular/AGaramond-Regular.woff2') format('woff2');
@@ -53,6 +44,24 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-family:'AGaramond-Italic';
 	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2');
 	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'TriptychTest-Italick';
+	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2');
+	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'FONTSPRINGDEMO-CATexteronRgRegular';
+	src: url('./fonts/FONTSPRINGDEMO-CATexteronRgRegular/ca%20texteron.ttf');
+	src: url('./fonts/FONTSPRINGDEMO-CATexteronRgRegular/ca%20texteron.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -105,9 +114,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 .bloc-md{
 	padding:50px 20px;
-}
-.bloc-sm{
-	padding:20px;
 }
 
 /* = Full Screen Blocs 
@@ -606,11 +612,11 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .link-style{
 	font-weight:bold;
-	font-family:"TriptychTest-Italick";
+	font-family:"FONTSPRINGDEMO-CATexteronRgRegular";
 	font-style:normal;
 	padding-top:1px;
 	padding-bottom:1px;
-	font-size:18px;
+	font-size:23px;
 }
 .btn-submit-style{
 	border-radius:21px 21px 21px 21px;
@@ -650,7 +656,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"AGaramond-Regular";
 }
 .h4-style{
-	font-family:"AGaramond-Italic";
+	font-family:"FONTSPRINGDEMO-CATexteronRgRegular";
 }
 .h1-bloc-14-style{
 	font-family:"AGaramond-Regular";
@@ -757,9 +763,6 @@ a{
 	width:100%;
 }
 .h1-bloc-9-style{
-	width:100%;
-}
-.container-div-style{
 	width:100%;
 }
 .svg-icon-bloc-14-fill{
@@ -907,16 +910,36 @@ a{
 .h2-bloc-8-style{
 	font-family:"TriptychTest-Grotesque";
 	font-size:38px;
-	width:54.3%;
+	width:100%;
 }
-strong{
-	font-weight:bold;
+.remove-h2-link-styling{
+	font-weight:lighter;
+	font-size:38px;
+	text-shadow:0.29px -0.96px 0px #000000,0.35px -1.97px 2px #FFFFFF;
 }
 .h3-bloc-8-style{
 	width:54.02%;
 }
 .img-hill-day-cov-style{
-	width:583px;
+	width:607px;
+}
+.link-0-style{
+	font-family:"TriptychTest-Italick";
+	font-size:1.21875rem;
+	width:100%;
+}
+.row-bloc-8-style{
+	width:100%;
+}
+.img-bloc-2-style{
+	width:371px;
+}
+.h2-4-style{
+	font-family:"TriptychTest-Grotesque";
+}
+.navbar-menu-text-weight{
+	font-size:20px;
+	line-height:21px;
 }
 
 /* = Colour
@@ -1693,6 +1716,14 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.remove-padding{
 	}
+	.link-0-style{
+		width:100%;
+		font-size:17px;
+	}
+	.navbar-menu-text-weight{
+		font-size:20px;
+		font-weight:500;
+	}
 	
 }
 
@@ -1762,6 +1793,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 		stroke:var(--swatch-var-7678)!important;
 		fill:var(--swatch-var-7678)!important;
 	}
+	.link-0-style{
+		font-size:22px;
+	}
 	
 }
 
@@ -1828,6 +1862,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.h1-5-style{
 		font-size:45px;
+	}
+	.link-0-style{
+		font-size:1.09375rem;
 	}
 	
 }
