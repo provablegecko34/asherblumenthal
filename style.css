@@ -50,9 +50,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 
 @font-face {
-	font-family:'FONTSPRINGDEMO-CATexteronRgRegular';
-	src: url('./fonts/FONTSPRINGDEMO-CATexteronRgRegular/ca%20texteron.ttf');
-	src: url('./fonts/FONTSPRINGDEMO-CATexteronRgRegular/ca%20texteron.ttf') format('truetype');
+	font-family:'AGaramond-Italic';
+	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2');
+	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -71,15 +71,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-family:'TriptychTest';
 	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2');
 	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
-	font-family:'AGaramond-Italic';
-	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2');
-	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
