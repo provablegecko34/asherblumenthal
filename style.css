@@ -1390,15 +1390,33 @@ a{
 .bg-d08{
 	background-image:url("img/d08.gif");
 }
-.bg-hill-day-cover{
-	background-image:url("img/hill-day-page-cover.jpg?timestamp=3096");
-}
 .bg-Hill-Day-Background{
 	background-image:url("img/Hill-Day-Background.jpg");
 	background-image: -webkit-image-set(url("img/Hill-Day-Background.webp") 1x,
 url("img/Hill-Day-Background.webp") 2x);background-image: image-set(url("img/Hill-Day-Background.jpg") 1x,
 url("img/Hill-Day-Background.jpg") 2x,url("img/Hill-Day-Background.webp") 1x,
 url("img/Hill-Day-Background.webp") 2x);
+}
+.bg-hill-day-page-cover{
+	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
+}
+.bg-hill-day-page-cover{
+	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
+}
+.bg-hill-day-page-cover{
+	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
 }
 
 /* = Custom Bric Data
