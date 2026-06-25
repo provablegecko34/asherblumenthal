@@ -50,9 +50,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 
 @font-face {
-	font-family:'FONTSPRINGDEMO-CATexteronRgRegular';
-	src: url('./fonts/FONTSPRINGDEMO-CATexteronRgRegular/ca%20texteron.ttf');
-	src: url('./fonts/FONTSPRINGDEMO-CATexteronRgRegular/ca%20texteron.ttf') format('truetype');
+	font-family:'AGaramond-Italic';
+	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2');
+	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -1449,9 +1449,6 @@ a{
 .bgc-111{
 	background-color:var(--swatch-var-111);
 }
-.bgc-4531{
-	background-color:var(--swatch-var-4531);
-}
 .bgc-3614{
 	background-color:var(--swatch-var-3614);
 }
@@ -1886,6 +1883,10 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.svg-icon-style{
 		width:55px!important;
+	}
+	.h6-style{
+		font-size:18px;
+		width:100%;
 	}
 	
 }
