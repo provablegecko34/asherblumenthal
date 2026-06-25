@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url>
 	<loc>asherblumenthal.com</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
 	<image:image>
-	<image:loc>asherblumenthal.com/img/blog-cover-1.jpeg</image:loc>
+	<image:loc>asherblumenthal.com/img/homepage-blog-cover.jpeg</image:loc>
 	<image:title>blog cover 1.jpeg</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>asherblumenthal.com/img/blog-cover-1.webp</image:loc>
+	<image:loc>asherblumenthal.com/img/homepage-blog-cover.webp</image:loc>
 	<image:title>blog cover 1.jpeg</image:title>
 	</image:image>
 </url>
 <url>
 	<loc>asherblumenthal.com/about.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -30,7 +30,7 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/novel.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -44,19 +44,19 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/sent.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/contact.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/sent-redirect.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -70,7 +70,7 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/404.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -88,19 +88,25 @@
 </url>
 <url>
 	<loc>asherblumenthal.com/hillday.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/kiev-4a/kiev.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>
 <url>
 	<loc>asherblumenthal.com/blog.html</loc>
-	<lastmod>2026-06-23</lastmod>
+	<lastmod>2026-06-25</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+</url>
+<url>
+	<loc>asherblumenthal.com/tor.html</loc>
+	<lastmod>2026-06-25</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 </url>

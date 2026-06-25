@@ -76,15 +76,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-display:swap;
 }
 
-@font-face {
-	font-family:'AGaramond-Italic';
-	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2');
-	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
 /* = Blocs
 -------------------------------------------------------------- */
 
@@ -145,6 +136,46 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 .bloc-fill-screen .fill-bloc-bottom-edge{
 	align-self: flex-end;
+}
+
+
+/* Edge Dividers */
+
+.bloc-shape-divider{
+	position: absolute;
+	width:100%;
+	text-align:center;
+	left:0;
+	right:0;
+	z-index: 0;
+	display: flex;
+	pointer-events: none;
+}
+.svg-divider{
+	width:100%;
+	height:100px;
+	fill:#000000;
+}
+.bloc-divider-top{
+	top:-1px;
+	align-items: flex-start;
+}
+.bloc-divider-bottom{
+	bottom:-1px;
+	align-items: flex-end;
+}
+
+
+/* Flip Edge Divider */
+
+.bloc-divider-flip-x svg{
+	transform:scale(-1,1);
+}
+.bloc-divider-flip-y svg{
+	transform:scale(1,-1);
+}
+.bloc-divider-flip-x.bloc-divider-flip-y svg{
+	transform:scale(-1,-1);
 }
 
 
@@ -415,10 +446,6 @@ blocsicon svg {
 }
 }
 
-/* Scroll FX */
-.scroll-fx-in-range{
-	will-change: opacity;
-}
 
 
 /* ScrollToTop button */
@@ -561,6 +588,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .h4-style{
 	font-family:"FONTSPRINGDEMO-CATexteronRgRegular";
+	font-size:18px;
+	line-height:0px;
 }
 .h1-bloc-14-style{
 	font-family:"AGaramond-Regular";
@@ -726,9 +755,6 @@ a{
 .h3-bloc-13-style{
 	width:56.55%;
 }
-.h1-style{
-	width:100%;
-}
 .row-bloc-9-style{
 	width:89.85%;
 }
@@ -751,7 +777,7 @@ a{
 	font-family:"AGaramond-Italic";
 }
 .h1-5-style{
-	font-size:48px;
+	font-size:115px;
 	font-family:"TriptychTest";
 }
 .dropcap-letter{
@@ -768,7 +794,7 @@ a{
 }
 .h5-style{
 	font-family:"AGaramond-Italic";
-	font-size:18px;
+	font-size:14px;
 }
 .logo-weight{
 	text-transform:capitalize;
@@ -781,6 +807,9 @@ a{
 	letter-spacing:px;
 	word-spacing:2px;
 	font-size:20px;
+	border-radius:1px 1px 1px 1px;
+	border-width:1px 1px 1px 1px;
+	border-color:var(--swatch-var-57)!important;
 }
 .p-bloc-16-style{
 	width:90.8%;
@@ -813,8 +842,8 @@ a{
 }
 .h2-bloc-8-style{
 	font-family:"TriptychTest-Grotesque";
-	font-size:38px;
-	width:100%;
+	font-size:45px;
+	width:500px;
 }
 .remove-h2-link-styling{
 	font-weight:lighter;
@@ -829,8 +858,13 @@ a{
 }
 .link-0-style{
 	font-family:"TriptychTest-Italick";
-	font-size:1.21875rem;
+	font-size:1.15625rem;
 	width:100%;
+	line-height:20px;
+	font-weight:bold;
+	color:#000000!important;
+	text-transform:capitalize;
+	font-style:normal;
 }
 .row-bloc-8-style{
 	width:100%;
@@ -842,7 +876,7 @@ a{
 	font-family:"TriptychTest-Grotesque";
 }
 .navbar-menu-text-weight{
-	font-size:20px;
+	font-size:1.09375rem;
 	line-height:21px;
 }
 .svg-icon-bloc-15-fill{
@@ -870,6 +904,76 @@ a{
 	fill:#2D7DCC!important;
 	width:65px!important;
 }
+.container-div-min-height{
+	width:100%;
+	height:20px;
+}
+.expand-text{
+	transition:all 0.5s ease 0s;
+	transform:scale(1);
+}
+.bottom-border{
+	border-color:var(--swatch-var-57)!important;
+	height:15px;
+	border-style:double;
+	border-radius:1px 1px 1px 1px;
+	border-width:0px 0px 1px 0px;
+	padding-bottom:35px;
+	margin-top:70px;
+	padding-top:35px;
+}
+.navbar-brand img{
+	width:35px;
+}
+.logo-follow{
+	float:left;
+}
+.dotted-border{
+	height:20px;
+	width:100%;
+	border-style:dotted;
+	border-color:var(--swatch-var-57)!important;
+	border-width:0px 0px 1px 0px;
+	border-radius:1px 1px 1px 1px;
+	margin-bottom:0px;
+}
+.top-scroll{
+	padding-bottom:50px;
+	padding-top:45px;
+}
+.header-divider{
+	width:195px;
+}
+.sidebar-column-1{
+	margin-left:25px;
+	margin-right:20px;
+}
+.image-text-overlay{
+	text-align:center;
+	text-transform:capitalize;
+	font-size:45px;
+	margin-top:135px;
+}
+.image-darken{
+	border-width:1px 1px 1px 1px;
+	border-color:var(--swatch-var-111)!important;
+}
+.image-darken:hover{
+	cursor:pointer;
+}
+.image-text-overlay-2{
+	width:500px;
+	margin-top:440px;
+}
+.bloc-divider-t-fill{
+	fill:var(--swatch-var-111);
+	width:45px;
+	height:45px;
+}
+.h6-style{
+	font-size:20px;
+	font-family:"FONTSPRINGDEMO-CATexteronRgRegular";
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -879,11 +983,11 @@ a{
 	
 	--swatch-var-7678:#333333;
 	
-	--swatch-var-6106:#FFFFFF;
+	--swatch-var-6106:rgba(204,204,204,1.00);
 	
 	--swatch-var-6328:rgba(255,255,255,0.86);
 	
-	--swatch-var-4531:rgba(250,250,250,1.00);
+	--swatch-var-4531:rgba(248,248,250,1.00);
 	
 	--swatch-var-5183:rgba(102,102,102,1.00);
 	
@@ -1333,11 +1437,18 @@ a{
 	
 	--swatch-var-7671:rgba(45,125,204,1.00);
 	
+	--swatch-var-111:rgba(253,253,253,1.00);
+	
+	--swatch-var-1901:rgba(242,242,242,1.00);
+	
 }
 
 
 /* Background colour styles */
 
+.bgc-111{
+	background-color:var(--swatch-var-111);
+}
 .bgc-4531{
 	background-color:var(--swatch-var-4531);
 }
@@ -1347,11 +1458,20 @@ a{
 
 /* Text colour styles */
 
+.tc-111{
+	color:var(--swatch-var-111)!important;
+}
+.tc-7090{
+	color:var(--swatch-var-7090)!important;
+}
 .tc-57{
 	color:var(--swatch-var-57)!important;
 }
 .tc-6328{
 	color:var(--swatch-var-6328)!important;
+}
+.tc-7678{
+	color:var(--swatch-var-7678)!important;
 }
 .tc-3614{
 	color:var(--swatch-var-3614)!important;
@@ -1378,6 +1498,12 @@ a{
 
 /* Link colour styles */
 
+.ltc-57{
+	color:var(--swatch-var-57)!important;
+}
+.ltc-57:hover{
+	color:#000000!important;
+}
 .ltc-3614{
 	color:var(--swatch-var-3614)!important;
 }
@@ -1434,9 +1560,6 @@ url("img/hill-day-page-cover.webp") 2x);
 	right:0;
 	top:0;
 	bottom: 0;
-}
-.code-embed{
-	color:#000;
 }
 .social-link-bric a svg{
 	transition: all 0.3s ease-in-out;
