@@ -992,6 +992,7 @@ url("img/homepage-blog-cover.webp") 2x);
 	overflow:hidden;
 	display:flex;
 	align-items:center;
+	border-color:transparent!important;
 }
 .h2-bloc-0-style{
 	font-size:55px;
@@ -1007,6 +1008,13 @@ url("img/homepage-blog-cover.webp") 2x);
 }
 .random-text-style{
 	color:#000000!important;
+}
+.solid-text{
+	color:#000000!important;
+	background-color:transparent;
+	border-color:#000000!important;
+	fill:transparent;
+	caret-color:transparent;
 }
 
 /* = Colour
@@ -1027,7 +1035,7 @@ url("img/homepage-blog-cover.webp") 2x);
 	
 	--swatch-var-3614:rgba(51,51,51,1.00);
 	
-	--swatch-var-57:rgba(0,0,0,1.00);
+	--swatch-var-57:rgba(0,0,0,0.36);
 	
 	--swatch-var-6766:rgba(255,204,204,1.00);
 	
@@ -1509,7 +1517,7 @@ url("img/homepage-blog-cover.webp") 2x);
 	color:#FFFFFF!important;
 }
 .btn-c-57:hover{
-	background:#000000!important;
+	background:rgba(0,0,0,0.36)!important;
 	color:#FFFFFF!important;
 }
 
@@ -1519,12 +1527,6 @@ url("img/homepage-blog-cover.webp") 2x);
 	color:var(--swatch-var-3614)!important;
 }
 .ltc-3614:hover{
-	color:#000000!important;
-}
-.ltc-57{
-	color:var(--swatch-var-57)!important;
-}
-.ltc-57:hover{
 	color:#000000!important;
 }
 
