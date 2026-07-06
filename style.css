@@ -560,6 +560,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .h2-bloc-2-style{
 	font-family:"AGaramond-Regular";
+	color:#000000!important;
 }
 .h2-feature-title-style{
 	font-family:"AGaramond-Regular";
@@ -1004,6 +1005,9 @@ url("img/homepage-blog-cover.webp") 2x);
 .overlay-1-subheading{
 	margin-top:350px;
 }
+.random-text-style{
+	color:#000000!important;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -1023,7 +1027,7 @@ url("img/homepage-blog-cover.webp") 2x);
 	
 	--swatch-var-3614:rgba(51,51,51,1.00);
 	
-	--swatch-var-57:rgba(0,0,0,0.20);
+	--swatch-var-57:rgba(0,0,0,1.00);
 	
 	--swatch-var-6766:rgba(255,204,204,1.00);
 	
@@ -1500,20 +1504,12 @@ url("img/homepage-blog-cover.webp") 2x);
 
 /* Button colour styles */
 
-.btn-c-7678{
-	background:var(--swatch-var-7678);
-	color:#FFFFFF!important;
-}
-.btn-c-7678:hover{
-	background:#000000!important;
-	color:#FFFFFF!important;
-}
 .btn-c-57{
 	background:var(--swatch-var-57);
 	color:#FFFFFF!important;
 }
 .btn-c-57:hover{
-	background:rgba(0,0,0,0.20)!important;
+	background:#000000!important;
 	color:#FFFFFF!important;
 }
 
@@ -1523,6 +1519,12 @@ url("img/homepage-blog-cover.webp") 2x);
 	color:var(--swatch-var-3614)!important;
 }
 .ltc-3614:hover{
+	color:#000000!important;
+}
+.ltc-57{
+	color:var(--swatch-var-57)!important;
+}
+.ltc-57:hover{
 	color:#000000!important;
 }
 
@@ -1908,6 +1910,9 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.h2-bloc-0-style{
 		font-size:35px;
+	}
+	.row-bloc-2-style{
+		width:96.79%;
 	}
 	
 }
