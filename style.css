@@ -1011,10 +1011,11 @@ url("img/homepage-blog-cover.webp") 2x);
 }
 .solid-text{
 	color:#000000!important;
-	background-color:transparent;
+	background-color:#FEFFFF;
 	border-color:#000000!important;
 	fill:transparent;
 	caret-color:transparent;
+	font-weight:normal;
 }
 
 /* = Colour
@@ -1488,11 +1489,11 @@ url("img/homepage-blog-cover.webp") 2x);
 
 /* Background colour styles */
 
-.bgc-3614{
-	background-color:var(--swatch-var-3614);
-}
 .bgc-111{
 	background-color:var(--swatch-var-111);
+}
+.bgc-3614{
+	background-color:var(--swatch-var-3614);
 }
 
 /* Text colour styles */
@@ -1536,11 +1537,11 @@ url("img/homepage-blog-cover.webp") 2x);
 	background-image:url("img/d08.gif");
 }
 .bg-Hill-Day-Background{
-	background-image:url("img/Hill-Day-Background.jpg");
-	background-image: -webkit-image-set(url("img/Hill-Day-Background.webp") 1x,
-url("img/Hill-Day-Background.webp") 2x);background-image: image-set(url("img/Hill-Day-Background.jpg") 1x,
-url("img/Hill-Day-Background.jpg") 2x,url("img/Hill-Day-Background.webp") 1x,
-url("img/Hill-Day-Background.webp") 2x);
+	background-image:url("img/Hill-Day-Background-1.jpg");
+	background-image: -webkit-image-set(url("img/Hill-Day-Background-1.webp") 1x,
+url("img/Hill-Day-Background-1.webp") 2x);background-image: image-set(url("img/Hill-Day-Background-1.jpg") 1x,
+url("img/Hill-Day-Background-1.jpg") 2x,url("img/Hill-Day-Background-1.webp") 1x,
+url("img/Hill-Day-Background-1.webp") 2x);
 }
 .bg-hill-day-page-cover{
 	background-image:url("img/hill-day-page-cover.jpg");
@@ -1562,6 +1563,9 @@ url("img/hill-day-page-cover.webp") 2x);
 url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
 url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
 url("img/hill-day-page-cover.webp") 2x);
+}
+.bg-Asher-Blumenthal-Jan-02-2026-Large-2-xtxkvw{
+	background-image:url("https://res.cloudinary.com/dwc5olhz0/image/upload/v1776923597/Asher_Blumenthal_Jan_02_2026_Large_2_xtxkvw.jpg");
 }
 
 /* = Custom Bric Data
