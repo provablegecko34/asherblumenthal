@@ -1033,7 +1033,7 @@ url("img/blog-cover-1-1.webp") 2x);
 	bottom:0px;
 	background-blend-mode:darken;
 	overflow:hidden;
-	background-color:rgba(0,0,0,0.40);
+	background-color:rgba(0,0,0,0.35);
 }
 .divider-bloc-14-background-color{
 	background-color:var(--swatch-var-57);
