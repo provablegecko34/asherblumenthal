@@ -46,16 +46,8 @@
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
-	<image:loc>asherblumenthal.com/img/404-icon.svg</image:loc>
-	<image:title>picsvg_download</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>asherblumenthal.com/img/404-image.png</image:loc>
-	<image:title>404-image</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>asherblumenthal.com/img/404-image.webp</image:loc>
-	<image:title>404-image</image:title>
+	<image:loc>asherblumenthal.com/img/404-peanuts.gif</image:loc>
+	<image:title>404 peanuts</image:title>
 	</image:image>
 </url>
 <url>
@@ -63,6 +55,14 @@
 	<lastmod>2026-09-30</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/placeholder-image.png</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>asherblumenthal.com/img/placeholder-image.webp</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
 </url>
 <url>
 	<loc>asherblumenthal.com/tor.html</loc>
