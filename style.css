@@ -133,46 +133,6 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 
 
-/* Edge Dividers */
-
-.bloc-shape-divider{
-	position: absolute;
-	width:100%;
-	text-align:center;
-	left:0;
-	right:0;
-	z-index: 0;
-	display: flex;
-	pointer-events: none;
-}
-.svg-divider{
-	width:100%;
-	height:100px;
-	fill:#000000;
-}
-.bloc-divider-top{
-	top:-1px;
-	align-items: flex-start;
-}
-.bloc-divider-bottom{
-	bottom:-1px;
-	align-items: flex-end;
-}
-
-
-/* Flip Edge Divider */
-
-.bloc-divider-flip-x svg{
-	transform:scale(-1,1);
-}
-.bloc-divider-flip-y svg{
-	transform:scale(1,-1);
-}
-.bloc-divider-flip-x.bloc-divider-flip-y svg{
-	transform:scale(-1,-1);
-}
-
-
 /* Background Textures */
 
 .bloc-bg-texture::before{
@@ -1511,11 +1471,6 @@ url("img/blog-cover-1-1.webp") 2x);
 }
 
 
-/* Background colour styles */
-
-.bgc-111{
-	background-color:var(--swatch-var-111);
-}
 
 /* Text colour styles */
 
@@ -1565,6 +1520,10 @@ url("img/blog-cover-1-1.webp") 2x);
 }
 .bg-Hill-Day-Background{
 	background-image:url("img/Hill-Day-Background.jpg");
+	background-image: -webkit-image-set(url("img/Hill-Day-Background.webp") 1x,
+url("img/Hill-Day-Background.webp") 2x);background-image: image-set(url("img/Hill-Day-Background.jpg") 1x,
+url("img/Hill-Day-Background.jpg") 2x,url("img/Hill-Day-Background.webp") 1x,
+url("img/Hill-Day-Background.webp") 2x);
 }
 .bg-hill-day-page-cover{
 	background-image:url("img/hill-day-page-cover.jpg");
@@ -1577,6 +1536,13 @@ url("img/blog-cover-1-1.webp") 2x);
 }
 .bg-Hill-Day-Background{
 	background-image:url("img/Hill-Day-Background.jpg");
+	background-image: -webkit-image-set(url("img/Hill-Day-Background.webp") 1x,
+url("img/Hill-Day-Background.webp") 2x);background-image: image-set(url("img/Hill-Day-Background.jpg") 1x,
+url("img/Hill-Day-Background.jpg") 2x,url("img/Hill-Day-Background.webp") 1x,
+url("img/Hill-Day-Background.webp") 2x);
+}
+.bg-hill-day-page-cover{
+	background-image:url("img/hill-day-page-cover.jpg");
 }
 
 /* = Custom Bric Data
