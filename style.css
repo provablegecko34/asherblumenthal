@@ -32,9 +32,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'TriptychTest-Italick';
-	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2');
-	src: url('./fonts/TriptychTest-Italick/TriptychTest-Italick.woff2') format('woff2');
+	font-family:'AGaramond-Italic';
+	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2');
+	src: url('./fonts/AGaramond-Italic/AGaramond-Italic.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -62,6 +62,15 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-family:'TriptychTest';
 	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2');
 	src: url('./fonts/TriptychTest/TriptychTest-Roman.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'TriptychTest-Grotesque';
+	src: url('./fonts/TriptychTest-Grotesque/TriptychTest-Grotesque.woff2');
+	src: url('./fonts/TriptychTest-Grotesque/TriptychTest-Grotesque.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -132,6 +141,26 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	align-self: flex-end;
 }
 
+/* = Full Width Blocs 
+-------------------------------------------------------------- */
+
+.full-width-bloc{
+	padding-left:0;
+	padding-right:0;
+}
+.full-width-bloc .row{
+	margin-left:0;
+	margin-right:0;
+}
+.full-width-bloc .container{
+	width:100%;
+	max-width:100%!important;
+}
+.full-width-bloc .carousel img{
+	width:100%;
+	height:auto;
+}
+
 
 /* Background Textures */
 
@@ -147,6 +176,13 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .texture-paper::before{
 	background: url("img/texture-paper.png");
 	background-size: 280px 280px;
+}
+.texture-fabric::before{
+	background: url("img/texture-fabric.png");
+}
+.texture-vertical-lines::before{
+	background: url("img/texture-v-lines.png");
+	background-size: 4px 4px;
 }
 
 
@@ -344,6 +380,25 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 
 
+/* Image Frame */
+.img-frame,.img-frame-md,.img-frame-lg,.img-frame-rd,.img-frame-rd-md,.img-frame-rd-lg{
+	background:#FFF;
+	border:1px solid rgba(0,0,0,0.1);
+	box-shadow:0 2px 2px rgba(0,0,0,0.05);
+	padding:4px;
+}
+.img-frame{
+	border-radius:3px;
+}
+.img-frame-md,.img-frame-lg{
+	border-radius:6px;
+}
+.img-frame-md,.img-frame-rd-md{
+	padding:8px;
+}
+.img-frame-lg,.img-frame-rd-lg{
+	padding:14px;
+}
 /* Image Protection */
 .img-protected{
 	-webkit-touch-callout: none;
@@ -351,6 +406,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 
 /* = Text & Icon Styles
 -------------------------------------------------------------- */
+.sm-shadow{
+	text-shadow:0 1px 2px rgba(0,0,0,.3);
+}
 .pressed-t{
 	text-shadow:0 1px 0 #FFF;
 }
@@ -503,7 +561,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .link-style{
 	font-weight:bold;
-	font-family:"FONTSPRINGDEMO-CATexteronRgRegular";
+	font-family:"AGaramond-Italic";
 	font-style:normal;
 	padding-top:1px;
 	padding-bottom:1px;
@@ -708,7 +766,8 @@ a{
 	border-radius:5px 5px 5px 5px;
 }
 .img-bloc-12-style{
-	width:2500px;
+	width:1000px;
+	height:700px;
 }
 .h3-style{
 	width:100%;
@@ -816,8 +875,8 @@ a{
 	width:607px;
 }
 .link-0-style{
-	font-family:"TriptychTest-Italick";
-	font-size:1.15625rem;
+	font-family:"AGaramond-Italic";
+	font-size:25px;
 	width:100%;
 	line-height:20px;
 	font-weight:bold;
@@ -989,11 +1048,11 @@ url("img/homepage-blog-cover.webp") 2x);
 }
 .h1-style{
 	font-family:"TriptychTest";
-	font-size:40px;
+	font-size:45px;
 }
 .h2-style{
 	font-family:"TriptychTest";
-	font-size:27px;
+	font-size:18px;
 }
 .home-wrapper-1{
 	width:100%;
@@ -1005,11 +1064,11 @@ url("img/homepage-blog-cover.webp") 2x);
 	height:500px;
 	display:block;
 	width:100%;
-	background-image:url("img/blog-cover-1-1.jpeg");
-	background-image: -webkit-image-set(url("img/blog-cover-1-1.webp") 1x,
-url("img/blog-cover-1-1.webp") 2x);background-image: image-set(url("img/blog-cover-1-1.jpeg") 1x,
-url("img/blog-cover-1-1.jpeg") 2x,url("img/blog-cover-1-1.webp") 1x,
-url("img/blog-cover-1-1.webp") 2x);
+	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
 }
 .home-overlay-1{
 	width:100%;
@@ -1028,6 +1087,30 @@ url("img/blog-cover-1-1.webp") 2x);
 .svg-icon-0-style{
 	fill:#2D7DCC!important;
 }
+.home-image-2{
+	width:100%;
+	background-size:100% 100%;
+	display:block;
+	background-image:url("https://res.cloudinary.com/dwc5olhz0/image/upload/v1791609561/Israel-2026-Asher-Blumenthal_4_hh07wp.jpg");
+	height:100%;
+	min-height:450px;
+	max-height:200%;
+}
+.h3-shot-on--style{
+	font-family:"TriptychTest-Grotesque";
+	font-size:22px;
+}
+.h2-bloc-12-style{
+	font-size:115px;
+	font-family:"TriptychTest";
+}
+.h1-8-style{
+	font-size:55px;
+}
+.h1-“sonder--style{
+	font-size:65px;
+	font-family:"TriptychTest";
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -1041,7 +1124,7 @@ url("img/blog-cover-1-1.webp") 2x);
 	
 	--swatch-var-6328:rgba(255,255,255,0.86);
 	
-	--swatch-var-4531:rgba(248,248,250,1.00);
+	--swatch-var-4531:rgba(235,235,240,0.95);
 	
 	--swatch-var-5183:rgba(102,102,102,1.00);
 	
@@ -1515,6 +1598,9 @@ url("img/blog-cover-1-1.webp") 2x);
 .tc-3614{
 	color:var(--swatch-var-3614)!important;
 }
+.tc-4531{
+	color:var(--swatch-var-4531)!important;
+}
 
 /* Button colour styles */
 
@@ -1556,12 +1642,27 @@ url("img/Hill-Day-Background.webp") 2x);
 }
 .bg-hill-day-page-cover{
 	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
 }
 .bg-hill-day-page-cover{
 	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
 }
 .bg-hill-day-page-cover{
 	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
+}
+.bg-Asher-Blumenthal-Jan-02-2026-Large-2-xtxkvw{
+	background-image:url("https://res.cloudinary.com/dwc5olhz0/image/upload/v1776923597/Asher_Blumenthal_Jan_02_2026_Large_2_xtxkvw.jpg");
 }
 .bg-Hill-Day-Background{
 	background-image:url("img/Hill-Day-Background.jpg");
@@ -1572,6 +1673,13 @@ url("img/Hill-Day-Background.webp") 2x);
 }
 .bg-hill-day-page-cover{
 	background-image:url("img/hill-day-page-cover.jpg");
+	background-image: -webkit-image-set(url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);background-image: image-set(url("img/hill-day-page-cover.jpg") 1x,
+url("img/hill-day-page-cover.jpg") 2x,url("img/hill-day-page-cover.webp") 1x,
+url("img/hill-day-page-cover.webp") 2x);
+}
+.bg-Israel-2026-Asher-Blumenthal-4-hh07wp{
+	background-image:url("https://res.cloudinary.com/dwc5olhz0/image/upload/v1791609561/Israel-2026-Asher-Blumenthal_4_hh07wp.jpg");
 }
 
 /* = Custom Bric Data
