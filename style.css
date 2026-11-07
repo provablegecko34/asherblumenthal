@@ -586,6 +586,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .row-style{
 	width:100%;
+	opacity:0.4;
 }
 .h2-5-style{
 	font-family:"AGaramond-Italic";
@@ -1125,6 +1126,17 @@ url("img/hill-day-page-cover.webp") 2x);
 	bottom:0px;
 	background-blend-mode:darken;
 	overflow:hidden;
+}
+.h1-on-life-style{
+	font-size:45px;
+	line-height:px;
+	letter-spacing:-1px;
+}
+.h2-7-style{
+	letter-spacing:-1px;
+}
+.img-9-style{
+	width:750px;
 }
 
 /* = Colour
@@ -1996,6 +2008,23 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 		width:725px;
 		height:475px;
 	}
+	.img-9-style{
+		width:650px;
+	}
+	.h1-on-life-style{
+		font-size:40px;
+		line-height:px;
+		font-family:"TriptychTest";
+		letter-spacing:-1px;
+	}
+	.h2-7-style{
+		font-family:"TriptychTest";
+		font-size:16px;
+		letter-spacing:-1px;
+	}
+	.h2-bloc-12-style{
+		font-size:90px;
+	}
 	
 }
 
@@ -2086,6 +2115,14 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	.svg-icon-0-style{
 		width:55px!important;
 	}
+	.h1-on-life-style{
+		font-size:35px;
+		line-height:px;
+		letter-spacing:-1px;
+	}
+	.h2-bloc-12-style{
+		font-size:70px;
+	}
 	
 }
 
@@ -2161,6 +2198,14 @@ a:focus-visible,button:focus-visible{outline: 4px solid rgba(13, 110, 253, 0.60)
 	}
 	.svg-icon-style{
 		width:40px!important;
+	}
+	.h1-on-life-style{
+		font-size:30px;
+		line-height:px;
+		letter-spacing:-1px;
+	}
+	.h2-bloc-12-style{
+		font-size:40px;
 	}
 	
 }
